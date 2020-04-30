@@ -1,2 +1,3 @@
-# app-frontend-bootstrap
-Bootstrap version of the frontend
+# Bootstrap version of the frontend app
+
+Preview Link : https://intoprofits.github.io/app-frontend-bootstrap/
