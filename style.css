@@ -55,7 +55,8 @@ body.signin {
   height: 58px;
   z-index: 3;
 }
-.primary-nav .btn:hover {
+.primary-nav .btn:hover, 
+.primary-nav .nav-item.active .btn {
   color: #0047AB;
 }
 .primary-nav .navbar-collapse {
@@ -156,7 +157,7 @@ body.signin {
   overflow: hidden;
   text-align: center;
   font-size: .6rem;
-  min-height: 100vh;
+  min-height: 80vh;
 }
 .sidebar i {
   font-size: 1.3rem;
@@ -220,6 +221,8 @@ body.signin {
   }
 
   /* input types */
-  .custom-select, .form-control {
+  .custom-select,
+  .form-control,
+  .custom-file-label {
     border-radius: 0;
   }

@@ -53,8 +53,8 @@
       <aside class="col-2 bg-light sidebar">
         <div class="sidebar-sticky">
           <ul class="nav flex-column">
-            <li class="nav-item"><a class="nav-link active" href="../account/personal-details.html"><i class="fas fa-id-card d-block d-lg-inline mr-lg-2"></i>Personal Details</a></li>
-            <li class="nav-item"><a class="nav-link" href="../account/company-profile.html"><i class="fas fa-building d-block d-lg-inline mr-lg-2"></i>Company Profile</a></li>
+            <li class="nav-item"><a class="nav-link" href="../account/personal-details.html"><i class="fas fa-id-card d-block d-lg-inline mr-lg-2"></i>Personal Details</a></li>
+            <li class="nav-item"><a class="nav-link active" href="../account/company-profile.html"><i class="fas fa-building d-block d-lg-inline mr-lg-2"></i>Company Profile</a></li>
             <li class="nav-item"><a class="nav-link" href="../account/drive-email-link.html"><i class="fab fa-google-drive d-block d-lg-inline mr-lg-2"></i>Drive and Email Link</a></li>
             <li class="nav-item"><a class="nav-link" href="../account/purchase-history.html"><i class="fas fa-shopping-cart d-block d-lg-inline mr-lg-2"></i>Purchase History</a></li>
             <li class="nav-item"><a class="nav-link" href="../account/payment-details.html"><i class="fas fa-money-check-alt d-block d-lg-inline mr-lg-2"></i>Payment Details</a></li>
@@ -66,35 +66,49 @@
       <section role="main" class="col-10 border-left">
 
         <div class="pt-3 pb-2 border-bottom mb-4">
-          <h3>Personal Details</h3>
+          <h3>Company Profile</h3>
         </div>
 
         <div class="row">
             <div class="col-lg-6 col-xl-5">
 
-                <div class="mb-3 ">
-                    <label for="name">Full Name</label>
-                    <input type="text" class="form-control" id="name">
+				<div class="mb-4">
+					<div class="border bg-light d-flex justify-content-center p-3">
+						<img src="../../imgs/company-logo.png" alt="" class="logo" width="300">
+					</div>
+					<p class="mb-2 mt-2" style="font-size: 90%;">Recommended dimentions of <b>450 x 68</b></p>
+
+					<div class="input-group">
+						<input type="file" class="custom-file-input" id="companyProfile">
+						<label class="custom-file-label" for="companyProfile" aria-describedby="inputGroupFileAddon02">Choose file</label>
+					</div>
+				</div>
+				
+				
+
+                <div class="mb-3">
+                    <label for="compName">Company Name</label>
+                    <input type="text" class="form-control" id="compName">
                 </div>
 
                 <div class="mb-3">
-                    <label for="name">Email</label>
-                    <input type="email" class="form-control" id="email">
+                    <label for="site">Website</label>
+                    <input type="text" class="form-control" id="site">
                 </div>
 
                 <div class="mb-3">
-                    <label for="phone">Phone</label>
-                    <input type="text" class="form-control" id="phone">
+                    <label for="address">Company Address</label>
+                    <input type="text" class="form-control" id="address">
                 </div>
 
                 <div class="mb-3">
-                    <label for="skype">Skype</label>
-                    <input type="text" class="form-control" id="skype">
-                </div>
-
-                <div class="mb-4">
-                    <label for="wechat">WeChat</label>
-                    <input type="text" class="form-control" id="wechat">
+                    <label for="timezone">Time Zone</label>
+                    <input type="text" class="form-control" id="timezone">
+				</div>
+				
+				<div class="mb-4">
+                    <label for="bio">Bio</label>
+					<textarea class="form-control" id="bio" rows="3"></textarea>
                 </div>
 
             </div>
