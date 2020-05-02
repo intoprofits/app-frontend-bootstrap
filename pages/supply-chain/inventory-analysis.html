@@ -12,89 +12,68 @@
 </head>
 <body>
   
-  <!-- <nav class="navbar primary-nav fixed-top flex-md-nowrap p-1 ">
-    <a class="col-sm-3 col-md-2 mr-0" href="../../index.html">
-      <img src="../../imgs/company-logo.png" alt="" class="logo" width="160" height="24">
-    </a>
+  <header>
+    <nav class="navbar primary-nav fixed-top navbar-expand-lg">
+      <a class="" href="../../index.html"><img src="../../imgs/company-logo.png" alt="" class="logo" width="160" height="24"></a>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#primaryNav" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="navbar-collapse collapse" id="primaryNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="btn"><i class="fas fa-heart mr-2"></i>Refer a friend</a></li>
+          <li class="nav-item"><a class="btn"><i class="fab fa-facebook mr-2"></i>Community</a></li>
+          <li class="nav-item"><a class="btn"><i class="fas fa-question-circle mr-2"></i>Help</a></li>
+          <li class="nav-item"><a class="btn"><i class="fas fa-user mr-2"></i>My Profile</a></li>
+          <li class="nav-item"><a class="btn"><i class="fas fa-lock-open mr-2"></i>Logout</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- /primary nav -->
 
-    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#primaryNav" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle navigation">
-      <i class="fas fa-bars"></i>
-    </button>
-    
-    <div class="navbar-collapse collapse" id="primaryNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="btn"><i class="fas fa-heart mr-2"></i>Refer a friend</a></li>
-        <li class="nav-item"><a class="btn"><i class="fab fa-facebook mr-2"></i>Community</a></li>
-        <li class="nav-item"><a class="btn"><i class="fas fa-question-circle mr-2"></i>Help</a></li>
-        <li class="nav-item"><a class="btn"><i class="fas fa-user mr-2"></i>My Profile</a></li>
-        <li class="nav-item"><a class="btn"><i class="fas fa-lock-open mr-2"></i>Logout</a></li>
-      </ul>
-    </div>
-
-  </nav> -->
-
-  <nav class="navbar primary-nav fixed-top">
-    <a class="col-sm-3 col-md-2 mr-0" href="../../index.html">
-      <img src="../../imgs/company-logo.png" alt="" class="logo" width="160" height="24">
-    </a>
-    
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="btn"><i class="fas fa-heart mr-2"></i>Refer a friend</a>
-        <a class="btn"><i class="fab fa-facebook mr-2"></i>Community</a>
-        <a class="btn"><i class="fas fa-question-circle mr-2"></i>Help</a>
-        <a class="btn"><i class="fas fa-user mr-2"></i>My Profile</a>
-        <a class="btn"><i class="fas fa-lock-open mr-2"></i>Logout</a>
-      </li>
-    </ul>
-
-  </nav>
-
-
-
-
-  <nav class="navbar secondary-nav fixed-top bg-light border-bottom p-0 navbar-expand-lg">
-    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#secondaryNav" aria-controls="secondaryNav" aria-expanded="false" aria-label="Toggle navigation">
-      <i class="fas fa-bars"></i>
-    </button>
-
-    <div class="navbar-collapse justify-content-md-center collapse" id="secondaryNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a role="button" class="btn" href="#">Dashboard</a></li>
-        <li class="nav-item"><a role="button" class="btn active" href="./inventory-analysis.html" class="active">Supply Chain</a></li>
-        <li class="nav-item"><a role="button" class="btn" href="#">Advertising</a></li>
-        <li class="nav-item"><a role="button" class="btn" href="#">Finances</a></li>
-        <li class="nav-item"><a role="button" class="btn" href="#">R&amp;D</a></li>
-      </ul>
-    </div>
-  </nav>
+    <nav class="navbar secondary-nav fixed-top bg-light border-bottom p-0 navbar-expand-lg">
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#secondaryNav" aria-controls="secondaryNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="navbar-collapse justify-content-md-center collapse" id="secondaryNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a role="button" class="btn" href="#">Dashboard</a></li>
+          <li class="nav-item"><a role="button" class="btn active" href="./inventory-analysis.html" class="active">Supply Chain</a></li>
+          <li class="nav-item"><a role="button" class="btn" href="#">Advertising</a></li>
+          <li class="nav-item"><a role="button" class="btn" href="#">Finances</a></li>
+          <li class="nav-item"><a role="button" class="btn" href="#">R&amp;D</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- /secondary nav -->
+  </header>
+  <!-- /header -->
 
   <div class="container-fluid">
     <div class="row">
-      <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+      <nav class="col-2 bg-light sidebar">
         <div class="sidebar-sticky">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link active" href="#">
-                <i class="fas fa-chart-pie mr-2"></i>
+              <a class="nav-link active" href="./inventory-analysis.html">
+                <i class="fas fa-chart-pie d-block d-lg-inline mr-2"></i>
                 Inverntory Analysis
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="fas fa-folder-plus mr-2"></i>
+              <a class="nav-link" href="./po-creator.html">
+                <i class="fas fa-folder-plus d-block d-lg-inline mr-2"></i>
                 P.O. Creator
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">
-                <i class="fas fa-box-open mr-2"></i>
+                <i class="fas fa-box-open d-block d-lg-inline mr-2"></i>
                 My Products
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">
-                <i class="fas fa-address-card mr-2"></i>
+                <i class="fas fa-address-card d-block d-lg-inline mr-2"></i>
                 My Contacts
               </a>
             </li>
@@ -102,19 +81,20 @@
         </div>
       </nav>
   
-      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <main role="main" class="col-10 border-left">
 
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 border-bottom">
           <h3>Inventory Analysis</h3>
           <div class="btn-toolbar mb-2 mb-md-0">
-            <button type="button" class="btn btn-sm btn-primary">Learn <i class="fas fa-play-circle ml-1"></i></button>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#exampleModal">Learn <i class="fas fa-play-circle ml-1"></i></button>
           </div>
         </div>
 
-        <div class="btn-toolbar mb-3 mt-3">
-          <button type="button" class="btn btn-primary mr-2"><i class="fas fa-tags mr-2"></i>Sort By Brand</button>
-          <button type="button" class="btn btn-primary mr-2"><i class="fas fa-calendar-alt mr-2"></i>Sort By Days of Stock</button>
-          <button type="button" class="btn btn-primary"><i class="fas fa-search mr-2"></i>Custom Filter</button>
+        <div class="btn-toolbar mt-3">
+          <button type="button" class="btn btn-primary mb-3 mr-2"><i class="fas fa-tags mr-2"></i>Sort By Brand</button>
+          <button type="button" class="btn btn-primary mb-3 mr-2"><i class="fas fa-calendar-alt mr-2"></i>Sort By Days of Stock</button>
+          <button type="button" class="btn btn-primary mb-3 "><i class="fas fa-search mr-2"></i>Custom Filter</button>
         </div>
         
         <div class="table-responsive mb-5">
@@ -135,195 +115,211 @@
             </thead>
             <tbody>
               <tr>
-                <td>1,001</td>
-                <td>Lorem</td>
-                <td>ipsum</td>
-                <td>dolor</td>
-                <td>sit</td>
-                <td>1,001</td>
-                <td>Lorem</td>
-                <td>ipsum</td>
-                <td>dolor</td>
+                <td>1</td>
+                <td><img src="https://dummyimage.com/120x120/e1e5e6/000.png"></td>
+                <td>
+                  <h5>Plate</h5>
+                  <p class="m-0">ASIN: <b>6DSF645DGF7</b></p>
+                  <p class="m-0">SKU: <b>M34F098</b></p>
+                  <p class="m-0">Lead Time: <b>10</b></p>
+                  <p class="m-0">Safety Stock: <b>21</b></p>
+                </td>
+                <td>123</td>
+                <td>456</td>
+                <td>789</td>
+                <td>321</td>
+                <td>
+                  <p class="m-0">Average: <b>32</b></p>
+                  <p class="m-0">Re-Order Date: <b><a href="#">03/04/19</a></b></p>
+                  <p class="m-0">Stock-Out Date: <b><a href="#">08/07/20</a></b></p>
+                </td>
+                <td>
+                  <p class="m-0">Average: <b>32</b></p>
+                  <p class="m-0">Re-Order Date: <b><a href="#">03/04/19</a></b></p>
+                  <p class="m-0">Stock-Out Date: <b><a href="#">08/07/20</a></b></p>
+                </td>
                 <td><button type="button" class="btn btn-sm btn-outline-secondary">Create P.O.</button></td>
               </tr>
               <tr>
-                <td>1,002</td>
-                <td>amet</td>
-                <td>consectetur</td>
-                <td>adipiscing</td>
-                <td>elit</td>
-                <td>1,001</td>
-                <td>Lorem</td>
-                <td>ipsum</td>
-                <td>dolor</td>
+                <td>2</td>
+                <td><img src="https://dummyimage.com/120x120/e1e5e6/000.png"></td>
+                <td>
+                  <h5>Plate</h5>
+                  <p class="m-0">ASIN: <b>6DSF645DGF7</b></p>
+                  <p class="m-0">SKU: <b>M34F098</b></p>
+                  <p class="m-0">Lead Time: <b>10</b></p>
+                  <p class="m-0">Safety Stock: <b>21</b></p>
+                </td>
+                <td>123</td>
+                <td>456</td>
+                <td>789</td>
+                <td>321</td>
+                <td>
+                  <p class="m-0">Average: <b>32</b></p>
+                  <p class="m-0">Re-Order Date: <b><a href="#">03/04/19</a></b></p>
+                  <p class="m-0">Stock-Out Date: <b><a href="#">08/07/20</a></b></p>
+                </td>
+                <td>
+                  <p class="m-0">Average: <b>32</b></p>
+                  <p class="m-0">Re-Order Date: <b><a href="#">03/04/19</a></b></p>
+                  <p class="m-0">Stock-Out Date: <b><a href="#">08/07/20</a></b></p>
+                </td>
                 <td><button type="button" class="btn btn-sm btn-outline-secondary">Create P.O.</button></td>
               </tr>
               <tr>
-                <td>1,003</td>
-                <td>Integer</td>
-                <td>nec</td>
-                <td>odio</td>
-                <td>Praesent</td>
-                <td>1,001</td>
-                <td>Lorem</td>
-                <td>ipsum</td>
-                <td>dolor</td>
+                <td>3</td>
+                <td><img src="https://dummyimage.com/120x120/e1e5e6/000.png"></td>
+                <td>
+                  <h5>Plate</h5>
+                  <p class="m-0">ASIN: <b>6DSF645DGF7</b></p>
+                  <p class="m-0">SKU: <b>M34F098</b></p>
+                  <p class="m-0">Lead Time: <b>10</b></p>
+                  <p class="m-0">Safety Stock: <b>21</b></p>
+                </td>
+                <td>123</td>
+                <td>456</td>
+                <td>789</td>
+                <td>321</td>
+                <td>
+                  <p class="m-0">Average: <b>32</b></p>
+                  <p class="m-0">Re-Order Date: <b><a href="#">03/04/19</a></b></p>
+                  <p class="m-0">Stock-Out Date: <b><a href="#">08/07/20</a></b></p>
+                </td>
+                <td>
+                  <p class="m-0">Average: <b>32</b></p>
+                  <p class="m-0">Re-Order Date: <b><a href="#">03/04/19</a></b></p>
+                  <p class="m-0">Stock-Out Date: <b><a href="#">08/07/20</a></b></p>
+                </td>
                 <td><button type="button" class="btn btn-sm btn-outline-secondary">Create P.O.</button></td>
               </tr>
               <tr>
-                <td>1,003</td>
-                <td>libero</td>
-                <td>Sed</td>
-                <td>cursus</td>
-                <td>ante</td>
-                <td>1,001</td>
-                <td>Lorem</td>
-                <td>ipsum</td>
-                <td>dolor</td>
+                <td>4</td>
+                <td><img src="https://dummyimage.com/120x120/e1e5e6/000.png"></td>
+                <td>
+                  <h5>Plate</h5>
+                  <p class="m-0">ASIN: <b>6DSF645DGF7</b></p>
+                  <p class="m-0">SKU: <b>M34F098</b></p>
+                  <p class="m-0">Lead Time: <b>10</b></p>
+                  <p class="m-0">Safety Stock: <b>21</b></p>
+                </td>
+                <td>123</td>
+                <td>456</td>
+                <td>789</td>
+                <td>321</td>
+                <td>
+                  <p class="m-0">Average: <b>32</b></p>
+                  <p class="m-0">Re-Order Date: <b><a href="#">03/04/19</a></b></p>
+                  <p class="m-0">Stock-Out Date: <b><a href="#">08/07/20</a></b></p>
+                </td>
+                <td>
+                  <p class="m-0">Average: <b>32</b></p>
+                  <p class="m-0">Re-Order Date: <b><a href="#">03/04/19</a></b></p>
+                  <p class="m-0">Stock-Out Date: <b><a href="#">08/07/20</a></b></p>
+                </td>
                 <td><button type="button" class="btn btn-sm btn-outline-secondary">Create P.O.</button></td>
               </tr>
               <tr>
-                <td>1,004</td>
-                <td>dapibus</td>
-                <td>diam</td>
-                <td>Sed</td>
-                <td>nisi</td>
-                <td>1,001</td>
-                <td>Lorem</td>
-                <td>ipsum</td>
-                <td>dolor</td>
+                <td>5</td>
+                <td><img src="https://dummyimage.com/120x120/e1e5e6/000.png"></td>
+                <td>
+                  <h5>Plate</h5>
+                  <p class="m-0">ASIN: <b>6DSF645DGF7</b></p>
+                  <p class="m-0">SKU: <b>M34F098</b></p>
+                  <p class="m-0">Lead Time: <b>10</b></p>
+                  <p class="m-0">Safety Stock: <b>21</b></p>
+                </td>
+                <td>123</td>
+                <td>456</td>
+                <td>789</td>
+                <td>321</td>
+                <td>
+                  <p class="m-0">Average: <b>32</b></p>
+                  <p class="m-0">Re-Order Date: <b><a href="#">03/04/19</a></b></p>
+                  <p class="m-0">Stock-Out Date: <b><a href="#">08/07/20</a></b></p>
+                </td>
+                <td>
+                  <p class="m-0">Average: <b>32</b></p>
+                  <p class="m-0">Re-Order Date: <b><a href="#">03/04/19</a></b></p>
+                  <p class="m-0">Stock-Out Date: <b><a href="#">08/07/20</a></b></p>
+                </td>
                 <td><button type="button" class="btn btn-sm btn-outline-secondary">Create P.O.</button></td>
               </tr>
               <tr>
-                <td>1,005</td>
-                <td>Nulla</td>
-                <td>quis</td>
-                <td>sem</td>
-                <td>at</td>
-                <td>1,001</td>
-                <td>Lorem</td>
-                <td>ipsum</td>
-                <td>dolor</td>
+                <td>6</td>
+                <td><img src="https://dummyimage.com/120x120/e1e5e6/000.png"></td>
+                <td>
+                  <h5>Plate</h5>
+                  <p class="m-0">ASIN: <b>6DSF645DGF7</b></p>
+                  <p class="m-0">SKU: <b>M34F098</b></p>
+                  <p class="m-0">Lead Time: <b>10</b></p>
+                  <p class="m-0">Safety Stock: <b>21</b></p>
+                </td>
+                <td>123</td>
+                <td>456</td>
+                <td>789</td>
+                <td>321</td>
+                <td>
+                  <p class="m-0">Average: <b>32</b></p>
+                  <p class="m-0">Re-Order Date: <b><a href="#">03/04/19</a></b></p>
+                  <p class="m-0">Stock-Out Date: <b><a href="#">08/07/20</a></b></p>
+                </td>
+                <td>
+                  <p class="m-0">Average: <b>32</b></p>
+                  <p class="m-0">Re-Order Date: <b><a href="#">03/04/19</a></b></p>
+                  <p class="m-0">Stock-Out Date: <b><a href="#">08/07/20</a></b></p>
+                </td>
                 <td><button type="button" class="btn btn-sm btn-outline-secondary">Create P.O.</button></td>
               </tr>
               <tr>
-                <td>1,006</td>
-                <td>nibh</td>
-                <td>elementum</td>
-                <td>imperdiet</td>
-                <td>Duis</td>
-                <td>1,001</td>
-                <td>Lorem</td>
-                <td>ipsum</td>
-                <td>dolor</td>
+                <td>7</td>
+                <td><img src="https://dummyimage.com/120x120/e1e5e6/000.png"></td>
+                <td>
+                  <h5>Plate</h5>
+                  <p class="m-0">ASIN: <b>6DSF645DGF7</b></p>
+                  <p class="m-0">SKU: <b>M34F098</b></p>
+                  <p class="m-0">Lead Time: <b>10</b></p>
+                  <p class="m-0">Safety Stock: <b>21</b></p>
+                </td>
+                <td>123</td>
+                <td>456</td>
+                <td>789</td>
+                <td>321</td>
+                <td>
+                  <p class="m-0">Average: <b>32</b></p>
+                  <p class="m-0">Re-Order Date: <b><a href="#">03/04/19</a></b></p>
+                  <p class="m-0">Stock-Out Date: <b><a href="#">08/07/20</a></b></p>
+                </td>
+                <td>
+                  <p class="m-0">Average: <b>32</b></p>
+                  <p class="m-0">Re-Order Date: <b><a href="#">03/04/19</a></b></p>
+                  <p class="m-0">Stock-Out Date: <b><a href="#">08/07/20</a></b></p>
+                </td>
                 <td><button type="button" class="btn btn-sm btn-outline-secondary">Create P.O.</button></td>
               </tr>
               <tr>
-                <td>1,007</td>
-                <td>sagittis</td>
-                <td>ipsum</td>
-                <td>Praesent</td>
-                <td>mauris</td>
-                <td>1,001</td>
-                <td>Lorem</td>
-                <td>ipsum</td>
-                <td>dolor</td>
-                <td><button type="button" class="btn btn-sm btn-outline-secondary">Create P.O.</button></td>
-              </tr>
-              <tr>
-                <td>1,008</td>
-                <td>Fusce</td>
-                <td>nec</td>
-                <td>tellus</td>
-                <td>sed</td>
-                <td>1,001</td>
-                <td>Lorem</td>
-                <td>ipsum</td>
-                <td>dolor</td>
-                <td><button type="button" class="btn btn-sm btn-outline-secondary">Create P.O.</button></td>
-              </tr>
-              <tr>
-                <td>1,009</td>
-                <td>augue</td>
-                <td>semper</td>
-                <td>porta</td>
-                <td>Mauris</td>
-                <td>1,001</td>
-                <td>Lorem</td>
-                <td>ipsum</td>
-                <td>dolor</td>
-                <td><button type="button" class="btn btn-sm btn-outline-secondary">Create P.O.</button></td>
-              </tr>
-              <tr>
-                <td>1,010</td>
-                <td>massa</td>
-                <td>Vestibulum</td>
-                <td>lacinia</td>
-                <td>arcu</td>
-                <td>1,001</td>
-                <td>Lorem</td>
-                <td>ipsum</td>
-                <td>dolor</td>
-                <td><button type="button" class="btn btn-sm btn-outline-secondary">Create P.O.</button></td>
-              </tr>
-              <tr>
-                <td>1,011</td>
-                <td>eget</td>
-                <td>nulla</td>
-                <td>Class</td>
-                <td>aptent</td>
-                <td>1,001</td>
-                <td>Lorem</td>
-                <td>ipsum</td>
-                <td>dolor</td>
-                <td><button type="button" class="btn btn-sm btn-outline-secondary">Create P.O.</button></td>
-              </tr>
-              <tr>
-                <td>1,012</td>
-                <td>taciti</td>
-                <td>sociosqu</td>
-                <td>ad</td>
-                <td>litora</td>
-                <td>1,001</td>
-                <td>Lorem</td>
-                <td>ipsum</td>
-                <td>dolor</td>
-                <td><button type="button" class="btn btn-sm btn-outline-secondary">Create P.O.</button></td>
-              </tr>
-              <tr>
-                <td>1,013</td>
-                <td>torquent</td>
-                <td>per</td>
-                <td>conubia</td>
-                <td>nostra</td>
-                <td>1,001</td>
-                <td>Lorem</td>
-                <td>ipsum</td>
-                <td>dolor</td>
-                <td><button type="button" class="btn btn-sm btn-outline-secondary">Create P.O.</button></td>
-              </tr>
-              <tr>
-                <td>1,014</td>
-                <td>per</td>
-                <td>inceptos</td>
-                <td>himenaeos</td>
-                <td>Curabitur</td>
-                <td>1,001</td>
-                <td>Lorem</td>
-                <td>ipsum</td>
-                <td>dolor</td>
-                <td><button type="button" class="btn btn-sm btn-outline-secondary">Create P.O.</button></td>
-              </tr>
-              <tr>
-                <td>1,015</td>
-                <td>sodales</td>
-                <td>ligula</td>
-                <td>in</td>
-                <td>libero</td>
-                <td>1,001</td>
-                <td>Lorem</td>
-                <td>ipsum</td>
-                <td>dolor</td>
+                <td>8</td>
+                <td><img src="https://dummyimage.com/120x120/e1e5e6/000.png"></td>
+                <td>
+                  <h5>Plate</h5>
+                  <p class="m-0">ASIN: <b>6DSF645DGF7</b></p>
+                  <p class="m-0">SKU: <b>M34F098</b></p>
+                  <p class="m-0">Lead Time: <b>10</b></p>
+                  <p class="m-0">Safety Stock: <b>21</b></p>
+                </td>
+                <td>123</td>
+                <td>456</td>
+                <td>789</td>
+                <td>321</td>
+                <td>
+                  <p class="m-0">Average: <b>32</b></p>
+                  <p class="m-0">Re-Order Date: <b><a href="#">03/04/19</a></b></p>
+                  <p class="m-0">Stock-Out Date: <b><a href="#">08/07/20</a></b></p>
+                </td>
+                <td>
+                  <p class="m-0">Average: <b>32</b></p>
+                  <p class="m-0">Re-Order Date: <b><a href="#">03/04/19</a></b></p>
+                  <p class="m-0">Stock-Out Date: <b><a href="#">08/07/20</a></b></p>
+                </td>
                 <td><button type="button" class="btn btn-sm btn-outline-secondary">Create P.O.</button></td>
               </tr>
             </tbody>
@@ -335,6 +331,23 @@
         <div class="text-center">
           <img src="../../imgs/logo-black.png" alt="" width="200" class="mb-2">
           <p>© 2020 Into Profits Limited</p>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Learn More</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img class="img-fluid" src="https://dummyimage.com/960x540/e1e5e6/000.png&text=video">
+            </div>
+          </div>
         </div>
       </div>
 

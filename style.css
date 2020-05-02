@@ -50,94 +50,145 @@ body.signin {
 
 
 /* primary nav */
-.navbar.primary-nav {
+.primary-nav {
   background-color: #E3E8EB;
   height: 58px;
+  z-index: 3;
 }
-.navbar .btn:hover {
+.primary-nav .btn:hover {
   color: #0047AB;
 }
-.navbar.primary-nav .navbar-nav {
+.primary-nav .navbar-collapse {
   background-color: #E3E8EB;
+  background: #fff;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 58px;
+  box-shadow: 0 15px 12px rgba(0, 0, 0, 0.12);
 }
+.primary-nav .nav-item {
+  border-bottom: 1px solid #dee2e6;
+}
+@media (min-width: 992px) {
+  .primary-nav .navbar-collapse {
+    top: 0;
+    width: auto;
+    position: relative;
+    background: none;
+    box-shadow: none;
+  }
+  .primary-nav .navbar-collapse .navbar-nav {
+    right: 0;
+    position: absolute;
+  }
+  .primary-nav .navbar-collapse .nav-item  {
+    border: none;
+  }
+}
+
 
 /* secondary nav  */
 .secondary-nav {
   top: 56px;
+  height: 64px;
+  z-index: 2;
+}
+.secondary-nav .navbar-collapse {
+  background: #fff;
+  position: absolute;
+  width: 100%;
+  top: 64px;
+  box-shadow: 0 15px 12px rgba(0, 0, 0, 0.12);
+}
+.secondary-nav .navbar-collapse .nav-item  {
+  display: block;
+  border-bottom: 1px solid #dee2e6;
 }
 .secondary-nav .btn {
-  box-shadow: inset 0 -5px 0 #f8f9fa;
-  border-radius: 0;
-  padding: .8rem 1rem 1rem;
+  box-shadow: none;
+  text-align: left;
 }
 .secondary-nav .btn:hover,
 .secondary-nav .btn.active {
-  box-shadow: inset 0 -5px 0 #0047AB;
+  box-shadow: none;
+  color: #0047AB;
 }
 .secondary-nav .itpf-logo {
   top: 1.2rem;
   right: 2rem;
   opacity: 0.2;
 }
+@media (min-width: 992px) {
+  .secondary-nav .navbar-collapse {
+    top: 0;
+    width: auto;
+    position: relative;
+    background: none;
+    box-shadow: none;
+  }
+  .secondary-nav .navbar-collapse .nav-item  {
+    display: block;
+    border: none;
+  }
+  .secondary-nav .btn {
+    box-shadow: inset 0 -5px 0 #f8f9fa;
+    border-radius: 0;
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+  .secondary-nav .btn:hover,
+  .secondary-nav .btn.active {
+    box-shadow: inset 0 -5px 0 #0047AB;
+    background: none;
+    color: #0047ab;
+  }
+}
+
+
 
 
 
 /* sidebar */
+.sidebar {
+  z-index: 1; /* Behind the navbar */
+  padding: 120px 0 0; /* Height of navbar */
+  overflow: hidden;
+  text-align: center;
+  font-size: .6rem;
+}
+.sidebar i {
+  font-size: 1rem;
+}
+.sidebar .nav-link {
+  font-weight: 500;
+  color: #333;
+  border-left: .3rem solid #fff ;
+  padding: 1rem 0;
+}
+.sidebar .nav-link.active,
+.sidebar .nav-link:hover  {
+  background-color: #fff;
+  font-weight: bold;
+  border-left: .3rem solid #0047AB;
+}
+@media (min-width: 768px) {
   .sidebar {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 100; /* Behind the navbar */
-    padding: 120px 0 0; /* Height of navbar */
-    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
-    font-size: 1rem;
+    font-size: .8rem;
   }
-  
-  .sidebar-sticky {
-    position: relative;
-    top: 0;
-    height: calc(100vh - 48px);
-    padding-top: .5rem;
-    overflow-x: hidden;
-    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-  }
-  
-  @supports ((position: -webkit-sticky) or (position: sticky)) {
-    .sidebar-sticky {
-      position: -webkit-sticky;
-      position: sticky;
-    }
-  }
-  
   .sidebar .nav-link {
-    font-weight: 500;
-    color: #333;
-    border-left: .3rem solid #fff ;
+    padding: .8rem 1rem;
+  }
+}
+@media (min-width: 1280px) {
+  .sidebar {
+    font-size: 1rem;
+    text-align: left;
   }
   
-  .sidebar .nav-link .feather {
-    margin-right: 4px;
-    color: #999;
-  }
-  
-  .sidebar .nav-link.active,
-  .sidebar .nav-link:hover  {
-    background-color: #fff;
-    font-weight: bold;
-    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
-    border-left: .3rem solid #0047AB;
-  }
-  
-  .sidebar .nav-link:hover .feather,
-  .sidebar .nav-link.active .feather {
-    color: inherit;
-  }
-  
-  .sidebar-heading {
-    font-size: .75rem;
-    text-transform: uppercase;
-  }
+}
+
+
   
   /*
    * Content
