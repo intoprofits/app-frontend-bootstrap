@@ -48,9 +48,9 @@
   </header>
   <!-- /header -->
 
-  <div class="container-fluid">
+  <main class="container-fluid">
     <div class="row">
-      <nav class="col-2 bg-light sidebar">
+      <aside class="col-2 bg-light sidebar">
         <div class="sidebar-sticky">
           <ul class="nav flex-column">
             <li class="nav-item">
@@ -79,9 +79,9 @@
             </li>
           </ul>
         </div>
-      </nav>
+      </aside>
   
-      <main role="main" class="col-10 border-left">
+      <section role="main" class="col-10 border-left">
 
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 border-bottom">
           <h3>My Products</h3>
@@ -174,89 +174,92 @@
           </table>
         </div>
 
-        <button class="btn btn-primary" data-toggle="modal" data-target="#addProduct"><i class="fas fa-plus mr-1"></i> Add Product</button>
+        <button class="btn btn-primary mb-5" data-toggle="modal" data-target="#addProduct"><i class="fas fa-plus mr-1"></i> Add Product</button>
+      
 
-        
-      <footer class="d-flex justify-content-center mt-5">
-        <div class="text-center">
-          <img src="../../imgs/logo-black.png" alt="" width="200" class="mb-2">
-          <p>© 2020 Into Profits Limited</p>
-        </div>
-      </footer>
-
-      <!-- Modal Learn More-->
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Learn More</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <img class="img-fluid" src="https://dummyimage.com/960x540/e1e5e6/000.png&text=video">
+        <!-- Modal Learn More-->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Learn More</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img class="img-fluid" src="https://dummyimage.com/960x540/e1e5e6/000.png&text=video">
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Modal Add Product-->
-      <div class="modal fade" id="addProduct" tabindex="-1" role="dialog" aria-labelledby="addProduct" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Add Product</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="mb-3">
-                <label for="asin">Product ASIN</label>
-                <input type="text" class="form-control" id="asin" placeholder="Product ASIN">
+        <!-- Modal Add Product-->
+        <div class="modal fade" id="addProduct" tabindex="-1" role="dialog" aria-labelledby="addProduct" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Product</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
               </div>
-              
-              <div class="mb-3">
-                <label for="sku">Product SKU</label>
-                <input type="text" class="form-control" id="sku" placeholder="Product SKU">
-              </div>
+              <div class="modal-body">
+                <div class="mb-3">
+                  <label for="asin">Product ASIN</label>
+                  <input type="text" class="form-control" id="asin" placeholder="Product ASIN">
+                </div>
+                
+                <div class="mb-3">
+                  <label for="sku">Product SKU</label>
+                  <input type="text" class="form-control" id="sku" placeholder="Product SKU">
+                </div>
 
-              <div class="mb-3">
-                <label for="cost">Product Cost</label>
-                <input type="text" class="form-control" id="cost" placeholder="Product Cost">
-              </div>
-              
-              <div class="mb-3">
-                <label for="shipCost">Shipping Cost</label>
-                <input type="text" class="form-control" id="shipCost" placeholder="Shipping Cost">
-              </div>
+                <div class="mb-3">
+                  <label for="cost">Product Cost</label>
+                  <input type="text" class="form-control" id="cost" placeholder="Product Cost">
+                </div>
+                
+                <div class="mb-3">
+                  <label for="shipCost">Shipping Cost</label>
+                  <input type="text" class="form-control" id="shipCost" placeholder="Shipping Cost">
+                </div>
 
-              <div class="mb-3">
-                <label for="supplier">Supplier</label>
-                <input type="text" class="form-control" id="supplier" placeholder="Supplier">
+                <div class="mb-3">
+                  <label for="supplier">Supplier</label>
+                  <input type="text" class="form-control" id="supplier" placeholder="Supplier">
+                </div>
+                
+                <div class="mb-3">
+                  <label for="description">Description</label>
+                  <input type="text" class="form-control" id="description" placeholder="Description">
+                </div>
               </div>
-              
-              <div class="mb-3">
-                <label for="description">Description</label>
-                <input type="text" class="form-control" id="description" placeholder="Description">
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">Save Product</button>
               </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">Save Product</button>
             </div>
           </div>
         </div>
-      </div>
 
-      </main>
+      </section>
     </div>
-  </div>
+  </main>
+  <!-- /main -->
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+  <footer class="d-flex justify-content-center pt-5 border-top">
+    <div class="text-center">
+      <img src="../../imgs/logo-black.png" alt="" width="200" class="mb-2">
+      <p>© 2020 Into Profits Limited</p>
+    </div>
+  </footer>
+  <!-- /footer -->
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 </body>
 </html>
