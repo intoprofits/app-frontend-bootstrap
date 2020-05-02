@@ -83,25 +83,193 @@
   
       <main role="main" class="col-10 border-left">
 
-        <div class="row pt-3 pb-2">
-          <div class="col-5">
-            <h3 class="border-bottom">P.O. Creator</h3>
-          </div>
-          <div class="col-7">
-            <h3 class="border-bottom">Recent P.O's</h3>
-          </div>
-        </div>
+        <div class="row mb-5">
+          <div class="col-md-5 col-xl-4">
+            <div class="d-flex pt-3 pb-2 border-bottom mb-4">
+              <h3>P.O. Creator</h3>
+            </div>
 
-        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center  border-bottom">
-          <h3>P.O. Creator</h3>
-          <div class="btn-toolbar mb-2 mb-md-0">
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#exampleModal">Learn <i class="fas fa-play-circle ml-1"></i></button>
+            <div class="mb-3">
+              <label for="language">Select Language</label>
+              <select class="custom-select d-block w-100" id="language" required="">
+                <option value="">Choose...</option>
+                <option>English</option>
+                <option>English &amp; Chinese</option>
+              </select>
+              <div class="invalid-feedback">Please select a language.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="supplier">Select Supplier</label>
+              <select class="custom-select d-block w-100" id="supplier" required="">
+                <option value="">Choose...</option>
+                <option value="Suplier One">Suplier One</option>
+                <option value="Suplier Two">Suplier Two</option>
+                <option value="Suplier Three">Suplier Three</option>
+              </select>
+              <div class="invalid-feedback">Please select a supplier.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="shippingSupplier">Select Shipping Address</label>
+              <select class="custom-select d-block w-100" id="shippingSupplier" required="">
+                <option value="">Choose...</option>
+                <option value="Sample Address 1">Sample Address 1</option>
+                <option value="Sample Address 2">Sample Address 2</option>
+                <option value="Sample Address 3">Sample Address 3</option>
+              </select>
+              <div class="invalid-feedback">Please select a shipping supplier.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="shipMethod">Shipping Method</label>
+              <select class="custom-select d-block w-100" id="shipMethod" required="">
+                <option value="">Choose...</option>
+                <option value="#">Land</option>
+                <option value="#">Sea</option>
+                <option value="#">Air</option>
+              </select>
+              <div class="invalid-feedback">Please select a shipping method.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="product">Product</label>
+              <select class="custom-select d-block w-100" id="product" required="">
+                <option value="">Choose...</option>
+                <option value="Product 1">Product 1</option>
+                <option value="Product 2">Product 2</option>
+                <option value="Product 3">Product 3</option>
+              </select>
+              <div class="invalid-feedback">Please select a valid product.</div>
+            </div>
+    
+            <div class="mb-3">
+              <label for="quantity">Order Quantity</label>
+              <input type="number" class="form-control" value="1" min="1" name="quantity" id="quantity">
+            </div>
+
+            <div class="mb-3">
+              <label for="unitCost">Unit Cost</label>
+              <input type="text" class="form-control" id="unitCost" placeholder="Unit Cost">
+            </div>
+            
+            <div class="mb-3">
+              <label for="discount">Discount Request</label>
+              <input type="text" class="form-control" id="discount" placeholder="Discount Request">
+            </div>
+
+            <div class="mb-4">
+              <label for="exportTerm">Export Term</label>
+              <select class="custom-select d-block w-100" id="exportTerm" required="">
+                <option value="">Choose...</option>
+                <option value="FOB">FOB</option>
+                <option value="EXW">EXW</option>
+              </select>
+              <div class="invalid-feedback">Please select a valid export term.</div>
+            </div>
+
+            <a name="" id="" class="btn btn-primary" href="#" role="button">Review</a>
+
+
+          </div>
+          <div class="col-md-7 col-xl-8">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 border-bottom mb-5">
+              <h3>Recent P.O's</h3>
+              <div class="btn-toolbar mb-2 mb-md-0">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#exampleModal">Learn <i class="fas fa-play-circle ml-1"></i></button>
+              </div>
+            </div>
+
+            <div class="row">
+
+              <div class="col-lg-6 col-xl-4">
+                <div class="card mb-4 rounded-0">
+                  <div style="height: 150px; width: 100%; background-image: url(https://dummyimage.com/600x350/e1e5e6/000.png); background-size: cover; background-position: center;"></div>
+                  <div class="card-body">
+                    <div class="card-text po-info mb-3">
+                      <p class="mb-0"><b>Supplier:</b> Batman LLC</p>
+                      <p class="mb-0"><b>Product:</b> Cup</p>
+                      <p class="mb-0"><b>Quantity:</b> 100</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      </div>
+                      <small class="text-muted">9 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-xl-4">
+                <div class="card mb-4 rounded-0">
+                  <div style="height: 150px; width: 100%; background-image: url(https://dummyimage.com/600x350/e1e5e6/000.png); background-size: cover; background-position: center;"></div>
+                  <div class="card-body">
+                    <div class="card-text po-info mb-3">
+                      <p class="mb-0"><b>Supplier:</b> Batman LLC</p>
+                      <p class="mb-0"><b>Product:</b> Cup</p>
+                      <p class="mb-0"><b>Quantity:</b> 100</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      </div>
+                      <small class="text-muted">9 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-xl-4">
+                <div class="card mb-4 rounded-0">
+                  <div style="height: 150px; width: 100%; background-image: url(https://dummyimage.com/600x350/e1e5e6/000.png); background-size: cover; background-position: center;"></div>
+                  <div class="card-body">
+                    <div class="card-text po-info mb-3">
+                      <p class="mb-0"><b>Supplier:</b> Batman LLC</p>
+                      <p class="mb-0"><b>Product:</b> Cup</p>
+                      <p class="mb-0"><b>Quantity:</b> 100</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      </div>
+                      <small class="text-muted">9 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-xl-4">
+                <div class="card mb-4 rounded-0">
+                  <div style="height: 150px; width: 100%; background-image: url(https://dummyimage.com/600x350/e1e5e6/000.png); background-size: cover; background-position: center;"></div>
+                  <div class="card-body">
+                    <div class="card-text po-info mb-3">
+                      <p class="mb-0"><b>Supplier:</b> Batman LLC</p>
+                      <p class="mb-0"><b>Product:</b> Cup</p>
+                      <p class="mb-0"><b>Quantity:</b> 100</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      </div>
+                      <small class="text-muted">9 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
           </div>
         </div>
 
         
-        <div class="d-flex justify-content-center">
+        <div class="row d-flex justify-content-center">
           <div class="text-center">
             <img src="../../imgs/logo-black.png" alt="" width="200" class="mb-2">
             <p>© 2020 Into Profits Limited</p>
