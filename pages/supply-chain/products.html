@@ -174,7 +174,7 @@
           </table>
         </div>
 
-        <a class="btn btn-primary" href="#"><i class="fas fa-plus mr-1"></i> Add Product</a>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#addProduct"><i class="fas fa-plus mr-1"></i> Add Product</button>
 
         
       <footer class="d-flex justify-content-center mt-5">
@@ -184,9 +184,9 @@
         </div>
       </footer>
 
-      <!-- Modal -->
+      <!-- Modal Learn More-->
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">Learn More</h5>
@@ -196,6 +196,55 @@
             </div>
             <div class="modal-body">
               <img class="img-fluid" src="https://dummyimage.com/960x540/e1e5e6/000.png&text=video">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Add Product-->
+      <div class="modal fade" id="addProduct" tabindex="-1" role="dialog" aria-labelledby="addProduct" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Add Product</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="asin">Product ASIN</label>
+                <input type="text" class="form-control" id="asin" placeholder="Product ASIN">
+              </div>
+              
+              <div class="mb-3">
+                <label for="sku">Product SKU</label>
+                <input type="text" class="form-control" id="sku" placeholder="Product SKU">
+              </div>
+
+              <div class="mb-3">
+                <label for="cost">Product Cost</label>
+                <input type="text" class="form-control" id="cost" placeholder="Product Cost">
+              </div>
+              
+              <div class="mb-3">
+                <label for="shipCost">Shipping Cost</label>
+                <input type="text" class="form-control" id="shipCost" placeholder="Shipping Cost">
+              </div>
+
+              <div class="mb-3">
+                <label for="supplier">Supplier</label>
+                <input type="text" class="form-control" id="supplier" placeholder="Supplier">
+              </div>
+              
+              <div class="mb-3">
+                <label for="description">Description</label>
+                <input type="text" class="form-control" id="description" placeholder="Description">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">Save Product</button>
             </div>
           </div>
         </div>

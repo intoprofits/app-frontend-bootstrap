@@ -168,7 +168,7 @@
               <div class="invalid-feedback">Please select a valid export term.</div>
             </div>
 
-            <a name="" id="" class="btn btn-primary" href="#" role="button">Review</a>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#addPO"><i class="fas fa-edit mr-2"></i> Review P.O.</button>
 
 
           </div>
@@ -177,11 +177,11 @@
               <h3>Recent P.O's</h3>
               <div class="btn-toolbar mb-2 mb-md-0">
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#exampleModal">Learn <i class="fas fa-play-circle ml-1"></i></button>
+                <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#learnMore">Learn <i class="fas fa-play-circle ml-1"></i></button>
               </div>
             </div>
 
-            <div class="row">
+            <div class="row mb-3">
 
               <div class="col-lg-6 col-xl-4">
                 <div class="card mb-4 rounded-0">
@@ -194,8 +194,8 @@
                     </div>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#addPO">View</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#editPO">Edit</button>
                       </div>
                       <small class="text-muted">9 mins</small>
                     </div>
@@ -214,8 +214,8 @@
                     </div>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#addPO">View</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#editPO">Edit</button>
                       </div>
                       <small class="text-muted">9 mins</small>
                     </div>
@@ -234,8 +234,8 @@
                     </div>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#addPO">View</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#editPO">Edit</button>
                       </div>
                       <small class="text-muted">9 mins</small>
                     </div>
@@ -243,26 +243,11 @@
                 </div>
               </div>
 
-              <div class="col-lg-6 col-xl-4">
-                <div class="card mb-4 rounded-0">
-                  <div style="height: 150px; width: 100%; background-image: url(https://dummyimage.com/600x350/e1e5e6/000.png); background-size: cover; background-position: center;"></div>
-                  <div class="card-body">
-                    <div class="card-text po-info mb-3">
-                      <p class="mb-0"><b>Supplier:</b> Batman LLC</p>
-                      <p class="mb-0"><b>Product:</b> Cup</p>
-                      <p class="mb-0"><b>Quantity:</b> 100</p>
-                    </div>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                      </div>
-                      <small class="text-muted">9 mins</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            </div>
 
+            <div class="btn-toolbar">
+              <button type="button" class="btn btn-primary mb-3 mr-2" data-toggle="modal" data-target="#editPO"><i class="fas fa-file mr-2"></i>Create Custom P.O.</button>
+              <button type="button" class="btn btn-primary mb-3 mr-2" data-toggle="modal" data-target="#savedTemplates"><i class="fas fa-save mr-2"></i>Saved Templates</button>
             </div>
 
           </div>
@@ -276,18 +261,121 @@
           </div>
         </footer>
 
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
+        <!-- Modal Learn More-->
+        <div class="modal fade" id="learnMore" tabindex="-1" role="dialog" aria-labelledby="learnMore" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Learn More</h5>
+                <h5 class="modal-title" id="learnMore">Learn More</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
               <div class="modal-body">
                 <img class="img-fluid" src="https://dummyimage.com/960x540/e1e5e6/000.png&text=video">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Add PO-->
+        <div class="modal fade" id="addPO" tabindex="-1" role="dialog" aria-labelledby="addPO" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="addPO">Review PO</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img class="img-fluid" src="https://dummyimage.com/960x540/e1e5e6/000.png&text=po">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">Save and Send</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">Save as Template</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Edit PO-->
+        <div class="modal fade" id="editPO" tabindex="-1" role="dialog" aria-labelledby="editPO" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="editPO">Edit P.O.</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img class="img-fluid" src="https://dummyimage.com/960x540/e1e5e6/000.png&text=po">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">Save and Send</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">Save as Template</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Saved Templates-->
+        <div class="modal fade" id="savedTemplates" tabindex="-1" role="dialog" aria-labelledby="savedTemplates" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="savedTemplates">Saved Templates</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-lg-6 col-xl-4">
+                    <div class="card mb-4 rounded-0">
+                      <div style="height: 150px; width: 100%; background-image: url(https://dummyimage.com/600x350/e1e5e6/000.png); background-size: cover; background-position: center;"></div>
+                      <div class="card-body">
+                        <div class="card-text po-info mb-3">
+                          <p class="mb-0"><b>Supplier:</b> Batman LLC</p>
+                          <p class="mb-0"><b>Product:</b> Cup</p>
+                          <p class="mb-0"><b>Quantity:</b> 100</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#addPO">View</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#editPO">Edit</button>
+                          </div>
+                          <small class="text-muted">9 mins</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    
+                  <div class="col-lg-6 col-xl-4">
+                    <div class="card mb-4 rounded-0">
+                      <div style="height: 150px; width: 100%; background-image: url(https://dummyimage.com/600x350/e1e5e6/000.png); background-size: cover; background-position: center;"></div>
+                      <div class="card-body">
+                        <div class="card-text po-info mb-3">
+                          <p class="mb-0"><b>Supplier:</b> Batman LLC</p>
+                          <p class="mb-0"><b>Product:</b> Cup</p>
+                          <p class="mb-0"><b>Quantity:</b> 100</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#addPO">View</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#editPO">Edit</button>
+                          </div>
+                          <small class="text-muted">9 mins</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">Close</button>
               </div>
             </div>
           </div>
