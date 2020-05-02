@@ -156,6 +156,7 @@ body.signin {
   overflow: hidden;
   text-align: center;
   font-size: .6rem;
+  min-height: 100vh;
 }
 .sidebar i {
   font-size: 1rem;
@@ -213,4 +214,9 @@ body.signin {
   .table-responsive thead{
     background-color: #E3E8EB;
     border: 0;
+  }
+
+  /* input types */
+  .custom-select, .form-control {
+    border-radius: 0;
   }
