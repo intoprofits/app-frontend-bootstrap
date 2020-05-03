@@ -95,6 +95,17 @@ body.signin {
   height: 64px;
   z-index: 2;
 }
+.secondary-nav:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 180px;
+  background: url(./imgs/logo-black.png) no-repeat center;
+  background-size: contain;
+  height: 20px;
+  right: 1rem;
+  opacity: .3;
+}
 .secondary-nav .navbar-collapse {
   background: #fff;
   position: absolute;
