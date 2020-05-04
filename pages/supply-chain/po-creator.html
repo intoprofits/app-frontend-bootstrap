@@ -75,7 +75,7 @@
             </div>
 
             <div class="mb-3">
-              <label for="language">Select Language</label>
+              <label for="language">Language</label>
               <select class="custom-select d-block w-100" id="language" required="">
                 <option value="">Choose...</option>
                 <option>English</option>
@@ -85,7 +85,7 @@
             </div>
 
             <div class="mb-3">
-              <label for="supplier">Select Supplier</label>
+              <label for="supplier">Supplier</label>
               <select class="custom-select d-block w-100" id="supplier" required="">
                 <option value="">Choose...</option>
                 <option value="Suplier One">Suplier One</option>
@@ -96,7 +96,7 @@
             </div>
 
             <div class="mb-3">
-              <label for="shippingSupplier">Select Shipping Address</label>
+              <label for="shippingSupplier">Shipping Address</label>
               <select class="custom-select d-block w-100" id="shippingSupplier" required="">
                 <option value="">Choose...</option>
                 <option value="Sample Address 1">Sample Address 1</option>
@@ -115,6 +115,16 @@
                 <option value="#">Air</option>
               </select>
               <div class="invalid-feedback">Please select a shipping method.</div>
+            </div>
+
+            <div class="mb-4">
+              <label for="exportTerm">Export Term</label>
+              <select class="custom-select d-block w-100" id="exportTerm" required="">
+                <option value="">Choose...</option>
+                <option value="FOB">FOB</option>
+                <option value="EXW">EXW</option>
+              </select>
+              <div class="invalid-feedback">Please select a valid export term.</div>
             </div>
 
             <div class="mb-3">
@@ -143,15 +153,7 @@
               <input type="text" class="form-control" id="discount" placeholder="Discount Request">
             </div>
 
-            <div class="mb-4">
-              <label for="exportTerm">Export Term</label>
-              <select class="custom-select d-block w-100" id="exportTerm" required="">
-                <option value="">Choose...</option>
-                <option value="FOB">FOB</option>
-                <option value="EXW">EXW</option>
-              </select>
-              <div class="invalid-feedback">Please select a valid export term.</div>
-            </div>
+            
 
             <button class="btn btn-primary  mb-5" data-toggle="modal" data-target="#addPO"><i class="fas fa-edit mr-2"></i> Review P.O.</button>
 
@@ -159,7 +161,7 @@
           </div>
           <div class="col-md-7 col-xl-8">
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 border-bottom mb-5">
-              <h3>Recent P.O's</h3>
+              <h3>Recent P.O.'s</h3>
               <div class="btn-toolbar mb-2 mb-md-0 d-none d-md-inline">
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#learnMore">Learn <i class="fas fa-play-circle ml-1"></i></button>
