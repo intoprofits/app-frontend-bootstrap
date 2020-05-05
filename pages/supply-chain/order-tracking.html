@@ -83,8 +83,8 @@
             <thead>
               <tr>
                 <th>P.O. #</th>
-                <th>P.I. #</th>
-                <th>S.I. #</th>
+                <th style="width: 180px; min-width: 130px">P.I. #</th>
+                <th style="width: 180px; min-width: 130px">S.I. #</th>
                 <th>Supplier</th>
                 <th># Units</th>
                 <th>SKU</th>
@@ -97,9 +97,71 @@
             </thead>
             <tbody>
               <tr>
-                <td>P10001</td>
-                <td>TM CUSJTJT</td>
-                <td>ASDFAF</td>
+                <td>P001</td>
+                <td >
+                  <input class="form-control form-control-sm mb-1 d-inline" type="text" placeholder="P.I Code">
+                  <div class="form-group inputDrop">
+                    <label class="sr-only" for="inputFile">Upload P.I.</label>
+                    <input type="file" class="form-control-file" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Drop P.I here">
+                  </div>
+                </td>
+                <td>
+                  <input class="form-control form-control-sm mb-1 d-inline" type="text" placeholder="S.I Code">
+                  <div class="form-group inputDrop">
+                    <label class="sr-only" for="inputFile">Upload S.I.</label>
+                    <input type="file" class="form-control-file" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Drop S.I here">
+                  </div>
+                </td>
+                <td>QWERRRR</td>
+                <td>621</td>
+                <td>ASDFFFF</td>
+                <td>ASDFFFASDF</td>
+                <td>$123132</td>
+                <td>$24234234</td>
+                <td>DATE</td>
+                <td>DATE</td>
+              </tr>
+              <tr>
+                <td>P002</td>
+                <td >
+                  <input class="form-control form-control-sm mb-1 d-inline" type="text" placeholder="P.I Code">
+                  <div class="form-group inputDrop">
+                    <label class="sr-only" for="inputFile">Upload P.I.</label>
+                    <input type="file" class="form-control-file" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Drop P.I here">
+                  </div>
+                </td>
+                <td>
+                  <input class="form-control form-control-sm mb-1 d-inline" type="text" placeholder="S.I Code">
+                  <div class="form-group inputDrop">
+                    <label class="sr-only" for="inputFile">Upload S.I.</label>
+                    <input type="file" class="form-control-file" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Drop S.I here">
+                  </div>
+                </td>
+                <td>QWERRRR</td>
+                <td>621</td>
+                <td>ASDFFFF</td>
+                <td>ASDFFFASDF</td>
+                <td>$123132</td>
+                <td>$24234234</td>
+                <td>DATE</td>
+                <td>DATE</td>
+              </tr>
+              <tr>
+                <td>P003</td>
+                <td >
+                  <input class="form-control form-control-sm mb-1 d-inline" type="text" placeholder="P.I Code">
+                  <div class="form-group inputDrop">
+                    <label class="sr-only" for="inputFile">Upload P.I.</label>
+                    <input type="file" class="form-control-file" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Drop P.I here">
+                  </div>
+                </td>
+                <td>
+                  <input class="form-control form-control-sm mb-1 d-inline" type="text" placeholder="S.I Code">
+                  <div class="form-group inputDrop">
+                    <label class="sr-only" for="inputFile">Upload S.I.</label>
+                    <input type="file" class="form-control-file" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Drop S.I here">
+                  </div>
+                </td>
                 <td>QWERRRR</td>
                 <td>621</td>
                 <td>ASDFFFF</td>
@@ -146,6 +208,21 @@
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script>
+    function readUrl(input) {
+  
+    if (input.files && input.files[0]) {
+      let reader = new FileReader();
+      reader.onload = (e) => {
+        let imgData = e.target.result;
+        let imgName = input.files[0].name;
+        input.setAttribute("data-title", imgName);
+        console.log(e.target.result);
+      }
+      reader.readAsDataURL(input.files[0]);
+    }
 
+  }
+  </script>
 </body>
 </html>

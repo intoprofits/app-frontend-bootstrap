@@ -237,3 +237,33 @@ body.signin {
   .custom-file-label {
     border-radius: 0;
   }
+
+  /* drag n drop */
+.inputDrop .form-control-file {
+    position: relative;
+    min-height: 2.1rem;
+    outline: none;
+    visibility: hidden;
+    cursor: pointer;
+}
+.inputDrop .form-control-file:before {
+  content: attr(data-title);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  line-height: 1rem;
+  font-size: .8rem;
+  padding: .4rem;
+  opacity: 1;
+  visibility: visible;
+  text-align: center;
+  border: 2px dashed #dee2e6;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
+  background: #fff;
+}
+.inputDrop .form-control-file:hover:before {
+  background: #E3E8EB;
+  border-color: #ccc;
+}
