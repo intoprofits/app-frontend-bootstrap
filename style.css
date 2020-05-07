@@ -318,8 +318,9 @@ main section.full {
 /* Order Tracking - steps */
 .steps {
   position: relative;
-  width: 98%;
+  width: 96%;
   min-width: 300px;
+  height: 1rem;
 }
 .step {
   width: 16px;
