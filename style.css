@@ -252,29 +252,31 @@ main section.full {
 
   /* Table */
 .table-responsive {
-  font-size: 13px;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .table td, .table th {
-  padding: .75rem .2rem;
+  padding: .75rem .4rem;
 }
 .table-responsive thead{
   background-color: #E3E8EB;
   border: 0;
 }
+.table-responsive thead th {
+  vertical-align: middle;
+}
+.table-responsive  td > .btn,
+.table-responsive .form-control {
+  font-size: 1em;
+}
+.table-responsive.inventory-analysis .hidden-fields {
+  display: none;
+}
+.table-responsive.inventory-analysis .hidden-fields.active {
+  display: table-cell;
+}
 
-.table-responsive.with-sort-icon thead th {
-  vertical-align: middle;
-}
-.table-responsive.with-sort-icon thead th p:after {
-  vertical-align: middle;
-  content: "\f0dc";
-  font-family: "Font Awesome 5 Free";
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  line-height: 1;
-}
+
 
   /* input types */
   .custom-select,
@@ -283,10 +285,10 @@ main section.full {
     border-radius: 0;
   }
 
-  /* drag n drop */
+  /* Order Tracking - drag n drop */
 .inputDrop .form-control-file {
     position: relative;
-    min-height: 2.1rem;
+    min-height: 2rem;
     outline: none;
     visibility: hidden;
     cursor: pointer;
@@ -299,7 +301,7 @@ main section.full {
   width: 100%;
   line-height: 1rem;
   font-size: .8rem;
-  padding: .4rem;
+  padding: .2rem;
   opacity: 1;
   visibility: visible;
   text-align: center;
@@ -311,4 +313,34 @@ main section.full {
 .inputDrop .form-control-file:hover:before {
   background: #E3E8EB;
   border-color: #ccc;
+}
+
+/* Order Tracking - steps */
+.steps {
+  position: relative;
+  width: 98%;
+  min-width: 300px;
+}
+.step {
+  width: 16px;
+  height: 16px;
+  background: #dfe1e2;
+  position: absolute;
+  z-index: 1;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.step.s1 { left: -1%; }
+.step.s2 { left: 18%; }
+.step.s3 { left: 38%; }
+.step.s4 { left: 58%; }
+.step.s5 { left: 78%; }
+.step.s6 { left: 98%; }
+.step.active { background: #0f9a2f; }
+
+.steps .progress {
+  height: 8px;
+  position: absolute;
+  width: 100%;
+  top: 4px;
 }

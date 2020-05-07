@@ -74,45 +74,37 @@
             <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#exampleModal">Learn <i class="fas fa-play-circle ml-1"></i></button>
           </div>
         </div>
-
-        <div class="btn-toolbar mt-3">
-          <button type="button" class="btn btn-primary mb-3 mr-2"><i class="fas fa-tags mr-2"></i>Sort By Brand</button>
-          <button type="button" class="btn btn-primary mb-3 mr-2"><i class="fas fa-calendar-alt mr-2"></i>Sort By Days of Stock</button>
-          <button type="button" class="btn btn-primary mb-3 "><i class="fas fa-filter mr-2"></i>Custom Filter</button>
-        </div>
         
-        <div class="table-responsive mb-5">
+        <div class="table-responsive mt-3 mb-5">
           <table class="table">
             <thead>
               <tr>
-                <th>P.O. #<i class="fas fa-sort"></i></th>
-                <th style="width: 180px; min-width: 130px">P.I. # <i class="fas fa-sort"></i></th>
-                <th style="width: 180px; min-width: 130px">S.I. # <i class="fas fa-sort"></i></th>
-                <th>Supplier <i class="fas fa-sort"></i></th>
-                <th># Units <i class="fas fa-sort"></i></th>
-                <th>SKU <i class="fas fa-sort"></i></th>
-                <th>Unit Cost <i class="fas fa-sort"></i></th>
-                <th>Invoice Amount <i class="fas fa-sort"></i></th>
-                <th>30% * Date <i class="fas fa-sort"></i></th>
-                <th>70% * Date <i class="fas fa-sort"></i></th>
-                <th>View More <i class="fas fa-sort"></i></th>
+                <th class="text-nowrap">P.O. #<i class="fas fa-sort"></i></th>
+                <th class="text-nowrap" style="width: 200px; min-width: 120px;">P.I. # <i class="fas fa-sort"></i></th>
+                <th class="text-nowrap" style="width: 200px; min-width: 120px;">S.I. # <i class="fas fa-sort"></i></th>
+                <th class="text-nowrap">Supplier <i class="fas fa-sort"></i></th>
+                <th class="text-nowrap"># Units <i class="fas fa-sort"></i></th>
+                <th class="text-nowrap">SKU <i class="fas fa-sort"></i></th>
+                <th><span class="text-nowrap">Unit</span> <span class="text-nowrap">Cost <i class="fas fa-sort"></i></span></th>
+                <th><span class="text-nowrap">Invoice</span> <span class="text-nowrap">Amount <i class="fas fa-sort"></i></span></th>
+                <th class="text-nowrap">Progress</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>P001</td>
                 <td >
-                  <input class="form-control form-control-sm mb-1 d-inline" type="text" placeholder="P.I Cost">
-                  <div class="form-group inputDrop">
+                  <input class="form-control form-control-sm mb-1 d-inline" type="text" placeholder="P.I. Cost">
+                  <div class="form-group inputDrop m-0">
                     <label class="sr-only" for="inputFile">Upload P.I.</label>
-                    <input type="file" class="form-control-file" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Drop P.I here">
+                    <input type="file" class="form-control-file" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Drop P.I. here">
                   </div>
                 </td>
                 <td>
-                  <input class="form-control form-control-sm mb-1 d-inline" type="text" placeholder="S.I Code">
-                  <div class="form-group inputDrop">
+                  <input class="form-control form-control-sm mb-1 d-inline" type="text" placeholder="S.I. Cost">
+                  <div class="form-group inputDrop m-0">
                     <label class="sr-only" for="inputFile">Upload S.I.</label>
-                    <input type="file" class="form-control-file" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Drop S.I here">
+                    <input type="file" class="form-control-file" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Drop S.I. here">
                   </div>
                 </td>
                 <td>QWERRRR</td>
@@ -120,24 +112,34 @@
                 <td>ASDFFFF</td>
                 <td>$123132</td>
                 <td>$24234234</td>
-                <td>DATE</td>
-                <td>DATE</td>
-                <td><button type="button" class="btn btn-sm btn-outline-secondary">View More</button></td>
+                <td>
+                  <div class="steps">
+                    <span class="step s1 active" data-steps="1" data-toggle="tooltip" data-placement="bottom" title="Order Placed"></span>
+                    <span class="step s2 active" data-steps="2" data-toggle="tooltip" data-placement="bottom" title="30% Deposit Paid"></span>
+                    <span class="step s3" data-steps="3" data-toggle="tooltip" data-placement="bottom" title="Product Completed - 70% Product Paid"></span>
+                    <span class="step s4" data-steps="4" data-toggle="tooltip" data-placement="bottom" title="Shipping Arraged"></span>
+                    <span class="step s5" data-steps="5" data-toggle="tooltip" data-placement="bottom" title="Step 5"></span>
+                    <span class="step s6" data-steps="6" data-toggle="tooltip" data-placement="bottom" title="Step 6"></span>
+                    <div class="progress">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 20%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </td>
               </tr>
               <tr>
                 <td>P002</td>
                 <td >
-                  <input class="form-control form-control-sm mb-1 d-inline" type="text" placeholder="P.I Cost">
-                  <div class="form-group inputDrop">
+                  <input class="form-control form-control-sm mb-1 d-inline" type="text" placeholder="P.I. Cost">
+                  <div class="form-group inputDrop m-0">
                     <label class="sr-only" for="inputFile">Upload P.I.</label>
-                    <input type="file" class="form-control-file" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Drop P.I here">
+                    <input type="file" class="form-control-file" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Drop P.I. here">
                   </div>
                 </td>
                 <td>
-                  <input class="form-control form-control-sm mb-1 d-inline" type="text" placeholder="S.I Code">
-                  <div class="form-group inputDrop">
+                  <input class="form-control form-control-sm mb-1 d-inline" type="text" placeholder="S.I. Cost">
+                  <div class="form-group inputDrop m-0">
                     <label class="sr-only" for="inputFile">Upload S.I.</label>
-                    <input type="file" class="form-control-file" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Drop S.I here">
+                    <input type="file" class="form-control-file" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Drop S.I. here">
                   </div>
                 </td>
                 <td>QWERRRR</td>
@@ -145,24 +147,34 @@
                 <td>ASDFFFF</td>
                 <td>$123132</td>
                 <td>$24234234</td>
-                <td>DATE</td>
-                <td>DATE</td>
-                <td><button type="button" class="btn btn-sm btn-outline-secondary">View More</button></td>
+                <td>
+                  <div class="steps">
+                    <span class="step s1 active" data-steps="1" data-toggle="tooltip" data-placement="bottom" title="Order Placed"></span>
+                    <span class="step s2 active" data-steps="2" data-toggle="tooltip" data-placement="bottom" title="30% Deposit Paid"></span>
+                    <span class="step s3" data-steps="3" data-toggle="tooltip" data-placement="bottom" title="Product Completed - 70% Product Paid"></span>
+                    <span class="step s4" data-steps="4" data-toggle="tooltip" data-placement="bottom" title="Shipping Arraged"></span>
+                    <span class="step s5" data-steps="5" data-toggle="tooltip" data-placement="bottom" title="Step 5"></span>
+                    <span class="step s6" data-steps="6" data-toggle="tooltip" data-placement="bottom" title="Step 6"></span>
+                    <div class="progress">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 20%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </td>
               </tr>
               <tr>
                 <td>P003</td>
                 <td >
-                  <input class="form-control form-control-sm mb-1 d-inline" type="text" placeholder="P.I Cost">
-                  <div class="form-group inputDrop">
+                  <input class="form-control form-control-sm mb-1 d-inline" type="text" placeholder="P.I. Cost">
+                  <div class="form-group inputDrop m-0">
                     <label class="sr-only" for="inputFile">Upload P.I.</label>
-                    <input type="file" class="form-control-file" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Drop P.I here">
+                    <input type="file" class="form-control-file" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Drop P.I. here">
                   </div>
                 </td>
                 <td>
-                  <input class="form-control form-control-sm mb-1 d-inline" type="text" placeholder="S.I Code">
-                  <div class="form-group inputDrop">
+                  <input class="form-control form-control-sm mb-1 d-inline" type="text" placeholder="S.I. Cost">
+                  <div class="form-group inputDrop m-0">
                     <label class="sr-only" for="inputFile">Upload S.I.</label>
-                    <input type="file" class="form-control-file" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Drop S.I here">
+                    <input type="file" class="form-control-file" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Drop S.I. here">
                   </div>
                 </td>
                 <td>QWERRRR</td>
@@ -170,24 +182,34 @@
                 <td>ASDFFFF</td>
                 <td>$123132</td>
                 <td>$24234234</td>
-                <td>DATE</td>
-                <td>DATE</td>
-                <td><button type="button" class="btn btn-sm btn-outline-secondary">View More</button></td>
+                <td>
+                  <div class="steps">
+                    <span class="step s1 active" data-steps="1" data-toggle="tooltip" data-placement="bottom" title="Order Placed"></span>
+                    <span class="step s2 active" data-steps="2" data-toggle="tooltip" data-placement="bottom" title="30% Deposit Paid"></span>
+                    <span class="step s3 active" data-steps="3" data-toggle="tooltip" data-placement="bottom" title="Product Completed - 70% Product Paid"></span>
+                    <span class="step s4" data-steps="4" data-toggle="tooltip" data-placement="bottom" title="Shipping Arraged"></span>
+                    <span class="step s5" data-steps="5" data-toggle="tooltip" data-placement="bottom" title="Step 5"></span>
+                    <span class="step s6" data-steps="6" data-toggle="tooltip" data-placement="bottom" title="Step 6"></span>
+                    <div class="progress">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 40%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </td>
               </tr>
               <tr>
                 <td>P004</td>
                 <td >
-                  <input class="form-control form-control-sm mb-1 d-inline" type="text" placeholder="P.I Cost">
-                  <div class="form-group inputDrop">
+                  <input class="form-control form-control-sm mb-1 d-inline" type="text" placeholder="P.I. Cost">
+                  <div class="form-group inputDrop m-0">
                     <label class="sr-only" for="inputFile">Upload P.I.</label>
-                    <input type="file" class="form-control-file" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Drop P.I here">
+                    <input type="file" class="form-control-file" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Drop P.I. here">
                   </div>
                 </td>
                 <td>
-                  <input class="form-control form-control-sm mb-1 d-inline" type="text" placeholder="S.I Code">
-                  <div class="form-group inputDrop">
+                  <input class="form-control form-control-sm mb-1 d-inline" type="text" placeholder="S.I. Cost">
+                  <div class="form-group inputDrop m-0">
                     <label class="sr-only" for="inputFile">Upload S.I.</label>
-                    <input type="file" class="form-control-file" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Drop S.I here">
+                    <input type="file" class="form-control-file" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Drop S.I. here">
                   </div>
                 </td>
                 <td>QWERRRR</td>
@@ -195,9 +217,19 @@
                 <td>ASDFFFF</td>
                 <td>$123132</td>
                 <td>$24234234</td>
-                <td>DATE</td>
-                <td>DATE</td>
-                <td><button type="button" class="btn btn-sm btn-outline-secondary">View More</button></td>
+                <td>
+                  <div class="steps">
+                    <span class="step s1 active" data-steps="1" data-toggle="tooltip" data-placement="bottom" title="Order Placed"></span>
+                    <span class="step s2 " data-steps="2" data-toggle="tooltip" data-placement="bottom" title="30% Deposit Paid"></span>
+                    <span class="step s3" data-steps="3" data-toggle="tooltip" data-placement="bottom" title="Product Completed - 70% Product Paid"></span>
+                    <span class="step s4" data-steps="4" data-toggle="tooltip" data-placement="bottom" title="Shipping Arraged"></span>
+                    <span class="step s5" data-steps="5" data-toggle="tooltip" data-placement="bottom" title="Step 5"></span>
+                    <span class="step s6" data-steps="6" data-toggle="tooltip" data-placement="bottom" title="Step 6"></span>
+                    <div class="progress">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 0" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </td>
               </tr>
             </tbody>
           </table>
