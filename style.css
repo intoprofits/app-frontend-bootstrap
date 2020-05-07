@@ -106,6 +106,10 @@ body.signin {
   right: 1rem;
   opacity: .3;
 }
+.secondary-nav .navbar-toggler {
+  position: absolute;
+  left: 2rem;
+}
 .secondary-nav .navbar-collapse {
   background: #fff;
   position: absolute;
@@ -162,6 +166,15 @@ body.signin {
 
 
 /* sidebar */
+button.sidebar-toggle {
+  left: 0;
+  position: absolute;
+  border: 0;
+  background: none;
+  padding: .5rem;
+  width: 2rem;
+  z-index: 2;
+}
 .sidebar {
   z-index: 1; /* Behind the navbar */
   padding: 120px 0 0; /* Height of navbar */
@@ -219,17 +232,49 @@ body.signin {
       padding-top: 118px; /* Space for fixed navbar */
     }
   }
-  
+  @media (min-width: 768px) {
+    .recent-po {
+      border-left: 1px solid #dee2e6;
+    }
+  }
 
-  
+main aside.hide {
+  display: none;
+}
+
+main section.full {
+  width: 100%;
+  max-width: 100%;
+  flex: 100%;
+  -ms-flex: 100%;
+}
 
 
   /* Table */
+.table-responsive {
+  font-size: 13px;
+}
+.table td, .table th {
+  padding: .75rem .2rem;
+}
+.table-responsive thead{
+  background-color: #E3E8EB;
+  border: 0;
+}
 
-  .table-responsive thead{
-    background-color: #E3E8EB;
-    border: 0;
-  }
+.table-responsive.with-sort-icon thead th {
+  vertical-align: middle;
+}
+.table-responsive.with-sort-icon thead th p:after {
+  vertical-align: middle;
+  content: "\f0dc";
+  font-family: "Font Awesome 5 Free";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
 
   /* input types */
   .custom-select,

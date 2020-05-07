@@ -31,6 +31,9 @@
     <!-- /primary nav -->
 
     <nav class="navbar secondary-nav fixed-top bg-light border-bottom p-0 navbar-expand-lg">
+      <button class="sidebar-toggle" type="button">
+        <i class="fas fa-chevron-left"></i>
+      </button>
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#secondaryNav" aria-controls="secondaryNav" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-bars"></i>
       </button>
@@ -50,7 +53,7 @@
 
   <main class="container-fluid">
     <div class="row">
-      <aside class="col-2 bg-light sidebar">
+      <aside class="col-2 bg-light sidebar" id="SidebarNav">
         <div class="sidebar-sticky">
           <ul class="nav flex-column">
             <li class="nav-item"><a class="nav-link" href="./inventory-analysis.html"><i class="fas fa-chart-pie d-block d-lg-inline mr-lg-2"></i> Inventory Analysis</a></li>
@@ -80,76 +83,76 @@
               <tr>
                 <th>Product ASIN</th>
                 <th>Product SKU</th>
-                <th>Product Cost</th>
-                <th>Shipping Cost</th>
+                <th>Cost Per Unit</th>
                 <th>Supplier</th>
                 <th>Description</th>
+                <th>Ignore</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>9871236</td>
                 <td>2</td>
-                <td>$32.50</td>
-                <td>$9.03</td>
+                <td><a href="#">$32.50</a></td>
                 <td>Tamsi LLC</td>
                 <td>Hammer</td>
+                <td><button type="button" class="btn btn-sm btn-outline-secondary" >Ignore</button></td>
               </tr>
               <tr>
                 <td>9871236</td>
                 <td>2</td>
-                <td>$32.50</td>
-                <td>$9.03</td>
+                <td><a href="#">$32.50</a></td>
                 <td>Tamsi LLC</td>
                 <td>Hammer</td>
+                <td><button type="button" class="btn btn-sm btn-outline-secondary" >Ignore</button></td>
               </tr>
               <tr>
                 <td>9871236</td>
                 <td>2</td>
-                <td>$32.50</td>
-                <td>$9.03</td>
+                <td><a href="#">$32.50</a></td>
                 <td>Tamsi LLC</td>
                 <td>Hammer</td>
+                <td><button type="button" class="btn btn-sm btn-outline-secondary" >Ignore</button></td>
               </tr>
               <tr>
                 <td>9871236</td>
                 <td>2</td>
-                <td>$32.50</td>
-                <td>$9.03</td>
+                <td><a href="#">$32.50</a></td>
                 <td>Tamsi LLC</td>
                 <td>Hammer</td>
+                <td><button type="button" class="btn btn-sm btn-outline-secondary" >Ignore</button></td>
               </tr>
               <tr>
                 <td>9871236</td>
                 <td>2</td>
-                <td>$32.50</td>
-                <td>$9.03</td>
+                <td><a href="#">$32.50</a></td>
                 <td>Tamsi LLC</td>
                 <td>Hammer</td>
+                <td><button type="button" class="btn btn-sm btn-outline-secondary" >Ignore</button></td>
               </tr>
               <tr>
                 <td>9871236</td>
                 <td>2</td>
-                <td>$32.50</td>
-                <td>$9.03</td>
+                <td><a href="#">$32.50</a></td>
                 <td>Tamsi LLC</td>
                 <td>Hammer</td>
+                <td><button type="button" class="btn btn-sm btn-outline-secondary" >Ignore</button></td>
               </tr>
               <tr>
                 <td>9871236</td>
                 <td>2</td>
-                <td>$32.50</td>
-                <td>$9.03</td>
+                <td><a href="#">$32.50</a></td>
                 <td>Tamsi LLC</td>
                 <td>Hammer</td>
+                <td><button type="button" class="btn btn-sm btn-outline-secondary" >Ignore</button></td>
               </tr>
               <tr>
                 <td>9871236</td>
                 <td>2</td>
-                <td>$32.50</td>
-                <td>$9.03</td>
+                <td><a href="#">$32.50</a></td>
                 <td>Tamsi LLC</td>
                 <td>Hammer</td>
+                <td><button type="button" class="btn btn-sm btn-outline-secondary" >Ignore</button></td>
               </tr>
             </tbody>
           </table>
@@ -241,6 +244,7 @@
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
+  <script src="../../script.js"></script>
+  
 </body>
 </html>
