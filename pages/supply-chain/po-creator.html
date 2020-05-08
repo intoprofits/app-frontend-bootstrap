@@ -172,7 +172,7 @@
             </div>
 
             <div class="btn-toolbar">
-              <button type="button" class="btn btn-primary mb-3 mr-2" data-toggle="modal" data-target="#editPO"><i class="fas fa-file mr-2"></i>Create Custom P.O.</button>
+              <button type="button" class="btn btn-primary mb-3 mr-2" data-toggle="modal" data-target="#createPO"><i class="fas fa-file mr-2"></i>Create Custom P.O.</button>
               <button type="button" class="btn btn-primary mb-3 mr-2" data-toggle="modal" data-target="#savedTemplates"><i class="fas fa-save mr-2"></i>Saved Templates</button>
             </div>
 
@@ -268,7 +268,7 @@
           <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="addPO">Review PO</h5>
+                <h5 class="modal-title" id="addPO">Review P.O.</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -290,6 +290,27 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="editPO">Edit P.O.</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img class="img-fluid" src="https://dummyimage.com/960x540/e1e5e6/000.png&text=po">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close"><i class="fas fa-share-square mr-2"></i>Save and Send</button>
+                  <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close"><i class="fas fa-save mr-2"></i>Save as Template</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Create PO-->
+        <div class="modal fade" id="createPO" tabindex="-1" role="dialog" aria-labelledby="createPO" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="createPO">Create P.O.</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -328,8 +349,8 @@
                         </div>
                         <div class="d-flex justify-content-between align-items-center">
                           <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#addPO">View</button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#editPO">Edit</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-dismiss="modal" data-target="#addPO">View</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-dismiss="modal" data-target="#editPO">Edit</button>
                           </div>
                           <small class="text-muted">9 mins</small>
                         </div>
@@ -348,8 +369,8 @@
                         </div>
                         <div class="d-flex justify-content-between align-items-center">
                           <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#addPO">View</button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#editPO">Edit</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-dismiss="modal" data-target="#addPO">View</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-dismiss="modal" data-target="#editPO">Edit</button>
                           </div>
                           <small class="text-muted">9 mins</small>
                         </div>
