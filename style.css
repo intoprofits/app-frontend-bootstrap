@@ -286,31 +286,36 @@ main section.full {
   }
 
   /* Order Tracking - drag n drop */
-.inputDrop .form-control-file {
-    position: relative;
-    min-height: 2rem;
-    outline: none;
-    visibility: hidden;
-    cursor: pointer;
+.inputDrop {
+  position: relative;
+  cursor: pointer;
 }
-.inputDrop .form-control-file .bg {
-  content: attr(data-title);
+.inputDrop .form-control-file {
+  position: relative;
+  cursor: pointer;
+  min-height: 2rem;
+  outline: none;
+  opacity: 0;
+  z-index: 2;
+}
+.inputDrop .bg {
   position: absolute;
+  cursor: pointer;
   top: 0;
+  bottom: 0;
   left: 0;
-  width: 100%;
-  line-height: 1rem;
-  font-size: .8rem;
-  padding: .2rem;
-  opacity: 1;
-  visibility: visible;
+  right: 0;
+  z-index: 1;
   text-align: center;
   border: 2px dashed #dee2e6;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   overflow: hidden;
   background: #fff;
+  align-items: center;
+  display: grid;
+  color: #818588;
 }
-.inputDrop .form-control-file .bg:hover {
+.inputDrop .bg:hover {
   background: #E3E8EB;
   border-color: #ccc;
 }
@@ -332,11 +337,12 @@ main section.full {
   cursor: pointer;
 }
 .step.s1 { left: -1%; }
-.step.s2 { left: 18%; }
-.step.s3 { left: 38%; }
-.step.s4 { left: 58%; }
-.step.s5 { left: 78%; }
-.step.s6 { left: 98%; }
+.step.s2 { left: 16%; }
+.step.s3 { left: 33%; }
+.step.s4 { left: 50%; }
+.step.s5 { left: 66%; }
+.step.s6 { left: 82%; }
+.step.s7 { left: 98%; }
 .step.active { background: #0f9a2f; }
 
 .steps .progress {
