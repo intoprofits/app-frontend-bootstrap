@@ -293,7 +293,7 @@ main section.full {
     visibility: hidden;
     cursor: pointer;
 }
-.inputDrop .form-control-file:before {
+.inputDrop .form-control-file .bg {
   content: attr(data-title);
   position: absolute;
   top: 0;
@@ -310,7 +310,7 @@ main section.full {
   overflow: hidden;
   background: #fff;
 }
-.inputDrop .form-control-file:hover:before {
+.inputDrop .form-control-file .bg:hover {
   background: #E3E8EB;
   border-color: #ccc;
 }
