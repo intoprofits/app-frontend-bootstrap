@@ -68,7 +68,7 @@
   
       <section role="main" class="col-10 border-left">
 
-        <div class="row">
+        <div class="POCreator row">
           <div class="col-md-5 col-xl-4">
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 border-bottom mb-5">
               <h3>P.O. Creator</h3>
@@ -100,8 +100,8 @@
             </div>
 
             <div class="mb-3">
-              <label for="shippingSupplier">Shipping Address</label>
-              <select class="custom-select d-block w-100" id="shippingSupplier" required="">
+              <label for="shipAddress">Shipping Address</label>
+              <select class="custom-select d-block w-100" id="shipAddress" required="">
                 <option value="">Select...</option>
                 <option value="Sample Address 1">Sample Address 1</option>
                 <option value="Sample Address 2">Sample Address 2</option>
@@ -114,9 +114,9 @@
               <label for="shipMethod">Shipping Method</label>
               <select class="custom-select d-block w-100" id="shipMethod" required="">
                 <option value="">Select...</option>
-                <option value="#">Land</option>
-                <option value="#">Sea</option>
-                <option value="#">Air</option>
+                <option value="Land">Land</option>
+                <option value="Sea">Sea</option>
+                <option value="Air">Air</option>
               </select>
               <div class="invalid-feedback">Please select a shipping method.</div>
             </div>
@@ -144,22 +144,25 @@
     
             <div class="mb-3">
               <label for="quantity">Order Quantity</label>
-              <input type="number" class="form-control" value="1" min="1" name="quantity" id="quantity">
+              <input type="number" class="form-control" value="" min="1" name="quantity" id="quantity" placeholder="1">
             </div>
 
             <div class="mb-3">
               <label for="unitCost">Unit Cost</label>
-              <input type="text" class="form-control" id="unitCost" placeholder="Unit Cost">
+              <input type="text" class="form-control" id="unitCost" value="" placeholder="Unit Cost">
             </div>
             
             <div class="mb-4">
               <label for="discount">Discount Request</label>
-              <input type="text" class="form-control" id="discount" placeholder="Discount Request">
+              <input type="text" class="form-control" id="discount" value="" placeholder="Discount Request">
             </div>
 
             
+            <div class="reviewpo alert alert-danger d-none" role="alert">
+              Please fill out the missing fields.
+            </div>
 
-            <button class="btn btn-primary  mb-5" data-toggle="modal" data-target="#addPO"><i class="fas fa-edit mr-2"></i> Review P.O.</button>
+            <button class="btn btn-primary mb-5" data-toggle="modal" id="reviewPO" data-target="#addPO"><i class="fas fa-edit mr-2"></i> Review P.O.</button>
 
 
           </div>
@@ -266,7 +269,7 @@
 
         <!-- Modal Add PO-->
         <div class="modal fade" id="addPO" tabindex="-1" role="dialog" aria-labelledby="addPO" aria-hidden="true">
-          <div class="modal-dialog modal-lg" role="document" style="max-width: 1412px;">
+          <div class="modal-dialog modal-lg" role="document" style="max-width: 1280px;">
             <div class="modal-content" >
               <div class="modal-header">
                 <h5 class="modal-title" id="addPO">Review P.O.</h5>
@@ -275,7 +278,232 @@
                 </button>
               </div>
               <div class="modal-body">
-                <iframe width="100%" height="600" class="border mb-1" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSsPTm9V9-qK5jh45YLuy1QVTSP3uqO-i1YYcAQBP4fJrvXFpYS0cDP4-ME2QwZoQ/pubhtml?gid=1164514586&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+                <table class="pofile en" cellspacing="0" cellpadding="0">
+                  <tbody>
+                      <tr style="height: 54px;">
+                          <td class="s0" colspan="5">PURCHASE ORDER</td>
+                      </tr>
+                      <tr style="height: 40px;">
+                          <td class="s1" colspan="5"><span class="ch">采购订单</span></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s2"></td>
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s3" colspan="2"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s4" dir="ltr">BUYER <span class="ch">买方</span></td>
+                          <td class="s5"><input type="text" value=""></td>
+                          <td class="s4">PO Number#: <span class="ch">订单号</span></td>
+                          <td class="s6" colspan="2"><input type="text" value=""></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s7">Address:</td>
+                          <td class="s5"><input type="text" value=""></td>
+                          <td class="s4">Order Date: <span class="ch">订单日期</span></td>
+                          <td class="s6" colspan="2"><input type="text" value=""></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s7">Contact person:</td>
+                          <td class="s5"><input type="text" value=""></td>
+                          <td class="s4">Desired Ship Date: <span class="ch">理想交货期</span></td>
+                          <td class="s6" colspan="2"><input type="text" value=""></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s7">Email:</td>
+                          <td class="s5"><input type="text" value=""></td>
+                          <td class="s3"></td>
+                          <td class="s3" colspan="2"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s7">Phone number:</td>
+                          <td class="s5"><input type="text" value=""></td>
+                          <td class="s3"></td>
+                          <td class="s3" colspan="2"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s3" colspan="2"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s8" colspan="2">SUPPLIER <span class="ch">供应商</span></td>
+                          <td class="s8" colspan="3">SHIP TO <span class="ch">发货地址</span></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s4" dir="ltr">SUPPLIER <span class="ch">供应商</span></td>
+                          <td class="s5"><input type="text" id="PO_supplier" value=""></td>
+                          <td class="s7">Company name:</td>
+                          <td class="s5" colspan="2"><input type="text" value=""></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s7">Address:</td>
+                          <td class="s9"><input type="text" id="PO_shipAddress" value=""></td>
+                          <td class="s7">Address:</td>
+                          <td class="s5" colspan="2"><input type="text" value=""></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s7">Contact person:</td>
+                          <td class="s5"><input type="text" value=""></td>
+                          <td class="s7">Contact person:</td>
+                          <td class="s5" colspan="2"><input type="text" value=""></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s7">Email:</td>
+                          <td class="s5"><input type="text" value=""></td>
+                          <td class="s7">Phone number:</td>
+                          <td class="s5" colspan="2"><input type="text" value=""></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s7">WeChat ID:</td>
+                          <td class="s5"><input type="text" value=""></td>
+                          <td class="s7">WeChat ID:</td>
+                          <td class="s5" colspan="2"><input type="text" value=""></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s3" colspan="2"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s8" colspan="2">EXPORT TERM <span class="ch">出口方式</span></td>
+                          <td class="s8">SHIPPING METHOD <span class="ch">运输方式</span></td>
+                          <td class="s8" colspan="2">PAYMENT TERM <span class="ch">付款方式</span></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s10" colspan="2"><input type="text" value="" id="PO_exportTerm" class="text-center" placeholder="FOB"></td>
+                          <td class="s10"><input type="text" value="" id="PO_shipMethod" class="text-center" placeholder="Ocean"></td>
+                          <td class="s10" colspan="2"><input type="text" value="" id="PO_paymentTerm" class="text-center" placeholder="30% upon PI. 70% Upon Completion	"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s3" colspan="2"></td>
+                          <td class="s3"></td>
+                          <td class="s3" colspan="2"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s8">PART # <span class="ch">产品代号</span></td>
+                          <td class="s8">ITEM DESCRIPTION <span class="ch">产品描述</span></td>
+                          <td class="s8">QUANTITY <span class="ch">订单数量</span></td>
+                          <td class="s8">UNIT COST <span class="ch">单价</span></td>
+                          <td class="s8">TOTAL <span class="ch">总额</span></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s11"><input type="text" value="" class="text-center" placeholder="100010"></td>
+                          <td class="s12"><input type="text" value="" id="PO_product" class="text-center" placeholder="Enter description here"></td>
+                          <td class="s13"><input type="text" value="" id="PO_quantity" class="text-center" placeholder="00"></td>
+                          <td class="s12"><input type="text" value="" id="PO_unitCost" class="text-center" placeholder="$0.00"></td>
+                          <td class="s14"><input type="text" value="" class="text-center" placeholder="$0.00"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s11"></td>
+                          <td class="s12"></td>
+                          <td class="s13"></td>
+                          <td class="s12"></td>
+                          <td class="s12"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s7">Sub Total:</td>
+                          <td class="s7">$0.00</td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s15">Discount: <span class="ch">折扣</span></td>
+                          <td class="s15"><input type="text" id="PO_discount" value="" placeholder="$0.00"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s7">Net Amount: <span class="ch">净额</span></td>
+                          <td class="s4">$0.00</td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s7">Currency: <span class="ch">货币</span></td>
+                          <td class="s4">USD</td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s8" colspan="5">P.O. Terms &amp; Conditions: <span class="ch">采购订单条件及条款</span></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s16" colspan="5">
+                              <span style="font-weight: bold;">1. Acknowledgement:</span> P.O. is not valid until acknowledged by the Supplier with written Proforma Invoice (P.I.) to confirm shipment Ready Date, Total Payment, and PO T&amp;Cs.<br />
+                              <span class="ch">订单确认: 订单在供应商以形式发票（P.I.）书面确认交货日期，订单总价及本订单其它订货条款和条件后才生效。</span>
+                          </td>
+                      </tr>
+                      <tr style="height: 31px;">
+                          <td class="s16" colspan="5">
+                              <span style="font-weight: bold;">2. Payment Term:</span> Buyer is responsible for paying total P.O. amount in USD currency. Supplier and its designated recipent is responsible for receiving bank&#39;s fees, charges. Down
+                              payment is due upon supplier&#39;s written P.I. before production; remaining balance is due after final inspection is approved by the Buyer and final Commercial Invoice and Packing List are rendered to the Buyer. <br />
+                              <span class="ch">付款期限: 买方负责以美元货币支付订单指定总额。供应商及其指定的收款方负责收款银行所收手续费及杂费。预付款在有供应商书面P.I.确认后, 在生产前到期; 余款在买方批准最终质检报告后，并且有卖方提交的商业发票和装箱单后到期。</span>
+                          </td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s16" colspan="5">
+                              <span style="font-weight: bold;">3. Specifications:</span> Supplier agrees to produce Buyer&#39;s product according to the specifications instructed by the Buyer, including but not limited to, specifications as outlined
+                              in this P.O. and/or instructed via written emails, texts and chat messages prior or after the PO is issued. <br />
+                              <span class="ch">规格: 供应商同意根据买方指示的产品规格生产买方产品，规格包括, 但不限于本订单中列举的以及在订单发出前或发出后通过电子邮件，短信及信息形式沟通的规格。</span>
+                          </td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s16" colspan="5">
+                              <span style="font-weight: bold;">4. Warranty:</span> Supplier agrees to warranty product quality against any material and/or workmanship defects within One (1) year of the shipping; the shipping date is the date shown on
+                              the Bill of Lading document. For all defective products discovered after shipping, at Buyer&#39;s discretion, Buyer can request Supplier to refund or credit toward Buyer&#39;s future purchases s either at the material
+                              cost or cost plus damage. <br />
+                              <span class="ch">质量保证: 供应商同意其产品质量保证期为一年，包括材料及工艺。质量保证期以发货提单上显示的出货日期为准。 出货后发现的质量问题，买方可以要求供应商退还购买成本及相关损失或将相应赔偿款项用于未来的采购订单上。</span>
+                          </td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s16" colspan="5">
+                              <span style="font-weight: bold;">5. Late Delivery Penalty:</span> Parties agree that the shipment&#39;s Ready Date&quot; as acknowledged in the Supplier P.I. will be used to measure supplier&#39;s on time delivery. Late
+                              delivery will result in penalty unless it is waived by the Buyer. Parties agree that if the Actual Ready Date is more than 7 days later than the Acknowledged Ready Date, starting on the 8th day, Supplier agrees to pay 1%
+                              late fee against total P.O. value; and for each late day, 0.25% late fee will be added to the total penalty. For example, if the Acknowledged Ready Date is Jan 1st and the Actual Ready Date is Jan 10th, then the late
+                              days are Jan 8th, 9th and 10th. The late fees are 1% + 0.25% +0.25% = 1.5% of the P.O. value. At Buyer&#39;s discretion, Buyer could apply the late delivery penalty to Buyer&#39;s remaining payment or apply it toward
+                              Buyer&#39;s future purchases. If the Supplier is more than 20 days late, Buyer reserves the right to cancel the entire PO and request full refund for the down payment. <span class="ch">延迟交货罚款: 双方同意供应商P.I.中确认的 &quot;
+                                Ready Date/交期”将做为供应商准时交货的标准。除非买方放弃其权利，延迟交货会有罚款。罚款条件如下：如果实际交期比确认交期晚了7天，从第8天开始，供应商应付订单1％的罚金,
+                                以后每个迟交日，罚金为订单的0.25％。比如，如果确认交期是1月1日，实际交期是1月10日，迟交日期则是1月8日，9日和10日。迟交罚金为订单的1％+ 0.25％+ 0.25％=
+                                1.5％。买方可选择将罚金从余款中扣除，或将罚金用于未来的购买订单上。如果供应商交货期延迟20以上，买方有权取消订单并要求将预付金全部返还。&quot;</span>
+                          </td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s16" colspan="5">
+                              <span style="font-weight: bold;">6. Change Notification:</span> In the event that the supplier has to make any changes, such as raw material specification, tooling, production process, packaging that could negatively
+                              affect Buyer&#39;s product quality or on time delivery, supplier must notify Buyer and obtain Buyer&#39;s written approval first. At its full discretion Buyer could reject the product if changes are made without its
+                              approval. <br />
+                              <span class="ch">变更通知: 如果供应商需要变更原材料标准，磨具，生产工艺，包装等等，该变更可能会给买方产品质量或按期交货带来不良影响，供应商必须通知买方并取得买方书面批准，否则买方有权拒收产品。</span>
+                          </td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s16" colspan="5">
+                              <span style="font-weight: bold;">7. Final Inspection:</span> Supplier agrees to provide Buyer a Final Inspection Report before shipping according to Buyer provided inspection check list. If Buyer chooses to use a 3rd
+                              party inspection agency, Supplier agrees to fully cooperate. Parties agree: 1. If product fails to pass the 1st inspection, supplier agrees to 1a). pay for the 2nd inspection fees; 1b). expedite rework or reproduction of
+                              partial or entire PO quantity; 1c). pay a minimum 5% late delivery penalty unless Buyer waives the penalty. 2. If 2nd inspection fails again, at the Buyer&#39;s discretion, Buyer can either a.) void a partial or the
+                              entire P.O. or b.) apply 1a, 1b, 1c terms to have the supplier carry out the PO. If a partial or the entire PO is void, Supplier agrees to refund Buyer either partial or entire down payment. <br />
+                              <span class="ch">最后质检: 供应商同意根据买方提供的质检要求，在发货前向买方提供最终检验报告。如果买方选择使用第三方质检公司，供应商同意全面配合。双方同意：
+                                1.如果产品不通过第一次检验，供应商同意1a）支付第二次质检费;1b）加快返工或重新生产部分或全部订单; 1C）支付至少5％延迟罚金，除非买方放弃其权利。 2.如果第二次检查再次失败，买方可以选择 2a）取消部分或全部订单. 或
+                                2b）按照1a，1b，1c条件让供应商继续执行订单。如果买方取消部分或全部订单，供应商同意退还买方部分或全部的预付款。</span>
+                          </td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s16" colspan="5">
+                              <span style="font-weight: bold;">8. Language, Governing Law and Dispute:</span> This PO is written in both English and Chinese. In the event of a discrepancy, the English language shall prevail. P.O. is governed by the
+                              laws of the People’s Republic of China. Any dispute related to this P.O. shall be submitted to China [Shanghai] Arbitration Commission for arbitration The language of arbitration shall be English. The arbitral award is
+                              final and binding upon both parties.<br />
+                              <span class="ch">语言, 适用法律及争议: 此订单由中英文书写，如有争议以英文为主。订单受中华人民共和国法律管辖。任何与此订单有关的争议应提交中国[上海]仲裁委员会仲裁。仲裁语言为英语。终局裁决对双方均有约束力。</span>
+                          </td>
+                      </tr>
+                  </tbody>
+              </table>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close"><i class="fas fa-share-square mr-2"></i>Save and Send</button>
@@ -296,7 +524,232 @@
                 </button>
               </div>
               <div class="modal-body">
-                <iframe width="100%" height="600" class="border mb-1" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSsPTm9V9-qK5jh45YLuy1QVTSP3uqO-i1YYcAQBP4fJrvXFpYS0cDP4-ME2QwZoQ/pubhtml?gid=1164514586&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+                <table class="pofile en" cellspacing="0" cellpadding="0">
+                  <tbody>
+                      <tr style="height: 54px;">
+                          <td class="s0" colspan="5">PURCHASE ORDER</td>
+                      </tr>
+                      <tr style="height: 40px;">
+                          <td class="s1" colspan="5"><span class="ch">采购订单</span></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s2"></td>
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s3" colspan="2"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s4" dir="ltr">BUYER <span class="ch">买方</span></td>
+                          <td class="s5"><input type="text" value="" placeholder="Enter buyer name"></td>
+                          <td class="s4">PO Number#: <span class="ch">订单号</span></td>
+                          <td class="s6" colspan="2">P0000</td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s7">Address:</td>
+                          <td class="s5"><input type="text" value="" placeholder="Enter buyer address"></td>
+                          <td class="s4">Order Date: <span class="ch">订单日期</span></td>
+                          <td class="s6" colspan="2"><input type="text" value="" placeholder="Order date"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s7">Contact person:</td>
+                          <td class="s5"><input type="text" value="" placeholder="Contact person"></td>
+                          <td class="s4">Desired Ship Date: <span class="ch">理想交货期</span></td>
+                          <td class="s6" colspan="2"><input type="text" value="" placeholder="Enter desired ship date"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s7">Email:</td>
+                          <td class="s5"><input type="text" value="" placeholder="Buyer email"></td>
+                          <td class="s3"></td>
+                          <td class="s3" colspan="2"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s7">Phone number:</td>
+                          <td class="s5"><input type="text" value="" placeholder="Buyer phone number"></td>
+                          <td class="s3"></td>
+                          <td class="s3" colspan="2"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s3" colspan="2"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s8" colspan="2">SUPPLIER <span class="ch">供应商</span></td>
+                          <td class="s8" colspan="3">SHIP TO <span class="ch">发货地址</span></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s4" dir="ltr">SUPPLIER <span class="ch">供应商</span></td>
+                          <td class="s5"><input type="text" id="PO_supplier" value="" placeholder="Enter supplier"></td>
+                          <td class="s7">Company name:</td>
+                          <td class="s5" colspan="2"><input type="text" value="" placeholder="Enter company name"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s7">Address:</td>
+                          <td class="s9"><input type="text" id="PO_shipAddress" value="" placeholder="Enter supplier address"></td>
+                          <td class="s7">Address:</td>
+                          <td class="s5" colspan="2"><input type="text" value="" placeholder="Enter company address"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s7">Contact person:</td>
+                          <td class="s5"><input type="text" value="" placeholder="Enter supplier contact person"></td>
+                          <td class="s7">Contact person:</td>
+                          <td class="s5" colspan="2"><input type="text" value="" placeholder="Enter company contact person"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s7">Email:</td>
+                          <td class="s5"><input type="text" value="" placeholder="Enter supplier email"></td>
+                          <td class="s7">Phone number:</td>
+                          <td class="s5" colspan="2"><input type="text" value="" placeholder="Enter company phone"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s7">WeChat ID:</td>
+                          <td class="s5"><input type="text" value="" placeholder="Enter supplier WeChat ID"></td>
+                          <td class="s7">WeChat ID:</td>
+                          <td class="s5" colspan="2"><input type="text" value="" placeholder="Enter company WeChat ID"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s3" colspan="2"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s8" colspan="2">EXPORT TERM <span class="ch">出口方式</span></td>
+                          <td class="s8">SHIPPING METHOD <span class="ch">运输方式</span></td>
+                          <td class="s8" colspan="2">PAYMENT TERM <span class="ch">付款方式</span></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s10" colspan="2"><input type="text" value="" id="PO_exportTerm" class="text-center" placeholder="e.i FOB,EXW"></td>
+                          <td class="s10"><input type="text" value="" id="PO_shipMethod" class="text-center" placeholder="e.i Land, Sea, Air"></td>
+                          <td class="s10" colspan="2"><input type="text" value="" id="PO_paymentTerm" class="text-center" placeholder="30% upon PI. 70% Upon Completion	"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s3" colspan="2"></td>
+                          <td class="s3"></td>
+                          <td class="s3" colspan="2"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s8">PART # <span class="ch">产品代号</span></td>
+                          <td class="s8">ITEM DESCRIPTION <span class="ch">产品描述</span></td>
+                          <td class="s8">QUANTITY <span class="ch">订单数量</span></td>
+                          <td class="s8">UNIT COST <span class="ch">单价</span></td>
+                          <td class="s8">TOTAL <span class="ch">总额</span></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s11"><input type="text" value="" class="text-center" placeholder="100010"></td>
+                          <td class="s12"><input type="text" value="" id="PO_product" class="text-center" placeholder="Enter description here"></td>
+                          <td class="s13"><input type="text" value="" id="PO_quantity" class="text-center" placeholder="00"></td>
+                          <td class="s12"><input type="text" value="" id="PO_unitCost" class="text-center" placeholder="$0.00"></td>
+                          <td class="s14"><input type="text" value="" class="text-center" placeholder="$0.00"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s11"></td>
+                          <td class="s12"></td>
+                          <td class="s13"></td>
+                          <td class="s12"></td>
+                          <td class="s12"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s7">Sub Total:</td>
+                          <td class="s7">$0.00</td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s15">Discount: <span class="ch">折扣</span></td>
+                          <td class="s15"><input type="text" id="PO_discount" value="" class="text-right" placeholder="$0.00"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s7">Net Amount: <span class="ch">净额</span></td>
+                          <td class="s4">$0.00</td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s7">Currency: <span class="ch">货币</span></td>
+                          <td class="s4">USD</td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s8" colspan="5">P.O. Terms &amp; Conditions: <span class="ch">采购订单条件及条款</span></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s16" colspan="5">
+                              <span style="font-weight: bold;">1. Acknowledgement:</span> P.O. is not valid until acknowledged by the Supplier with written Proforma Invoice (P.I.) to confirm shipment Ready Date, Total Payment, and PO T&amp;Cs.<br />
+                              <span class="ch">订单确认: 订单在供应商以形式发票（P.I.）书面确认交货日期，订单总价及本订单其它订货条款和条件后才生效。</span>
+                          </td>
+                      </tr>
+                      <tr style="height: 31px;">
+                          <td class="s16" colspan="5">
+                              <span style="font-weight: bold;">2. Payment Term:</span> Buyer is responsible for paying total P.O. amount in USD currency. Supplier and its designated recipent is responsible for receiving bank&#39;s fees, charges. Down
+                              payment is due upon supplier&#39;s written P.I. before production; remaining balance is due after final inspection is approved by the Buyer and final Commercial Invoice and Packing List are rendered to the Buyer. <br />
+                              <span class="ch">付款期限: 买方负责以美元货币支付订单指定总额。供应商及其指定的收款方负责收款银行所收手续费及杂费。预付款在有供应商书面P.I.确认后, 在生产前到期; 余款在买方批准最终质检报告后，并且有卖方提交的商业发票和装箱单后到期。</span>
+                          </td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s16" colspan="5">
+                              <span style="font-weight: bold;">3. Specifications:</span> Supplier agrees to produce Buyer&#39;s product according to the specifications instructed by the Buyer, including but not limited to, specifications as outlined
+                              in this P.O. and/or instructed via written emails, texts and chat messages prior or after the PO is issued. <br />
+                              <span class="ch">规格: 供应商同意根据买方指示的产品规格生产买方产品，规格包括, 但不限于本订单中列举的以及在订单发出前或发出后通过电子邮件，短信及信息形式沟通的规格。</span>
+                          </td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s16" colspan="5">
+                              <span style="font-weight: bold;">4. Warranty:</span> Supplier agrees to warranty product quality against any material and/or workmanship defects within One (1) year of the shipping; the shipping date is the date shown on
+                              the Bill of Lading document. For all defective products discovered after shipping, at Buyer&#39;s discretion, Buyer can request Supplier to refund or credit toward Buyer&#39;s future purchases s either at the material
+                              cost or cost plus damage. <br />
+                              <span class="ch">质量保证: 供应商同意其产品质量保证期为一年，包括材料及工艺。质量保证期以发货提单上显示的出货日期为准。 出货后发现的质量问题，买方可以要求供应商退还购买成本及相关损失或将相应赔偿款项用于未来的采购订单上。</span>
+                          </td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s16" colspan="5">
+                              <span style="font-weight: bold;">5. Late Delivery Penalty:</span> Parties agree that the shipment&#39;s Ready Date&quot; as acknowledged in the Supplier P.I. will be used to measure supplier&#39;s on time delivery. Late
+                              delivery will result in penalty unless it is waived by the Buyer. Parties agree that if the Actual Ready Date is more than 7 days later than the Acknowledged Ready Date, starting on the 8th day, Supplier agrees to pay 1%
+                              late fee against total P.O. value; and for each late day, 0.25% late fee will be added to the total penalty. For example, if the Acknowledged Ready Date is Jan 1st and the Actual Ready Date is Jan 10th, then the late
+                              days are Jan 8th, 9th and 10th. The late fees are 1% + 0.25% +0.25% = 1.5% of the P.O. value. At Buyer&#39;s discretion, Buyer could apply the late delivery penalty to Buyer&#39;s remaining payment or apply it toward
+                              Buyer&#39;s future purchases. If the Supplier is more than 20 days late, Buyer reserves the right to cancel the entire PO and request full refund for the down payment. <span class="ch">延迟交货罚款: 双方同意供应商P.I.中确认的 &quot;
+                                Ready Date/交期”将做为供应商准时交货的标准。除非买方放弃其权利，延迟交货会有罚款。罚款条件如下：如果实际交期比确认交期晚了7天，从第8天开始，供应商应付订单1％的罚金,
+                                以后每个迟交日，罚金为订单的0.25％。比如，如果确认交期是1月1日，实际交期是1月10日，迟交日期则是1月8日，9日和10日。迟交罚金为订单的1％+ 0.25％+ 0.25％=
+                                1.5％。买方可选择将罚金从余款中扣除，或将罚金用于未来的购买订单上。如果供应商交货期延迟20以上，买方有权取消订单并要求将预付金全部返还。&quot;</span>
+                          </td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s16" colspan="5">
+                              <span style="font-weight: bold;">6. Change Notification:</span> In the event that the supplier has to make any changes, such as raw material specification, tooling, production process, packaging that could negatively
+                              affect Buyer&#39;s product quality or on time delivery, supplier must notify Buyer and obtain Buyer&#39;s written approval first. At its full discretion Buyer could reject the product if changes are made without its
+                              approval. <br />
+                              <span class="ch">变更通知: 如果供应商需要变更原材料标准，磨具，生产工艺，包装等等，该变更可能会给买方产品质量或按期交货带来不良影响，供应商必须通知买方并取得买方书面批准，否则买方有权拒收产品。</span>
+                          </td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s16" colspan="5">
+                              <span style="font-weight: bold;">7. Final Inspection:</span> Supplier agrees to provide Buyer a Final Inspection Report before shipping according to Buyer provided inspection check list. If Buyer chooses to use a 3rd
+                              party inspection agency, Supplier agrees to fully cooperate. Parties agree: 1. If product fails to pass the 1st inspection, supplier agrees to 1a). pay for the 2nd inspection fees; 1b). expedite rework or reproduction of
+                              partial or entire PO quantity; 1c). pay a minimum 5% late delivery penalty unless Buyer waives the penalty. 2. If 2nd inspection fails again, at the Buyer&#39;s discretion, Buyer can either a.) void a partial or the
+                              entire P.O. or b.) apply 1a, 1b, 1c terms to have the supplier carry out the PO. If a partial or the entire PO is void, Supplier agrees to refund Buyer either partial or entire down payment. <br />
+                              <span class="ch">最后质检: 供应商同意根据买方提供的质检要求，在发货前向买方提供最终检验报告。如果买方选择使用第三方质检公司，供应商同意全面配合。双方同意：
+                                1.如果产品不通过第一次检验，供应商同意1a）支付第二次质检费;1b）加快返工或重新生产部分或全部订单; 1C）支付至少5％延迟罚金，除非买方放弃其权利。 2.如果第二次检查再次失败，买方可以选择 2a）取消部分或全部订单. 或
+                                2b）按照1a，1b，1c条件让供应商继续执行订单。如果买方取消部分或全部订单，供应商同意退还买方部分或全部的预付款。</span>
+                          </td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s16" colspan="5">
+                              <span style="font-weight: bold;">8. Language, Governing Law and Dispute:</span> This PO is written in both English and Chinese. In the event of a discrepancy, the English language shall prevail. P.O. is governed by the
+                              laws of the People’s Republic of China. Any dispute related to this P.O. shall be submitted to China [Shanghai] Arbitration Commission for arbitration The language of arbitration shall be English. The arbitral award is
+                              final and binding upon both parties.<br />
+                              <span class="ch">语言, 适用法律及争议: 此订单由中英文书写，如有争议以英文为主。订单受中华人民共和国法律管辖。任何与此订单有关的争议应提交中国[上海]仲裁委员会仲裁。仲裁语言为英语。终局裁决对双方均有约束力。</span>
+                          </td>
+                      </tr>
+                  </tbody>
+              </table>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close"><i class="fas fa-share-square mr-2"></i>Save and Send</button>
@@ -308,16 +761,241 @@
 
         <!-- Modal Create PO-->
         <div class="modal fade" id="createPO" tabindex="-1" role="dialog" aria-labelledby="createPO" aria-hidden="true">
-          <div class="modal-dialog modal-lg" role="document" style="max-width: 1412px;">
+          <div class="modal-dialog modal-lg" role="document" style="max-width: 1280px;">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="createPO">Create P.O.</h5>
+                <h5 class="modal-title" id="createPO">Create Custom P.O.</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
               <div class="modal-body">
-                <iframe width="100%" height="600" class="border mb-1" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSsPTm9V9-qK5jh45YLuy1QVTSP3uqO-i1YYcAQBP4fJrvXFpYS0cDP4-ME2QwZoQ/pubhtml?gid=1164514586&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+                <table class="pofile en" cellspacing="0" cellpadding="0">
+                  <tbody>
+                      <tr style="height: 54px;">
+                          <td class="s0" colspan="5">PURCHASE ORDER</td>
+                      </tr>
+                      <tr style="height: 40px;">
+                          <td class="s1" colspan="5"><span class="ch">采购订单</span></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s2"></td>
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s3" colspan="2"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s4" dir="ltr">BUYER <span class="ch">买方</span></td>
+                          <td class="s5"><input type="text" value="" placeholder="Enter buyer name"></td>
+                          <td class="s4">PO Number#: <span class="ch">订单号</span></td>
+                          <td class="s6" colspan="2">P0000</td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s7">Address:</td>
+                          <td class="s5"><input type="text" value="" placeholder="Enter buyer address"></td>
+                          <td class="s4">Order Date: <span class="ch">订单日期</span></td>
+                          <td class="s6" colspan="2"><input type="text" value="" placeholder="Order date"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s7">Contact person:</td>
+                          <td class="s5"><input type="text" value="" placeholder="Contact person"></td>
+                          <td class="s4">Desired Ship Date: <span class="ch">理想交货期</span></td>
+                          <td class="s6" colspan="2"><input type="text" value="" placeholder="Enter desired ship date"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s7">Email:</td>
+                          <td class="s5"><input type="text" value="" placeholder="Buyer email"></td>
+                          <td class="s3"></td>
+                          <td class="s3" colspan="2"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s7">Phone number:</td>
+                          <td class="s5"><input type="text" value="" placeholder="Buyer phone number"></td>
+                          <td class="s3"></td>
+                          <td class="s3" colspan="2"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s3" colspan="2"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s8" colspan="2">SUPPLIER <span class="ch">供应商</span></td>
+                          <td class="s8" colspan="3">SHIP TO <span class="ch">发货地址</span></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s4" dir="ltr">SUPPLIER <span class="ch">供应商</span></td>
+                          <td class="s5"><input type="text" id="PO_supplier" value="" placeholder="Enter supplier"></td>
+                          <td class="s7">Company name:</td>
+                          <td class="s5" colspan="2"><input type="text" value="" placeholder="Enter company name"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s7">Address:</td>
+                          <td class="s9"><input type="text" id="PO_shipAddress" value="" placeholder="Enter supplier address"></td>
+                          <td class="s7">Address:</td>
+                          <td class="s5" colspan="2"><input type="text" value="" placeholder="Enter company address"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s7">Contact person:</td>
+                          <td class="s5"><input type="text" value="" placeholder="Enter supplier contact person"></td>
+                          <td class="s7">Contact person:</td>
+                          <td class="s5" colspan="2"><input type="text" value="" placeholder="Enter company contact person"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s7">Email:</td>
+                          <td class="s5"><input type="text" value="" placeholder="Enter supplier email"></td>
+                          <td class="s7">Phone number:</td>
+                          <td class="s5" colspan="2"><input type="text" value="" placeholder="Enter company phone"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s7">WeChat ID:</td>
+                          <td class="s5"><input type="text" value="" placeholder="Enter supplier WeChat ID"></td>
+                          <td class="s7">WeChat ID:</td>
+                          <td class="s5" colspan="2"><input type="text" value="" placeholder="Enter company WeChat ID"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s3" colspan="2"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s8" colspan="2">EXPORT TERM <span class="ch">出口方式</span></td>
+                          <td class="s8">SHIPPING METHOD <span class="ch">运输方式</span></td>
+                          <td class="s8" colspan="2">PAYMENT TERM <span class="ch">付款方式</span></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s10" colspan="2"><input type="text" value="" id="PO_exportTerm" class="text-center" placeholder="e.i FOB,EXW"></td>
+                          <td class="s10"><input type="text" value="" id="PO_shipMethod" class="text-center" placeholder="e.i Land, Sea, Air"></td>
+                          <td class="s10" colspan="2"><input type="text" value="" id="PO_paymentTerm" class="text-center" placeholder="30% upon PI. 70% Upon Completion	"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s3" colspan="2"></td>
+                          <td class="s3"></td>
+                          <td class="s3" colspan="2"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s8">PART # <span class="ch">产品代号</span></td>
+                          <td class="s8">ITEM DESCRIPTION <span class="ch">产品描述</span></td>
+                          <td class="s8">QUANTITY <span class="ch">订单数量</span></td>
+                          <td class="s8">UNIT COST <span class="ch">单价</span></td>
+                          <td class="s8">TOTAL <span class="ch">总额</span></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s11"><input type="text" value="" class="text-center" placeholder="100010"></td>
+                          <td class="s12"><input type="text" value="" id="PO_product" class="text-center" placeholder="Enter description here"></td>
+                          <td class="s13"><input type="text" value="" id="PO_quantity" class="text-center" placeholder="00"></td>
+                          <td class="s12"><input type="text" value="" id="PO_unitCost" class="text-center" placeholder="$0.00"></td>
+                          <td class="s14"><input type="text" value="" class="text-center" placeholder="$0.00"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s11"></td>
+                          <td class="s12"></td>
+                          <td class="s13"></td>
+                          <td class="s12"></td>
+                          <td class="s12"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s7">Sub Total:</td>
+                          <td class="s7">$0.00</td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s15">Discount: <span class="ch">折扣</span></td>
+                          <td class="s15"><input type="text" id="PO_discount" value="" class="text-right" placeholder="$0.00"></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s7">Net Amount: <span class="ch">净额</span></td>
+                          <td class="s4">$0.00</td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s3"></td>
+                          <td class="s7">Currency: <span class="ch">货币</span></td>
+                          <td class="s4">USD</td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s8" colspan="5">P.O. Terms &amp; Conditions: <span class="ch">采购订单条件及条款</span></td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s16" colspan="5">
+                              <span style="font-weight: bold;">1. Acknowledgement:</span> P.O. is not valid until acknowledged by the Supplier with written Proforma Invoice (P.I.) to confirm shipment Ready Date, Total Payment, and PO T&amp;Cs.<br />
+                              <span class="ch">订单确认: 订单在供应商以形式发票（P.I.）书面确认交货日期，订单总价及本订单其它订货条款和条件后才生效。</span>
+                          </td>
+                      </tr>
+                      <tr style="height: 31px;">
+                          <td class="s16" colspan="5">
+                              <span style="font-weight: bold;">2. Payment Term:</span> Buyer is responsible for paying total P.O. amount in USD currency. Supplier and its designated recipent is responsible for receiving bank&#39;s fees, charges. Down
+                              payment is due upon supplier&#39;s written P.I. before production; remaining balance is due after final inspection is approved by the Buyer and final Commercial Invoice and Packing List are rendered to the Buyer. <br />
+                              <span class="ch">付款期限: 买方负责以美元货币支付订单指定总额。供应商及其指定的收款方负责收款银行所收手续费及杂费。预付款在有供应商书面P.I.确认后, 在生产前到期; 余款在买方批准最终质检报告后，并且有卖方提交的商业发票和装箱单后到期。</span>
+                          </td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s16" colspan="5">
+                              <span style="font-weight: bold;">3. Specifications:</span> Supplier agrees to produce Buyer&#39;s product according to the specifications instructed by the Buyer, including but not limited to, specifications as outlined
+                              in this P.O. and/or instructed via written emails, texts and chat messages prior or after the PO is issued. <br />
+                              <span class="ch">规格: 供应商同意根据买方指示的产品规格生产买方产品，规格包括, 但不限于本订单中列举的以及在订单发出前或发出后通过电子邮件，短信及信息形式沟通的规格。</span>
+                          </td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s16" colspan="5">
+                              <span style="font-weight: bold;">4. Warranty:</span> Supplier agrees to warranty product quality against any material and/or workmanship defects within One (1) year of the shipping; the shipping date is the date shown on
+                              the Bill of Lading document. For all defective products discovered after shipping, at Buyer&#39;s discretion, Buyer can request Supplier to refund or credit toward Buyer&#39;s future purchases s either at the material
+                              cost or cost plus damage. <br />
+                              <span class="ch">质量保证: 供应商同意其产品质量保证期为一年，包括材料及工艺。质量保证期以发货提单上显示的出货日期为准。 出货后发现的质量问题，买方可以要求供应商退还购买成本及相关损失或将相应赔偿款项用于未来的采购订单上。</span>
+                          </td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s16" colspan="5">
+                              <span style="font-weight: bold;">5. Late Delivery Penalty:</span> Parties agree that the shipment&#39;s Ready Date&quot; as acknowledged in the Supplier P.I. will be used to measure supplier&#39;s on time delivery. Late
+                              delivery will result in penalty unless it is waived by the Buyer. Parties agree that if the Actual Ready Date is more than 7 days later than the Acknowledged Ready Date, starting on the 8th day, Supplier agrees to pay 1%
+                              late fee against total P.O. value; and for each late day, 0.25% late fee will be added to the total penalty. For example, if the Acknowledged Ready Date is Jan 1st and the Actual Ready Date is Jan 10th, then the late
+                              days are Jan 8th, 9th and 10th. The late fees are 1% + 0.25% +0.25% = 1.5% of the P.O. value. At Buyer&#39;s discretion, Buyer could apply the late delivery penalty to Buyer&#39;s remaining payment or apply it toward
+                              Buyer&#39;s future purchases. If the Supplier is more than 20 days late, Buyer reserves the right to cancel the entire PO and request full refund for the down payment. <span class="ch">延迟交货罚款: 双方同意供应商P.I.中确认的 &quot;
+                                Ready Date/交期”将做为供应商准时交货的标准。除非买方放弃其权利，延迟交货会有罚款。罚款条件如下：如果实际交期比确认交期晚了7天，从第8天开始，供应商应付订单1％的罚金,
+                                以后每个迟交日，罚金为订单的0.25％。比如，如果确认交期是1月1日，实际交期是1月10日，迟交日期则是1月8日，9日和10日。迟交罚金为订单的1％+ 0.25％+ 0.25％=
+                                1.5％。买方可选择将罚金从余款中扣除，或将罚金用于未来的购买订单上。如果供应商交货期延迟20以上，买方有权取消订单并要求将预付金全部返还。&quot;</span>
+                          </td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s16" colspan="5">
+                              <span style="font-weight: bold;">6. Change Notification:</span> In the event that the supplier has to make any changes, such as raw material specification, tooling, production process, packaging that could negatively
+                              affect Buyer&#39;s product quality or on time delivery, supplier must notify Buyer and obtain Buyer&#39;s written approval first. At its full discretion Buyer could reject the product if changes are made without its
+                              approval. <br />
+                              <span class="ch">变更通知: 如果供应商需要变更原材料标准，磨具，生产工艺，包装等等，该变更可能会给买方产品质量或按期交货带来不良影响，供应商必须通知买方并取得买方书面批准，否则买方有权拒收产品。</span>
+                          </td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s16" colspan="5">
+                              <span style="font-weight: bold;">7. Final Inspection:</span> Supplier agrees to provide Buyer a Final Inspection Report before shipping according to Buyer provided inspection check list. If Buyer chooses to use a 3rd
+                              party inspection agency, Supplier agrees to fully cooperate. Parties agree: 1. If product fails to pass the 1st inspection, supplier agrees to 1a). pay for the 2nd inspection fees; 1b). expedite rework or reproduction of
+                              partial or entire PO quantity; 1c). pay a minimum 5% late delivery penalty unless Buyer waives the penalty. 2. If 2nd inspection fails again, at the Buyer&#39;s discretion, Buyer can either a.) void a partial or the
+                              entire P.O. or b.) apply 1a, 1b, 1c terms to have the supplier carry out the PO. If a partial or the entire PO is void, Supplier agrees to refund Buyer either partial or entire down payment. <br />
+                              <span class="ch">最后质检: 供应商同意根据买方提供的质检要求，在发货前向买方提供最终检验报告。如果买方选择使用第三方质检公司，供应商同意全面配合。双方同意：
+                                1.如果产品不通过第一次检验，供应商同意1a）支付第二次质检费;1b）加快返工或重新生产部分或全部订单; 1C）支付至少5％延迟罚金，除非买方放弃其权利。 2.如果第二次检查再次失败，买方可以选择 2a）取消部分或全部订单. 或
+                                2b）按照1a，1b，1c条件让供应商继续执行订单。如果买方取消部分或全部订单，供应商同意退还买方部分或全部的预付款。</span>
+                          </td>
+                      </tr>
+                      <tr style="height: 20px;">
+                          <td class="s16" colspan="5">
+                              <span style="font-weight: bold;">8. Language, Governing Law and Dispute:</span> This PO is written in both English and Chinese. In the event of a discrepancy, the English language shall prevail. P.O. is governed by the
+                              laws of the People’s Republic of China. Any dispute related to this P.O. shall be submitted to China [Shanghai] Arbitration Commission for arbitration The language of arbitration shall be English. The arbitral award is
+                              final and binding upon both parties.<br />
+                              <span class="ch">语言, 适用法律及争议: 此订单由中英文书写，如有争议以英文为主。订单受中华人民共和国法律管辖。任何与此订单有关的争议应提交中国[上海]仲裁委员会仲裁。仲裁语言为英语。终局裁决对双方均有约束力。</span>
+                          </td>
+                      </tr>
+                  </tbody>
+              </table>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close"><i class="fas fa-share-square mr-2"></i>Save and Send</button>
