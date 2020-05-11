@@ -34,8 +34,8 @@ $('button.sidebar-toggle').click(function() {
 // dot steps 
 $('.steps .step').click(function(){
 
-    let current = $(this).attr('data-steps'),
-        e = $(this);
+    let e = $(this),
+        current = e.attr('data-steps');
     
     e.addClass('active').siblings().removeClass('active');
     e.prevAll().addClass('active');
@@ -109,7 +109,7 @@ $(".POCreator input").keyup(function(e){
 });
 
 // review button
-$("#reviewPO").click(function(e){
+$("#reviewPO").click(function(){
 
     let POinputs = [
         $(".POCreator select#template")[0],
@@ -135,4 +135,19 @@ $("#reviewPO").click(function(e){
             this.setAttribute("data-toggle", "modal");
         }
     });
+});
+
+// saved templates buttons
+$("#savedTemplates button.savedTempBtn").click(function(e){
+
+    let text = e.target.innerText;
+    $('#savedTemplates').modal('hide');
+
+    setTimeout(function(){
+        if (text != 'Edit') {
+            $('#addPO').modal('toggle');
+        } else {
+            $('#editPO').modal('toggle');
+        }
+    }, 500)
 });
