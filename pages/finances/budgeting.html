@@ -62,8 +62,103 @@
   
       <section role="main" class="col-10 border-left">
 
-        <div class="pt-3 pb-2 border-bottom mb-4">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 border-bottom mb-3">
           <h3>Budgeting</h3>
+          <div class="btn-toolbar mb-2 mb-md-0">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#exampleModal">Learn <i class="fas fa-play-circle ml-1"></i></button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-lg-6 mb-3">
+              <div class="budget-month-selector mt-4">
+                <a href="#" class="prev"><i class="fas fa-chevron-left"></i></a>
+                <div class="month-select">
+                  <span>JAN 2020</span>
+                  <span>FEB 2020</span>
+                  <span>MAR 2020</span>
+                  <span>APR 2020</span>
+                  <span class="active">MAY 2020</span>
+                  <span>JUN 2020</span>
+                  <span>JUL 2020</span>
+                  <span>AUG 2020</span>
+                  <span>SEP 2020</span>
+                  <span>OCT 2020</span>
+                  <span>NOV 2020</span>
+                  <span>DEC 2020</span>
+                </div>
+                <a href="#" class="nxt"><i class="fas fa-chevron-right"></i></a>
+              </div>
+          </div>
+          <div class="col-12 col-lg-3 mb-3">
+              <div class="text-center card rounded-0 p-3" style="background: #f8f9fa">
+                <h2 class="mb-1">$123.00</h2>
+                <p class="m-0">Spare Funds</p>
+              </div>
+          </div>
+          <div class="col-12 col-lg-3 mb-3">
+            <span class="text-center card rounded-0 p-3" style="background: #f8f9fa">
+              <h2 class="mb-1">$3,520.00</h2>
+              <p class="m-0">Total Balance</p>
+            </span>
+          </div>
+        </div>
+        
+        <div class="table-responsive mb-5">
+          <table class="table">
+            <thead>
+              <tr>
+                <th class="text-nowrap">PO #<i class="fas fa-sort"></i></th>
+                <th style="width: 15%;">SKU<i class="fas fa-sort"></i></th>
+                <th>Percentage<i class="fas fa-sort"></i></th>
+                <th>Budgeted<i class="fas fa-sort"></i></th>
+                <th>Saved<i class="fas fa-sort"></i></th>
+                <th class="text-nowrap">Total Required<i class="fas fa-sort"></i></th>
+                <th style="width: 10%;">Complete</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td class="align-middle">P0001</td>
+                <td class="align-middle">32132165</td>
+                <td class="align-middle">23%</td>
+                <td class="align-middle">20%</td>
+                <td class="align-middle">10%</td>
+                <td class="align-middle">....</td>
+                <td class="align-middle"><button type="button" class="btn btn-sm btn-outline-secondary">Complete</button></td>
+              </tr>
+
+              <tr>
+                <td class="align-middle">P0002</td>
+                <td class="align-middle">32132165</td>
+                <td class="align-middle">23%</td>
+                <td class="align-middle">20%</td>
+                <td class="align-middle">10%</td>
+                <td class="align-middle">....</td>
+                <td class="align-middle"><button type="button" class="btn btn-sm btn-outline-secondary">Complete</button></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Modal Learn More-->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Learn More</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img class="img-fluid" src="https://dummyimage.com/960x540/e1e5e6/000.png&text=video">
+              </div>
+            </div>
+          </div>
         </div>
 
       
@@ -84,6 +179,7 @@
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="../../script.js"></script>
 
 </body>
 </html>

@@ -564,3 +564,41 @@ table.pofile td {
 .pofile-wrap {
   overflow: auto;
 }
+
+
+/*------------
+    FINANCES
+--------------*/
+
+/* budgeting */
+.budget-month-selector {
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+}
+.budget-month-selector a {
+  color: #212529;
+  background: #e3e8eb;
+  padding: 0.6rem 1rem;
+  opacity: 1;
+  transition: all linear 0.2s;
+  border-color: #fff;
+}
+.budget-month-selector a:hover {
+  opacity: .6;
+}
+.budget-month-selector div.month-select {
+  padding: 0.4rem 1rem;
+  background: #e3e8eb;
+  text-align: center;
+  display: inline-block;
+  min-width: 150px;
+  cursor: pointer;
+}
+.budget-month-selector span {
+  display: none;
+}
+.budget-month-selector span.active {
+  display: block;
+}
+
