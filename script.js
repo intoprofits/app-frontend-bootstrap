@@ -77,6 +77,7 @@ $("#reviewPO").click(function(){
         $(".POCreator select#shipAddress")[0],
         $(".POCreator select#shipMethod")[0],
         $(".POCreator select#exportTerm")[0],
+        $(".POCreator select#paymentTerm")[0],
         $(".POCreator select#product")[0],
         $(".POCreator input#quantity")[0],
         $(".POCreator input#unitCost")[0],

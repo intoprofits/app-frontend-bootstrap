@@ -201,18 +201,22 @@ button.sidebar-toggle {
 @media (min-width: 768px) {
   .sidebar {
     font-size: .8rem;
+    text-align: left;
   }
   .sidebar i {
     font-size: 1rem;
+    position: absolute;
+    left: 10px;
+    top: 16px;
   }
   .sidebar .nav-link {
-    padding: .8rem 1rem;
+    padding: .8rem 1rem .8rem 2.5rem;
+    position: relative;
   }
 }
 @media (min-width: 1280px) {
   .sidebar {
-    font-size: 1rem;
-    text-align: left;
+    font-size: 1rem; 
   }
   
 }
@@ -267,6 +271,11 @@ main section.full {
 }
 .table-responsive  td > .btn,
 .table-responsive .form-control {
+  font-size: 1em;
+}
+.table-responsive td > .input-group input,
+.table-responsive td > .input-group button {
+  height: 28px;
   font-size: 1em;
 }
 .table-responsive.inventory-analysis .hidden-fields {
@@ -566,9 +575,9 @@ table.pofile td {
 }
 
 
-/*------------
-    FINANCES
---------------*/
+/*---------------*/
+/*   FINANCES
+/*---------------*/
 
 /* budgeting */
 .budget-month-selector {
@@ -579,7 +588,7 @@ table.pofile td {
 .budget-month-selector a {
   color: #212529;
   background: #e3e8eb;
-  padding: 0.6rem 1rem;
+  padding: 0.6rem .8rem;
   opacity: 1;
   transition: all linear 0.2s;
   border-color: #fff;
@@ -592,7 +601,7 @@ table.pofile td {
   background: #e3e8eb;
   text-align: center;
   display: inline-block;
-  min-width: 150px;
+  min-width: 130px;
   cursor: pointer;
 }
 .budget-month-selector span {

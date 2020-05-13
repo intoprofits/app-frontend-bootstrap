@@ -131,6 +131,19 @@
             </div>
 
             <div class="mb-3">
+              <label for="paymentTerm">Payment Term</label>
+              <select class="custom-select d-block w-100" id="paymentTerm" required="">
+                <option value="">Select...</option>
+                <option value="10/90">10/90</option>
+                <option value="20/80">20/80</option>
+                <option value="30/70">30/70</option>
+                <option value="40/60">40/60</option>
+                <option value="50/50">50/50</option>
+              </select>
+              <div class="invalid-feedback">Please select a Payment Term.</div>
+            </div>
+
+            <div class="mb-3">
               <label for="product">Product</label>
               <select class="custom-select d-block w-100" id="product" required="">
                 <option value="">Select...</option>
@@ -376,7 +389,8 @@
                         <tr style="height: 20px;">
                             <td class="s10" colspan="2"><input type="text" value="" id="PO_exportTerm" class="text-center" placeholder="FOB"></td>
                             <td class="s10"><input type="text" value="" id="PO_shipMethod" class="text-center" placeholder="Ocean"></td>
-                            <td class="s10" colspan="2"><input type="text" value="" id="PO_paymentTerm" class="text-center" placeholder="30% upon PI. 70% Upon Completion	"></td>
+                            <td class="s10" colspan="1"><input type="text" value="" id="PO_paymentTerm" class="text-center" placeholder="30% upon P.I."></td>
+                            <td class="s10" colspan="1"><input type="text" value="" id="PO_paymentTerm" class="text-center" placeholder="70% Upon Completion"></td>
                         </tr>
                         <tr style="height: 20px;">
                             <td class="s3" colspan="2"></td>
@@ -625,7 +639,9 @@
                         <tr style="height: 20px;">
                             <td class="s10" colspan="2"><input type="text" value="" id="PO_exportTerm" class="text-center" placeholder="e.i FOB,EXW"></td>
                             <td class="s10"><input type="text" value="" id="PO_shipMethod" class="text-center" placeholder="e.i Land, Sea, Air"></td>
-                            <td class="s10" colspan="2"><input type="text" value="" id="PO_paymentTerm" class="text-center" placeholder="30% upon PI. 70% Upon Completion	"></td>
+                            <td class="s10" colspan="1"><input type="text" value="" id="PO_paymentTerm" class="text-center" placeholder="30% upon P.I."></td>
+                            <td class="s10" colspan="1"><input type="text" value="" id="PO_paymentTerm" class="text-center" placeholder="70% Upon Completion"></td>
+                        </tr>
                         </tr>
                         <tr style="height: 20px;">
                             <td class="s3" colspan="2"></td>
@@ -874,7 +890,8 @@
                         <tr style="height: 20px;">
                             <td class="s10" colspan="2"><input type="text" value="" id="PO_exportTerm" class="text-center" placeholder="e.i FOB,EXW"></td>
                             <td class="s10"><input type="text" value="" id="PO_shipMethod" class="text-center" placeholder="e.i Land, Sea, Air"></td>
-                            <td class="s10" colspan="2"><input type="text" value="" id="PO_paymentTerm" class="text-center" placeholder="30% upon PI. 70% Upon Completion	"></td>
+                            <td class="s10" colspan="1"><input type="text" value="" id="PO_paymentTerm" class="text-center" placeholder="30% upon P.I."></td>
+                            <td class="s10" colspan="1"><input type="text" value="" id="PO_paymentTerm" class="text-center" placeholder="70% Upon Completion"></td>
                         </tr>
                         <tr style="height: 20px;">
                             <td class="s3" colspan="2"></td>
