@@ -611,3 +611,16 @@ table.pofile td {
   display: block;
 }
 
+
+
+/*----------------*/
+/*   ADVERTISING
+/*----------------*/
+
+/* campaign management */
+.campaign-management-layout section {
+  display: none;
+}
+.campaign-management-layout section.active {
+  display: block;
+}
