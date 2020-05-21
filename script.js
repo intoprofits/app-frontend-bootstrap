@@ -162,7 +162,7 @@ $('[data-toggle="tooltip"]').tooltip();
 // FINANCES - Budgeting
 // ---------------------
 
-$('.budget-month-selector a').click(function(e){
+$('.budget-month-selector a').click(function(){
     if ( $(this).hasClass('nxt') ) {
         if ( !$('.month-select span.active:last-child').length ) {
             $('.month-select span.active').removeClass('active').next('span').addClass('active');
@@ -172,4 +172,43 @@ $('.budget-month-selector a').click(function(e){
             $('.month-select span.active').removeClass('active').prev('span').addClass('active');
         }
     }
+})
+
+// operating expenses
+$('#submitNewExpense').click(function(){
+
+    let inputs = [
+        $("#addOperatingExpenses input#date")[0],
+        $("#addOperatingExpenses input#type")[0],
+        $("#addOperatingExpenses input#budgeted")[0],
+        $("#addOperatingExpenses input#saved")[0],
+        $("#addOperatingExpenses input#total")[0]
+    ]
+
+    let addTemplate = `<tr>
+            <td class="align-middle">${inputs[0].value}</td>
+            <td class="align-middle">${inputs[1].value}</td>
+            <td class="align-middle">${inputs[2].value}</td>
+            <td class="align-middle">${inputs[3].value}%</td>
+            <td class="align-middle">${inputs[4].value}%</td>
+        </tr>`;
+
+    $(addTemplate).insertAfter('table#operatingExpenses tbody tr:last-child');
+
+    inputs.forEach(element => {
+        element.value = "";
+    });
+
+});
+
+
+// ----------------------------------
+// ADVERTISING - Campaign Management
+// ----------------------------------
+
+$('.campaign-management-btns button').click(function(e){
+    let nav = e.target.dataset.layout;
+    e.preventDefault();
+    $(this).toggleClass('active').siblings().removeClass('active');
+    $('.campaign-management-layout').find('section.' + nav).toggleClass('active').siblings().removeClass('active');
 })

@@ -53,7 +53,7 @@ body.signin {
 .primary-nav {
   background-color: #E3E8EB;
   height: 58px;
-  z-index: 3;
+  z-index: 5;
 }
 .primary-nav .btn:hover, 
 .primary-nav .nav-item.active .btn {
@@ -93,7 +93,7 @@ body.signin {
 .secondary-nav {
   top: 56px;
   height: 64px;
-  z-index: 2;
+  z-index: 4;
 }
 .secondary-nav:after {
   content: "";
@@ -581,9 +581,9 @@ table.pofile td {
 
 /* budgeting */
 .budget-month-selector {
-  font-size: 1.5rem;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
+  display: inline-block;
 }
 .budget-month-selector a {
   color: #212529;
@@ -610,7 +610,30 @@ table.pofile td {
 .budget-month-selector span.active {
   display: block;
 }
-
+button.assign {
+  float: right;
+}
+@media (min-width: 1200px) {
+  .budget-month-selector {
+    display: block;
+  }
+  button.assign {
+    float: none;
+    width: 216px;
+  }
+}
+button.addNewExpense {
+  position: absolute;
+  bottom: -16px;
+  background: #fff;
+  width: 30px;
+  height: 30px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 50%;
+  border-color: #b9b9b9;
+}
 
 
 /*----------------*/
