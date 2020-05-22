@@ -647,3 +647,10 @@ button.addNewExpense {
 .campaign-management-layout section.active {
   display: block;
 }
+@media (min-width: 1200px) {
+  .culling .col-xl-2 {
+    -ms-flex: 0 0 14.285%;
+    flex: 0 0 14.285%;
+    max-width: 14.285%
+  }
+}

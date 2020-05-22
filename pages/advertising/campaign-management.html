@@ -132,9 +132,40 @@
 
         <div class="campaign-management-layout">
 
-          <section class="culling ">
+          <section class="culling">
             
             <div class="row">
+              <div class="col-12 col-md-6 col-xl-2">
+                <div class="mb-3">
+                  <label for="recordType">Record Type</label>
+                  <select class="custom-select d-block w-100" id="recordType" required="">
+                    <option value="">Select...</option>
+                    <option value="Keywords">Keywords</option>
+                    <option value="Ad Groups">Ad Groups</option>
+                  </select>
+                  <div class="invalid-feedback">Please select a Record Type.</div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6 col-xl-2">
+                <div class="mb-3">
+                  <label for="campaign" class="text-nowrap">Select Campaign</label>
+                  <select class="custom-select d-block w-100" id="campaign" required="">
+                    <option value="">Select...</option>
+                    <option value="...">...</option>
+                    <option value="...">...</option>
+                  </select>
+                  <div class="invalid-feedback">Please select a campaign.</div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6 col-xl-2">
+                <div class="mb-3">
+                  <label for="date">Date</label>
+                  <input type="date" class="form-control" name="date" id="">
+                </div>
+              </div>
+
               <div class="col-12 col-md-6 col-xl-2">
                 <div class="mb-3">
                   <label for="spend">Spend</label>
@@ -184,6 +215,7 @@
               <div class="col-12 col-md-12 col-xl-2">
                 <button class="btn btn-primary btn-block mb-3" style="margin-top: 1.8rem">Submit</button>
               </div>
+
             </div>
 
             <div class="table-responsive border-bottom mb-3">
