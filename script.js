@@ -191,6 +191,14 @@ $('#submitNewExpense').click(function(){
             <td class="align-middle">${inputs[2].value}</td>
             <td class="align-middle">${inputs[3].value}%</td>
             <td class="align-middle">${inputs[4].value}%</td>
+            <td class="align-middle">
+                <div class="input-group">
+                    <input type="text" class="form-control" aria-label="" placeholder="$0">
+                    <div class="input-group-append">
+                    <button class="btn btn-sm btn-outline-secondary" type="button">Submit</button>
+                    </div>
+                </div>
+            </td>
         </tr>`;
 
     $(addTemplate).insertAfter('table#operatingExpenses tbody tr:last-child');

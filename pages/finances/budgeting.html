@@ -235,11 +235,12 @@
             <table class="table" id="operatingExpenses">
               <thead>
                 <tr>
-                  <th style="width: 20%;" class="text-nowrap">Due Date <i class="fas fa-sort"></i></th>
-                  <th style="width: 20%;" class="text-nowrap">Type <i class="fas fa-sort"></i></th>
-                  <th style="width: 20%;" class="text-nowrap">Budgeted <i class="fas fa-sort"></i></th>
-                  <th style="width: 20%;" class="text-nowrap">Saved <i class="fas fa-sort"></i></th>
-                  <th style="width: 20%;" class="text-nowrap">Total Required <i class="fas fa-sort"></i></th>
+                  <th style="width: 16.666%;" class="text-nowrap">Due Date <i class="fas fa-sort"></i></th>
+                  <th style="width: 16.666%;" class="text-nowrap">Type <i class="fas fa-sort"></i></th>
+                  <th style="width: 16.666%;" class="text-nowrap">Budgeted <i class="fas fa-sort"></i></th>
+                  <th style="width: 16.666%;" class="text-nowrap">Saved <i class="fas fa-sort"></i></th>
+                  <th style="width: 16.666%;" class="text-nowrap">Total Required <i class="fas fa-sort"></i></th>
+                  <th style="width: 16.666%; min-width: 120px">Allocate Now</th>
                 </tr>
               </thead>
               <tbody>
@@ -250,6 +251,14 @@
                   <td class="align-middle">20%</td>
                   <td class="align-middle">10%</td>
                   <td class="align-middle">2%</td>
+                  <td class="align-middle">
+                    <div class="input-group">
+                      <input type="text" class="form-control" aria-label="" placeholder="$0">
+                      <div class="input-group-append">
+                        <button class="btn btn-sm btn-outline-secondary" type="button">Submit</button>
+                      </div>
+                    </div>
+                  </td>
                 </tr>
 
               </tbody>
@@ -263,14 +272,13 @@
           <table class="table">
             <thead>
               <tr>
-                <th style="width: 12.5%;" class="text-nowrap">Due Date <i class="fas fa-sort"></i></th>
-                <th style="width: 12.5%;" class="text-nowrap">PO # <i class="fas fa-sort"></i></th>
-                <th style="width: 12.5%;">SKU <i class="fas fa-sort"></i></th>
-                <th style="width: 12.5%;" class="text-nowrap">Percentage <i class="fas fa-sort"></i></th>
-                <th style="width: 12.5%;" class="text-nowrap">Budgeted <i class="fas fa-sort"></i></th>
-                <th style="width: 12.5%;" class="text-nowrap">Saved <i class="fas fa-sort"></i></th>
-                <th style="width: 12.5%;" class="text-nowrap">Total Required <i class="fas fa-sort"></i></th>
-                <th style="width: 12.5%;">Complete</th>
+                <th style="width: 14.285%;" class="text-nowrap">Due Date <i class="fas fa-sort"></i></th>
+                <th style="width: 14.285%;" class="text-nowrap">PO # <i class="fas fa-sort"></i></th>
+                <th style="width: 14.285%;">SKU <i class="fas fa-sort"></i></th>
+                <th style="width: 14.285%;" class="text-nowrap">Percentage <i class="fas fa-sort"></i></th>
+                <th style="width: 14.285%;" class="text-nowrap">Budgeted <i class="fas fa-sort"></i></th>
+                <th style="width: 14.285%;" class="text-nowrap">Saved <i class="fas fa-sort"></i></th>
+                <th style="width: 14.285%;" class="text-nowrap">Total Required <i class="fas fa-sort"></i></th>
               </tr>
             </thead>
             <tbody>
@@ -283,7 +291,6 @@
                 <td class="align-middle">20%</td>
                 <td class="align-middle">10%</td>
                 <td class="align-middle">....</td>
-                <td class="align-middle"><button type="button" class="btn btn-sm btn-outline-secondary">Complete</button></td>
               </tr>
 
               <tr>
@@ -294,7 +301,6 @@
                 <td class="align-middle">20%</td>
                 <td class="align-middle">10%</td>
                 <td class="align-middle">....</td>
-                <td class="align-middle"><button type="button" class="btn btn-sm btn-outline-secondary">Complete</button></td>
               </tr>
 
             </tbody>
@@ -308,7 +314,7 @@
               <tr>
                 <th style="width: 16.66%;" class="text-nowrap">Due Date <i class="fas fa-sort"></i></th>
                 <th style="width: 16.66%;" class="text-nowrap">Type <i class="fas fa-sort"></i></th>
-                <th style="width: 16.66%;">Tax <span class="text-nowrap">Rate <i class="fas fa-sort"></i></span></th>
+                <th style="width: 16.66%;" class="text-nowrap">Rate <i class="fas fa-sort"></i></th>
                 <th style="width: 16.66%;" class="text-nowrap">Budgeted <i class="fas fa-sort"></i></th>
                 <th style="width: 16.66%;" class="text-nowrap">Saved <i class="fas fa-sort"></i></th>
                 <th style="width: 16.66%;" class="text-nowrap">Total Required <i class="fas fa-sort"></i></th>
@@ -344,11 +350,10 @@
           <table class="table">
             <thead>
               <tr>
-                <th style="width: 20%;" class="text-nowrap">Due Date <i class="fas fa-sort"></i></th>
-                <th style="width: 20%;" class="text-nowrap">Percentage <i class="fas fa-sort"></i></th>
-                <th style="width: 20%;" class="text-nowrap">Budgeted <i class="fas fa-sort"></i></th>
-                <th style="width: 20%;" class="text-nowrap">Saved <i class="fas fa-sort"></i></th>
-                <th style="width: 20%;" class="text-nowrap">Total Required <i class="fas fa-sort"></i></th>
+                <th style="width: 25%;" class="text-nowrap">Date <i class="fas fa-sort"></i></th>
+                <th style="width: 25%;" class="text-nowrap">Target Profit Percentage <i class="fas fa-sort"></i></th>
+                <th style="width: 25%;" class="text-nowrap">Current Profit Percentage <i class="fas fa-sort"></i></th>
+                <th style="width: 25%;" class="text-nowrap">Your Total Profit <i class="fas fa-sort"></i></th>
               </tr>
             </thead>
             <tbody>
@@ -357,8 +362,7 @@
                 <td class="align-middle">11/06/20</td>
                 <td class="align-middle">23%</td>
                 <td class="align-middle">20%</td>
-                <td class="align-middle">10%</td>
-                <td class="align-middle">2%</td>
+                <td class="align-middle">$0.00</td>
               </tr>
 
             </tbody>
