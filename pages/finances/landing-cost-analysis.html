@@ -73,98 +73,36 @@
         </div>
 
         <div class="row">
-          <div class="col-12 col-md-6 col-xl-3">
-            <div class="mb-3 ">
-              <label for="orderQuantity">Order Quantity</label>
-              <input type="text" class="form-control" id="orderQuantity" placeholder="">
+            <div class="col-md-6 col-lg-4 col-xl-3">
+              <div class="card mb-4 rounded-0">
+                <div style="height: 150px; width: 100%; background-image: url(https://dummyimage.com/600x350/e1e5e6/000.png); background-size: cover; background-position: center;"></div>
+                <div class="card-body">
+                  <div class="card-text po-info mb-3">
+                    <p class="mb-0"><b>Supplier:</b> Batman LLC</p>
+                    <p class="mb-0"><b>Product:</b> Cup</p>
+                    <p class="mb-0"><b>Quantity:</b> 100</p>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#addPO">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#editPO">Edit</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-xl-3">
-            <div class="mb-3 ">
-              <label for="costPerUnit">Cost Per Unit</label>
-              <input type="text" class="form-control" id="costPerUnit" placeholder="">
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-xl-3">
-            <div class="mb-3 ">
-              <label for="shipCostPerUnit">Ship Cost Per Unit</label>
-              <input type="text" class="form-control" id="shipCostPerUnit" placeholder="">
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-xl-3">
-            <div class="mb-3 ">
-              <label for="totalShipCost">Total Shipping Cost</label>
-              <input type="text" class="form-control" id="totalShipCost" placeholder="">
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-xl-3">
-            <div class="mb-3 ">
-              <label for="inspection">Inspection</label>
-              <input type="text" class="form-control" id="inspection" placeholder="">
-            </div>
-          </div>
-  
-          <div class="col-12 col-md-6 col-xl-3">
-            <div class="mb-3 ">
-              <label for="taxPlusDuty">Tax + Duty</label>
-              <input type="text" class="form-control" id="taxPlusDuty" placeholder="">
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-xl-3">
-            <div class="mb-3 ">
-              <label for="bond">Bond</label>
-              <input type="text" class="form-control" id="bond" placeholder="">
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-xl-3">
-            <div class="mb-3 ">
-              <label for="amazonSalePrice">Amazon Sale Price</label>
-              <input type="text" class="form-control" id="amazonSalePrice" placeholder="">
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-xl-3">
-            <div class="mb-3 ">
-              <label for="amazonFees">Amazon Fees</label>
-              <input type="text" class="form-control" id="amazonFees" placeholder="">
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-xl-3">
-            <div class="mb-3 ">
-              <label for="amazonFBArates">Amazon FBA Rates</label>
-              <input type="text" class="form-control" id="amazonFBArates" placeholder="">
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-xl-3">
-            <div class="mb-3 ">
-              <label for="returnPlusRefunds">Return + Refunds</label>
-              <input type="text" class="form-control" id="returnPlusRefunds" placeholder="">
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-xl-3">
-            <div class="mb-3 ">
-              <label for="salesTax">Sales Tax/Vat</label>
-              <input type="text" class="form-control" id="salesTax" placeholder="">
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-xl-3">
-            <div class="mb-3 ">
-              <label for="aCots">ACoTS</label>
-              <input type="text" class="form-control" id="aCots" placeholder="">
-            </div>
-          </div>
-
         </div>
+
+        <!-- repeat template above to save some space - delete this after integrating laravel -->
+        <script>
+          let container = document.querySelector("section[role='main'] > .row");
+          let element = container.innerHTML;
+
+          for (let i = 0; i < 11; i++) {
+            container.innerHTML += element;
+          };
+        </script>
 
 
         <!-- Modal Learn More-->

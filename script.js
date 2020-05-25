@@ -150,7 +150,7 @@ $('.steps .step').click(function(){
         default:
             e.siblings('.progress').find('.progress-bar').attr('style', 'width: 0');
     }
-})
+});
 
 // tooltip init
 $('[data-toggle="tooltip"]').tooltip();
@@ -162,7 +162,8 @@ $('[data-toggle="tooltip"]').tooltip();
 // FINANCES - Budgeting
 // ---------------------
 
-$('.budget-month-selector a').click(function(){
+$('.budget-month-selector a').click(function(e){
+    e.preventDefault();
     if ( $(this).hasClass('nxt') ) {
         if ( !$('.month-select span.active:last-child').length ) {
             $('.month-select span.active').removeClass('active').next('span').addClass('active');
@@ -172,7 +173,7 @@ $('.budget-month-selector a').click(function(){
             $('.month-select span.active').removeClass('active').prev('span').addClass('active');
         }
     }
-})
+});
 
 // operating expenses
 $('#submitNewExpense').click(function(){
