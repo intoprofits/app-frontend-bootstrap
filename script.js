@@ -219,4 +219,14 @@ $('.campaign-management-btns button').click(function(e){
     e.preventDefault();
     $(this).toggleClass('active').siblings().removeClass('active');
     $('.campaign-management-layout').find('section.' + nav).toggleClass('active').siblings().removeClass('active');
-})
+});
+
+$('a.edit-avl').click(function(e){
+    e.preventDefault();
+    $(this).hide().siblings('.input-group').show().find('input').attr('placeholder', this.text);
+});
+
+$('button.save-avl').click(function(){
+    let val = $(this).parent().siblings().val() + '%';
+    $(this).parent().parent().hide().siblings().show().html(val);
+});
