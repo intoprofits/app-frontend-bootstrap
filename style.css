@@ -635,6 +635,61 @@ button.addNewExpense {
   border-color: #b9b9b9;
 }
 
+/* Landing Cost & Analysis */
+.cstm-tble-wrap {
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+.cstm-tble-shadow {
+  background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(220, 220, 220, 0.45) 100%);
+  position: absolute;
+  width: 40px;
+  right: 1rem;
+  top: 3rem;
+  bottom: 2rem;
+}
+table.cstm-tble {
+  font-size: 14px;
+  color: #000000;
+  font-family: "Trebuchet MS";
+  text-align: center;
+}
+table.cstm-tble,
+table.cstm-tble td, 
+table.cstm-tble th {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 1px solid #dee2e6;
+  border-spacing: 0;
+  border-collapse: collapse;
+  background: #efefef;
+}
+.cstm-tble td {
+  vertical-align: bottom;
+  white-space: nowrap;
+  text-align: center; 
+  vertical-align: middle;
+  height: 22px;
+  min-width: 180px;
+}
+.cstm-tble .cb {
+  font-weight: bold;
+  color: #1155cc;
+}
+.cstm-tble input {
+  display: block;
+  border: 0;
+  width: 100%;
+  box-sizing: border-box;
+  height: 21px;
+  padding: 0;
+  text-align: center;
+}
+.cstm-tble .bgb {
+  background: #739ad4;
+}
+
 
 /*----------------*/
 /*   ADVERTISING

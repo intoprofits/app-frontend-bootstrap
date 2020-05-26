@@ -84,8 +84,8 @@
                   </div>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#addPO">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#editPO">Edit</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#viewLandingCostAnalysis">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#editLandingCostAnalysis">Edit</button>
                     </div>
                     <small class="text-muted">9 mins</small>
                   </div>
@@ -117,6 +117,609 @@
               </div>
               <div class="modal-body">
                 <img class="img-fluid" src="https://dummyimage.com/960x540/e1e5e6/000.png&text=video">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal View Landing Cost & Analysis -->
+        <div class="modal fade" id="viewLandingCostAnalysis" tabindex="-1" role="dialog" aria-labelledby="viewLandingCostAnalysisLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document" style="max-width: 1280px;">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="viewLandingCostAnalysisLabel">View Landing Cost & Analysis</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="cstm-tble-wrap">
+                  <h5 class="mb-2">Qoutes</h5>
+                  <table class="cstm-tble">
+                      <tr>
+                          <td></td>
+                          <td></td>
+                          <td class="cb">Product</td>
+                          <td class="cb">P1002</td>
+                          <td class="cb">P1003</td>
+                          <td class="cb">P1004</td>
+                          <td class="cb">P1005</td>
+                          <td class="cb">P1006</td>
+                          <td class="cb">P1007</td>
+                          <td class="cb">P1008</td>
+                          <td class="cb">P1009</td>
+                      </tr>
+              
+                      <tr>
+                          <td></td>
+                          <td></td>
+                          <td class="">Quantities:</td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                      </tr>
+              
+                      <tr>
+                          <td></td>
+                          <td></td>
+                          <td class="">Cost per unit:</td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                      </tr>
+              
+                      <tr>
+                          <td></td>
+                          <td></td>
+                          <td class="">Total cost:</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                      </tr>
+
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+              
+                      <tr>
+                          <td></td>
+                          <td></td>
+                          <td class=" cb">Shipping</td>
+                          <td class="cb">OCEAN</td>
+                          <td class="cb">AIR</td>
+                          <td class="cb">OCEAN</td>
+                          <td class="cb">LAND</td>
+                          <td class="cb">LAND</td>
+                          <td class="cb">OCEAN</td>
+                          <td class="cb">AIR</td>
+                          <td class="cb">OCEAN</td>
+                      </tr>
+              
+                      <tr>
+                          <td></td>
+                          <td></td>
+                          <td class="">China Freight</td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                      </tr>
+                      
+                      <tr>
+                        <td></td>
+                          <td></td>
+                          <td class="">USA Freight</td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                      </tr>
+                      
+                      <tr>
+                        <td></td>
+                          <td></td>
+                          <td class="">3PL Fees</td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                      </tr>
+                      
+                      <tr>
+                        <td></td>
+                          <td></td>
+                          <td class="">Amazon LTL Fees</td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                      </tr>
+                      
+                      <tr>
+                        <td></td>
+                          <td></td>
+                          <td class="">Total cost:</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                      </tr>
+                  
+                      <tr>
+                        <td></td>
+                          <td></td>
+                          <td class="">Cost per unit:</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                      </tr>
+              
+                  </table>
+              
+                  <h5 class="mb-2 mt-4">Landed Costs</h5>
+                  <table class="cstm-tble">
+                      <tr>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td class="cb">P1002</td>
+                          <td class="cb">P1003</td>
+                          <td class="cb">P1004</td>
+                          <td class="cb">P1005</td>
+                          <td class="cb">P1006</td>
+                          <td class="cb">P1007</td>
+                          <td class="cb">P1008</td>
+                          <td class="cb">P1009</td>
+                      </tr>
+
+                      <tr>
+                        <td class="cb">Item</td>
+                        <td class="cb">Type</td>
+                        <td class="cb">Total</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                      </tr>
+              
+                      <tr>
+                          <td>Materials</td>
+                          <td>Variables ($)</td>
+                          <td>...</td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                      </tr>
+              
+                      <tr>
+                          <td>PayPal/Bank Charges</td>
+                          <td>Fixed ($)</td>
+                          <td><input type="text"></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                      </tr>
+              
+                      <tr>
+                          <td>Packaging</td>
+                          <td>Variable ($)</td>
+                          <td>...</td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                          <td><input type="text"></td>
+                      </tr>
+              
+                      <tr>
+                          <td>Inspection</td>
+                          <td>Fixed ($)</td>
+                          <td><input type="text"></td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                      </tr>
+              
+                      <tr>
+                          <td>Tax & Duty</td>
+                          <td>Fixed (%)</td>
+                          <td><input type="text"></td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                      </tr>
+              
+                      <tr>
+                          <td>Other</td>
+                          <td>Fixed ($)</td>
+                          <td><input type="text"></td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                      </tr>
+
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td class="cb">Total before shipping:</td>
+                        <td>$0.00</td>
+                        <td>$0.00</td>
+                        <td>$0.00</td>
+                        <td>$0.00</td>
+                        <td>$0.00</td>
+                        <td>$0.00</td>
+                        <td>$0.00</td>
+                        <td>$0.00</td>
+                      </tr>
+
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+
+                      <tr>
+                        <td>Shipping</td>
+                        <td>Variable ($)</td>
+                        <td>...</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td class="cb">Total landed costs:</td>
+                        <td>#VALUE!</td>
+                        <td>#VALUE!</td>
+                        <td>#VALUE!</td>
+                        <td>#VALUE!</td>
+                        <td>#VALUE!</td>
+                        <td>#VALUE!</td>
+                        <td>#VALUE!</td>
+                        <td>#VALUE!</td>
+                      </tr>
+              
+                  </table>
+              
+                  <h5 class="mb-2 mt-4">Margin Analysis</h5>
+                  <table class="cstm-tble">
+                      <tr>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td class="cb">P1002</td>
+                          <td class="cb">P1003</td>
+                          <td class="cb">P1004</td>
+                          <td class="cb">P1005</td>
+                          <td class="cb">P1006</td>
+                          <td class="cb">P1007</td>
+                          <td class="cb">P1008</td>
+                          <td class="cb">P1009</td>
+                      </tr>
+              
+                      <tr>
+                          <td></td>
+                          <td></td>
+                          <td>Sales Price:</td>
+                          <td><input type="text" name="" id=""></td>
+                          <td><input type="text" name="" id=""></td>
+                          <td><input type="text" name="" id=""></td>
+                          <td><input type="text" name="" id=""></td>
+                          <td><input type="text" name="" id=""></td>
+                          <td><input type="text" name="" id=""></td>
+                          <td><input type="text" name="" id=""></td>
+                          <td><input type="text" name="" id=""></td>
+                      </tr>
+              
+                      <tr>
+                          <td></td>
+                          <td></td>
+                          <td>Amz Referral fees:</td>
+                          <td><input type="text" name="" id=""></td>
+                          <td><input type="text" name="" id=""></td>
+                          <td><input type="text" name="" id=""></td>
+                          <td><input type="text" name="" id=""></td>
+                          <td><input type="text" name="" id=""></td>
+                          <td><input type="text" name="" id=""></td>
+                          <td><input type="text" name="" id=""></td>
+                          <td><input type="text" name="" id=""></td>
+                      </tr>
+              
+                      <tr>
+                          <td></td>
+                          <td></td>
+                          <td>FBA fees:</td>
+                          <td><input type="text" name="" id=""></td>
+                          <td><input type="text" name="" id=""></td>
+                          <td><input type="text" name="" id=""></td>
+                          <td><input type="text" name="" id=""></td>
+                          <td><input type="text" name="" id=""></td>
+                          <td><input type="text" name="" id=""></td>
+                          <td><input type="text" name="" id=""></td>
+                          <td><input type="text" name="" id=""></td>
+                      </tr>
+              
+                      <tr>
+                          <td></td>
+                          <td></td>
+                          <td>Gross profit:</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                      </tr>
+              
+                      <tr>
+                          <td></td>
+                          <td></td>
+                          <td>Gross margin:</td>
+                          <td>#VALUE!</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                          <td>$0.00</td>
+                      </tr>
+              
+                      <tr>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                      </tr>
+              
+                      <tr>
+                          <td class="cb">Item</td>
+                          <td class="cb">Type</td>
+                          <td class="cb">Total</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                      </tr>
+              
+                      <tr>
+                          <td>Returns & Refunds</td>
+                          <td>Variable (%)</td>
+                          <td><input type="text" name="" id=""></td>
+                          <td>0.00%</td>
+                          <td>0.00%</td>
+                          <td>0.00%</td>
+                          <td>0.00%</td>
+                          <td>0.00%</td>
+                          <td>0.00%</td>
+                          <td>0.00%</td>
+                          <td>0.00%</td>
+                      </tr>
+              
+                      <tr>
+                          <td>ACoTS</td>
+                          <td>Variable (%)</td>
+                          <td><input type="text" name="" id=""></td>
+                          <td>0.00%</td>
+                          <td>0.00%</td>
+                          <td>0.00%</td>
+                          <td>0.00%</td>
+                          <td>0.00%</td>
+                          <td>0.00%</td>
+                          <td>0.00%</td>
+                          <td>0.00%</td>
+                      </tr>
+              
+                      <tr>
+                          <td>Other</td>
+                          <td>Variable (%)</td>
+                          <td><input type="text" name="" id=""></td>
+                          <td>0.00%</td>
+                          <td>0.00%</td>
+                          <td>0.00%</td>
+                          <td>0.00%</td>
+                          <td>0.00%</td>
+                          <td>0.00%</td>
+                          <td>0.00%</td>
+                          <td>0.00%</td>
+                      </tr>
+              
+                      <tr>
+                          <td>Other</td>
+                          <td>Variable (%)</td>
+                          <td><input type="text" name="" id=""></td>
+                          <td>0.00%</td>
+                          <td>0.00%</td>
+                          <td>0.00%</td>
+                          <td>0.00%</td>
+                          <td>0.00%</td>
+                          <td>0.00%</td>
+                          <td>0.00%</td>
+                          <td>0.00%</td>
+                      </tr>
+              
+                      <tr>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                      </tr>
+              
+                      <tr>
+                          <td></td>
+                          <td></td>
+                          <td class="bgb">Net profit %:</td>
+                          <td class="bgb">0.00%</td>
+                          <td class="bgb">0.00%</td>
+                          <td class="bgb">0.00%</td>
+                          <td class="bgb">0.00%</td>
+                          <td class="bgb">0.00%</td>
+                          <td class="bgb">0.00%</td>
+                          <td class="bgb">0.00%</td>
+                          <td class="bgb">0.00%</td>
+                      </tr>
+                      <tr>
+                          <td></td>
+                          <td></td>
+                          <td class="bgb">Net profit $:</td>
+                          <td class="bgb">$0.00</td>
+                          <td class="bgb">$0.00</td>
+                          <td class="bgb">$0.00</td>
+                          <td class="bgb">$0.00</td>
+                          <td class="bgb">$0.00</td>
+                          <td class="bgb">$0.00</td>
+                          <td class="bgb">$0.00</td>
+                          <td class="bgb">$0.00</td>
+                      </tr>
+                  </table>
+                </div>
+                <div class="cstm-tble-shadow"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Edit Landing Cost & Analysis -->
+        <div class="modal fade" id="editLandingCostAnalysis" tabindex="-1" role="dialog" aria-labelledby="editLandingCostAnalysisLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document" style="max-width: 1280px;">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="editLandingCostAnalysisLabel">Edit Landing Cost & Analysis</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img class="img-fluid" src="https://dummyimage.com/1280x720/e1e5e6/000.png&text=edit-landing-cost-analysis">
               </div>
             </div>
           </div>
