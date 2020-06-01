@@ -59,7 +59,6 @@
             <li class="nav-item"><a class="nav-link" href="../advertising/ad-performance-report.html"><i class="fas fa-file-medical-alt d-block d-lg-inline mr-lg-2"></i>Ad Performance Report</a></li>
             <li class="nav-item"><a class="nav-link active" href="../advertising/campaign-management.html"><i class="fas fa-chart-bar d-block d-lg-inline mr-lg-2"></i>Campaign Management</a></li>
             <li class="nav-item"><a class="nav-link" href="../advertising/day-parting-tool.html"><i class="fas fa-wrench d-block d-lg-inline mr-lg-2"></i>Day Parting Tool</a></li>
-            <li class="nav-item"><a class="nav-link" href="../advertising/ppc-history.html"><i class="fas fa-history d-block d-lg-inline mr-lg-2"></i>PPC History</a></li>
           </ul>
         </div>
       </aside>
@@ -84,9 +83,9 @@
               <tr>
                 <th style="width: 30%;" class="text-nowrap">Product Name <i class="fas fa-sort" aria-hidden="true"></i></th>
                 <th style="width: 14%;" class="text-nowrap">SKU <i class="fas fa-sort" aria-hidden="true"></i></th>
-                <th style="width: 14%;" class="text-nowrap">Current ACoS <i class="fas fa-sort" aria-hidden="true"></i></th>
                 <th style="width: 14%;" class="text-nowrap">Gross Margin % <i class="fas fa-sort" aria-hidden="true"></i></th>
                 <th style="width: 14%;" class="text-nowrap">Target ACoS <i class="fas fa-sort" aria-hidden="true"></i></th>
+                <th style="width: 14%;" class="text-nowrap">Current ACoS <i class="fas fa-sort" aria-hidden="true"></i></th>
                 <th style="width: 14%; min-width: 140px;" class="text-nowrap">AVL <i class="fas fa-sort" aria-hidden="true"></i></th>
               </tr>
             </thead>
@@ -236,35 +235,6 @@
               </div>
 
             </div>
-            <div class="pt-3 pb-2 border-bottom mb-3">
-              <h5>Process Log</h5>
-            </div>
-            <div class="table-responsive border-bottom mb-3">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th>Process ID</th>
-                    <th>Date</th>
-                    <th>SKU</th>
-                    <th>Status</th>
-                    <th>Result</th>
-                    <th>View</th>
-                    <th>Revert</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>001</td>
-                    <td>12-13-20</td>
-                    <td>3216549</td>
-                    <td>DONE</td>
-                    <td>Result</td>
-                    <td><button class="btn btn-sm btn-outline-secondary">View</button></td>
-                    <td><button class="btn btn-sm btn-outline-secondary">Revert</button></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
           </section>
 
           <section class="calibration">
@@ -308,44 +278,54 @@
                 <button class="btn btn-primary btn-block" style="margin-top: 1.8rem">Submit</button>
               </div>
             </div>
-            <div class="pt-3 pb-2 border-bottom mb-3">
-              <h5>Process Log</h5>
-            </div>
-            <div class="table-responsive border-bottom mb-3">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th>Process ID</th>
-                    <th>Date</th>
-                    <th>SKU</th>
-                    <th>Status</th>
-                    <th>Result</th>
-                    <th>View</th>
-                    <th>Revert</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>001</td>
-                    <td>12-13-20</td>
-                    <td>3216549</td>
-                    <td>DONE</td>
-                    <td>Result</td>
-                    <td><button class="btn btn-sm btn-outline-secondary">View</button></td>
-                    <td><button class="btn btn-sm btn-outline-secondary">Revert</button></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
           </section>
 
           <section class="whitelist">
-            <div class="pt-2 pb-2 mb-3">
-              <h5>Whitelist</h5>
-            </div>
           </section>
         
         </div>
+
+        
+       
+          <div class="pt-3 pb-2 border-bottom mb-3">
+            <h5>Process Log</h5>
+          </div>
+          <div class="table-responsive border-bottom mb-3">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Process ID</th>
+                  <th>Date</th>
+                  <th>SKU</th>
+                  <th>Status</th>
+                  <th>Result</th>
+                  <th>View</th>
+                  <th>Revert</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>001 - Calibration</td>
+                  <td>12-13-20</td>
+                  <td>3216549</td>
+                  <td>DONE</td>
+                  <td>Result</td>
+                  <td><button class="btn btn-sm btn-outline-secondary">View</button></td>
+                  <td><button class="btn btn-sm btn-outline-secondary">Revert</button></td>
+                </tr>
+                <tr>
+                  <td>002 - Culling</td>
+                  <td>12-13-20</td>
+                  <td>3216549</td>
+                  <td>DONE</td>
+                  <td>Result</td>
+                  <td><button class="btn btn-sm btn-outline-secondary">View</button></td>
+                  <td><button class="btn btn-sm btn-outline-secondary">Revert</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+     
 
         <!-- Modal Learn More-->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
