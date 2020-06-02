@@ -25,6 +25,9 @@ a:hover {
   background-color: #0047AB;
   border-color: #0047AB;
 }
+.text-primary {
+  color: #155bbf!important;
+}
 
 /* signin */
 body.signin, html.signin {
@@ -610,14 +613,14 @@ table.pofile td {
 .budget-month-selector span.active {
   display: block;
 }
-button.assign {
+a.assign {
   float: right;
 }
 @media (min-width: 1200px) {
   .budget-month-selector {
     display: block;
   }
-  button.assign {
+  a.assign {
     float: none;
     width: 216px;
   }
@@ -633,6 +636,17 @@ button.addNewExpense {
   margin: 0 auto;
   border-radius: 50%;
   border-color: #b9b9b9;
+}
+/* budgeting-asign */
+table.budgeting-asign input.tag-select {
+  position: relative;
+  top: 2px;
+}
+table.budgeting-asign tbody i {
+  color: #ccc;
+}
+table.budgeting-asign tbody i.active {
+  color: #18b92c;
 }
 
 /* Landing Cost & Analysis */
