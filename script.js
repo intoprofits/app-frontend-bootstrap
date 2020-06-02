@@ -216,10 +216,14 @@ $('#submitNewExpense').click(function(){
 // ----------------------------------
 
 $('.campaign-management-btns button').click(function(e){
-    let nav = e.target.dataset.layout;
-    e.preventDefault();
     $(this).toggleClass('active').siblings().removeClass('active');
-    $('.campaign-management-layout').find('section.' + nav).toggleClass('active').siblings().removeClass('active');
+    
+    if (!$(this).hasClass('open-modal')) {
+        let nav = e.target.dataset.layout;
+        $('.campaign-management-layout').find('section.' + nav).toggleClass('active').siblings().removeClass('active');
+    } else {
+        $('.campaign-management-layout').find('section').removeClass('active');
+    }
 });
 
 $('a.edit-avl').click(function(e){
