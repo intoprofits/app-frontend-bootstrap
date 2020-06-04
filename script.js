@@ -162,6 +162,7 @@ $('[data-toggle="tooltip"]').tooltip();
 // FINANCES - Budgeting
 // ---------------------
 
+// month selector
 $('.budget-month-selector a').click(function(e){
     e.preventDefault();
     if ( $(this).hasClass('nxt') ) {
@@ -208,6 +209,164 @@ $('#submitNewExpense').click(function(){
         element.value = "";
     });
 
+});
+
+
+// ---------------------------------
+// FINANCES - Budgeting -> Assign
+// ---------------------------------
+
+// dummy data (replace this with api call)
+const dummyData = [
+    {
+        name: "account",
+        data: ['Batman Account','Foo Account','Lorem Account','Tea Account']
+    },
+    {
+        name: "payees",
+        data: ['Green Lantern','Batman','Aquaman','Superman']
+    },
+    {
+        name: "categories",
+        data: ['Inflow','Spare Funds','Inventory','Payment']
+    },
+    {
+        name: "transaction",
+        data: [
+            {account: 'Batman Account', date: '2020-03-20', payee: 'Batman', category: 'Inflow', memo: 'this is a sample memo', outflow: '$5,000.00', inflow: '$0.00'},
+            {account: 'Foo Account', date: '2020-04-25', payee: 'Green Lantern', category: 'Spare Funds', memo: 'this is a sample memo', outflow: '$7,000.00', inflow: '$0.00'},
+            {account: 'Lorem account', date: '2020-05-15', payee: 'Aquaman', category: 'Inventory', memo: 'this is a sample memo', outflow: '$8,000.00', inflow: '$0.00'},
+        ]
+    }
+];
+
+// extract dummy contents from dummyData variable
+const extractDummyContents = (dummyCategory) => {
+    let contents = '';
+    dummyData.forEach(catName => {
+        if (catName.name === dummyCategory) {
+            catName.data.forEach(acc => {
+                contents += `<a href="#" data-transaction="update">${acc}</a>`;
+            });
+        }
+    });
+    //convert title to titleCase
+    dummyCategory = dummyCategory.replace(/(\w+)/g, function(x) { return x[0].toUpperCase() + x.substring(1) });
+
+    return `<b>${dummyCategory}</b>${contents}`;
+};
+
+// display dummy data on 'tbody.transaction-list'
+dummyData.forEach(catName => {
+    if (catName.name === 'transaction') {
+        catName.data.forEach(content => {
+            document.querySelector('tbody.transaction-list').innerHTML += 
+            `<tr class="transaction-details">
+                <td>
+                    <input class="tag-select mr-2" type="checkbox" value=""> <i class="fas fa-tag"></i>
+                </td>
+                <td>
+                    <span data-transaction="account">${content.account}</span>
+                    <div class="input-group">
+                        <input type="text" data-transaction="account" class="form-control" value="${content.account}">
+                        <div class="popup-content">${extractDummyContents('account')}</div>
+                    </div>
+                </td>
+                <td>
+                    <span data-transaction="date">${content.date}</span>
+                    <div class="input-group"><input type="date" data-transaction="date" class="form-control" value="${content.date}"></div>
+                </td>
+                <td>
+                    <span data-transaction="payee">${content.payee}</span>
+                    <div class="input-group">
+                        <input type="text" data-transaction="payee" class="form-control" value="${content.payee}">
+                        <div class="popup-content">${extractDummyContents('payees')}</div>
+                    </div>
+                </td>
+                <td>
+                    <span data-transaction="category">${content.category}</span>
+                    <div class="input-group">
+                        <input type="text" data-transaction="category" class="form-control" value="${content.category}">
+                        <div class="popup-content">${extractDummyContents('categories')}</div>
+                    </div>
+                </td>
+                <td>
+                    <span data-transaction="memo">${content.memo}</span>
+                    <div class="input-group"><input type="text" data-transaction="memo" class="form-control" value="${content.memo}"></div>
+                </td>
+                <td>
+                    <span data-transaction="outflow">${content.outflow}</span>
+                    <div class="input-group"><input type="text" data-transaction="outflow" class="form-control" value="${content.outflow}"></div>
+                </td>
+                <td>
+                    <span data-transaction="inflow">${content.inflow}</span>
+                    <div class="input-group mb-3"><input type="text" data-transaction="inflow" class="form-control" value="${content.inflow}"></div>
+                    <div class="btn-toolbar float-right">
+                            <a href="#" class="btn btn-sm mr-2 btn-secondary" data-transaction="cancel">Cancel</a>
+                            <a href="#" class="btn btn-sm btn-success" data-transaction="save">Save</a>
+                    </div>
+                </td>
+                <td> <i class="fas fa-copyright active"></i></td>
+            </tr>`
+        });
+    }
+})
+
+// edit transactions
+$('tr.transaction-details span').click(function(){
+    let parent = $(this).parents('tr');
+
+    parent.addClass('show').siblings().removeClass('show');
+    $(this).siblings('.input-group').find('input').focus().select();
+    $(this).siblings('.input-group').find('.popup-content').addClass('show')
+    parent.find('input[type="checkbox"]').prop( "checked", true );
+});
+
+// select inputs
+$('.input-group input').focus(function(){
+    $(this).parents('tr').find('.popup-content').removeClass('show');
+    $(this).siblings().addClass('show');
+});
+
+
+// update transaction
+$('a[data-transaction="update"]').click(function(){
+    let parent = $(this).parents('.input-group');
+
+    parent.find('input').val($(this).text());
+    parent.find('.popup-content').removeClass('show')
+})
+
+// cancel transaction
+$('a[data-transaction="cancel"]').click(function(){
+    let parent = $(this).parents('tr');
+
+	parent.removeClass('show');
+    parent.find('input[type="checkbox"]').prop( "checked", false );
+    parent.find('.popup-content').removeClass('show');
+});
+
+// save transaction
+$('a[data-transaction="save"]').click(function(){
+	let parent = $(this).parents('tr'),
+        acc = parent.find('input[data-transaction="account"]').val(),
+        dte = parent.find('input[data-transaction="date"]').val(),
+        pay = parent.find('input[data-transaction="payee"]').val(),
+        cat = parent.find('input[data-transaction="category"]').val(),
+        mem = parent.find('input[data-transaction="memo"]').val(),
+        ouf = parent.find('input[data-transaction="outflow"]').val(),
+        inf = parent.find('input[data-transaction="inflow"]').val();
+
+	parent.find('span[data-transaction="account"]').text(acc);
+	parent.find('span[data-transaction="date"]').text(dte),
+	parent.find('span[data-transaction="payee"]').text(pay),
+	parent.find('span[data-transaction="category"]').text(cat),
+	parent.find('span[data-transaction="memo"]').text(mem),
+	parent.find('span[data-transaction="outflow"]').text(ouf),
+	parent.find('span[data-transaction="inflow"]').text(inf);
+
+    parent.removeClass('show');
+    parent.find('input[type="checkbox"]').prop( "checked", false );
 });
 
 

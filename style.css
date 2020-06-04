@@ -637,16 +637,71 @@ button.addNewExpense {
   border-radius: 50%;
   border-color: #b9b9b9;
 }
-/* budgeting-asign */
-table.budgeting-asign input.tag-select {
-  position: relative;
-  top: 2px;
+
+/* budgeting-transactions */
+.budgeting-transactions {
+  overflow: inherit;
 }
-table.budgeting-asign tbody i {
+.budgeting-transactions tbody i {
   color: #ccc;
 }
-table.budgeting-asign tbody i.active {
+.budgeting-transactions tbody i.active {
   color: #18b92c;
+}
+tr.transaction-details.show {
+  background: #eff2f5;
+}
+tr.transaction-details.show input[type="checkbox"],
+tr.transaction-details.show i {
+  margin-top: 8px;
+}
+tr.transaction-details span {
+  cursor: pointer;
+}
+tr.transaction-details span,
+tr.transaction-details.show .input-group,
+tr.transaction-details.show .btn-toolbar {
+  display: block;
+}
+tr.transaction-details.show span,
+tr.transaction-details .input-group,
+tr.transaction-details .btn-toolbar {
+  display: none;
+}
+
+.popup-content {
+  position: absolute;
+  background: #fff;
+  box-shadow: 0 0 20px #ccc;
+  min-width: 200px;
+  top: 44px;
+  z-index: 1;
+  display: none;
+}
+.popup-content.show {
+  display: block;
+}
+.popup-content:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #f8f9fa;
+  position: absolute;
+  top: -12px;
+  left: 12px;
+}
+.popup-content b {
+  padding: .5rem 1rem;
+  display: block;
+  border-bottom: 1px solid #e3e8eb;
+  background: #f8f9fa;
+}
+.popup-content a {
+  display: block;
+  padding: .5rem 1rem;
+  border-bottom: 1px solid #e8e8e8;
 }
 
 /* Landing Cost & Analysis */
