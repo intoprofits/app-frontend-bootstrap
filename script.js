@@ -257,60 +257,62 @@ const extractDummyContents = (dummyCategory) => {
 };
 
 // display dummy data on 'tbody.transaction-list'
-dummyData.forEach(catName => {
-    if (catName.name === 'transaction') {
-        catName.data.forEach(content => {
-            document.querySelector('tbody.transaction-list').innerHTML += 
-            `<tr class="transaction-details">
-                <td>
-                    <input class="tag-select mr-2" type="checkbox" value=""> <i class="fas fa-tag"></i>
-                </td>
-                <td>
-                    <span data-transaction="account">${content.account}</span>
-                    <div class="input-group">
-                        <input type="text" data-transaction="account" class="form-control" value="${content.account}">
-                        <div class="popup-content">${extractDummyContents('account')}</div>
-                    </div>
-                </td>
-                <td>
-                    <span data-transaction="date">${content.date}</span>
-                    <div class="input-group"><input type="date" data-transaction="date" class="form-control" value="${content.date}"></div>
-                </td>
-                <td>
-                    <span data-transaction="payee">${content.payee}</span>
-                    <div class="input-group">
-                        <input type="text" data-transaction="payee" class="form-control" value="${content.payee}">
-                        <div class="popup-content">${extractDummyContents('payees')}</div>
-                    </div>
-                </td>
-                <td>
-                    <span data-transaction="category">${content.category}</span>
-                    <div class="input-group">
-                        <input type="text" data-transaction="category" class="form-control" value="${content.category}">
-                        <div class="popup-content">${extractDummyContents('categories')}</div>
-                    </div>
-                </td>
-                <td>
-                    <span data-transaction="memo">${content.memo}</span>
-                    <div class="input-group"><input type="text" data-transaction="memo" class="form-control" value="${content.memo}"></div>
-                </td>
-                <td>
-                    <span data-transaction="outflow">${content.outflow}</span>
-                    <div class="input-group"><input type="text" data-transaction="outflow" class="form-control" value="${content.outflow}"></div>
-                </td>
-                <td>
-                    <span data-transaction="inflow">${content.inflow}</span>
-                    <div class="input-group mb-3"><input type="text" data-transaction="inflow" class="form-control" value="${content.inflow}"></div>
-                    <div class="btn-toolbar float-right">
-                            <a href="#" class="btn btn-sm mr-2 btn-secondary" data-transaction="cancel">Cancel</a>
-                            <a href="#" class="btn btn-sm btn-success" data-transaction="save">Save</a>
-                    </div>
-                </td>
-                <td> <i class="fas fa-copyright active"></i></td>
-            </tr>`
-        });
-    }
-})
+if (document.querySelector('tbody.transaction-list')) {
+    dummyData.forEach(catName => {
+        if (catName.name === 'transaction') {
+            catName.data.forEach(content => {
+                document.querySelector('tbody.transaction-list').innerHTML += 
+                `<tr class="transaction-details">
+                    <td>
+                        <input class="tag-select mr-2" type="checkbox" value=""> <i class="fas fa-tag"></i>
+                    </td>
+                    <td>
+                        <span data-transaction="account">${content.account}</span>
+                        <div class="input-group">
+                            <input type="text" data-transaction="account" class="form-control" value="${content.account}">
+                            <div class="popup-content">${extractDummyContents('account')}</div>
+                        </div>
+                    </td>
+                    <td>
+                        <span data-transaction="date">${content.date}</span>
+                        <div class="input-group"><input type="date" data-transaction="date" class="form-control" value="${content.date}"></div>
+                    </td>
+                    <td>
+                        <span data-transaction="payee">${content.payee}</span>
+                        <div class="input-group">
+                            <input type="text" data-transaction="payee" class="form-control" value="${content.payee}">
+                            <div class="popup-content">${extractDummyContents('payees')}</div>
+                        </div>
+                    </td>
+                    <td>
+                        <span data-transaction="category">${content.category}</span>
+                        <div class="input-group">
+                            <input type="text" data-transaction="category" class="form-control" value="${content.category}">
+                            <div class="popup-content">${extractDummyContents('categories')}</div>
+                        </div>
+                    </td>
+                    <td>
+                        <span data-transaction="memo">${content.memo}</span>
+                        <div class="input-group"><input type="text" data-transaction="memo" class="form-control" value="${content.memo}"></div>
+                    </td>
+                    <td>
+                        <span data-transaction="outflow">${content.outflow}</span>
+                        <div class="input-group"><input type="text" data-transaction="outflow" class="form-control" value="${content.outflow}"></div>
+                    </td>
+                    <td>
+                        <span data-transaction="inflow">${content.inflow}</span>
+                        <div class="input-group mb-3"><input type="text" data-transaction="inflow" class="form-control" value="${content.inflow}"></div>
+                        <div class="btn-toolbar float-right">
+                                <a href="#" class="btn btn-sm mr-2 btn-secondary" data-transaction="cancel">Cancel</a>
+                                <a href="#" class="btn btn-sm btn-success" data-transaction="save">Save</a>
+                        </div>
+                    </td>
+                    <td> <i class="fas fa-copyright active"></i></td>
+                </tr>`
+            });
+        }
+    })
+}
 
 // edit transactions
 $('tr.transaction-details span').click(function(){
