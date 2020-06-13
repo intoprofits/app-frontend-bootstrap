@@ -122,34 +122,11 @@ $("#savedTemplates button.savedTempBtn").click(function(e){
 // dot steps 
 $('.steps .step').click(function(){
 
-    let e = $(this),
-        current = e.attr('data-steps');
+    let e = $(this);
     
     e.addClass('active').siblings().removeClass('active');
     e.prevAll().addClass('active');
-
-    switch (current) {
-        case "2":
-            e.siblings('.progress').find('.progress-bar').attr('style', 'width: 17%');
-            break;
-        case "3":
-            e.siblings('.progress').find('.progress-bar').attr('style', 'width: 34%');
-            break;
-        case "4":
-            e.siblings('.progress').find('.progress-bar').attr('style', 'width: 51%');
-            break;
-        case "5":
-            e.siblings('.progress').find('.progress-bar').attr('style', 'width: 67%');
-            break;
-        case "6":
-            e.siblings('.progress').find('.progress-bar').attr('style', 'width: 83%');
-            break;
-        case "7":
-            e.siblings('.progress').find('.progress-bar').attr('style', 'width: 100%');
-            break;
-        default:
-            e.siblings('.progress').find('.progress-bar').attr('style', 'width: 0');
-    }
+    
 });
 
 // tooltip init
