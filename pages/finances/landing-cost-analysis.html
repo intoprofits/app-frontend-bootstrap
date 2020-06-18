@@ -85,6 +85,7 @@
                 <th class="m-0"><span>Gross</span> <span class="text-nowrap">Profit <i class="fas fa-sort"></i></span></th>
                 <th class="m-0"><span>Net</span> <span class="text-nowrap">Margin <i class="fas fa-sort"></i></span></th>
                 <th class="m-0"><span>Net</span> <span class="text-nowrap">Profit <i class="fas fa-sort"></i></span></th>
+                <th class="m-0"><span class="text-nowrap">Edit</span></th>
               </tr>
             </thead>
             <tbody>
@@ -101,6 +102,7 @@
                 <td class="align-middle">25%</td>
                 <td class="align-middle">$320.10</td>
                 <td class="align-middle">$5,210.00</td>
+                <td class="align-middle"><button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#viewLandingCostAnalysis">Edit</button></td>
               </tr>
 
               <tr>
@@ -116,6 +118,7 @@
                 <td class="align-middle">62%</td>
                 <td class="align-middle">$1,023.00</td>
                 <td class="align-middle">$1,200.00</td>
+                <td class="align-middle"><button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#viewLandingCostAnalysis">Edit</button></td>
               </tr>
 
               <tr>
@@ -131,43 +134,12 @@
                 <td class="align-middle">25%</td>
                 <td class="align-middle">$2,010.00</td>
                 <td class="align-middle">$3,800.00</td>
+                <td class="align-middle"><button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#viewLandingCostAnalysis">Edit</button></td>
               </tr>
 
             </tbody>
           </table>
         </div>
-
-        <div class="row">
-            <div class="col-md-6 col-lg-4 col-xl-3">
-              <div class="card mb-4 rounded-0">
-                <div style="height: 150px; width: 100%; background-image: url(https://dummyimage.com/600x350/e1e5e6/000.png); background-size: cover; background-position: center;"></div>
-                <div class="card-body">
-                  <div class="card-text po-info mb-3">
-                    <p class="mb-0"><b>Supplier:</b> Batman LLC</p>
-                    <p class="mb-0"><b>Product:</b> Cup</p>
-                    <p class="mb-0"><b>Quantity:</b> 100</p>
-                  </div>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#viewLandingCostAnalysis">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#editLandingCostAnalysis">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </div>
-
-        <!-- repeat template above to save some space - delete this after integrating laravel -->
-        <script>
-          let container = document.querySelector("section[role='main'] > .row");
-          let element = container.innerHTML;
-
-          for (let i = 0; i < 11; i++) {
-            container.innerHTML += element;
-          };
-        </script>
 
 
         <!-- Modal Learn More-->
@@ -192,7 +164,7 @@
           <div class="modal-dialog modal-lg" role="document" style="max-width: 1280px;">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="viewLandingCostAnalysisLabel">View Landing Cost & Analysis</h5>
+                <h5 class="modal-title" id="viewLandingCostAnalysisLabel">Edit Landing Cost & Analysis</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -768,23 +740,6 @@
                   </table>
                 </div>
                 <div class="cstm-tble-shadow"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modal Edit Landing Cost & Analysis -->
-        <div class="modal fade" id="editLandingCostAnalysis" tabindex="-1" role="dialog" aria-labelledby="editLandingCostAnalysisLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg" role="document" style="max-width: 1280px;">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="editLandingCostAnalysisLabel">Edit Landing Cost & Analysis</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <img class="img-fluid" src="https://dummyimage.com/1280x720/e1e5e6/000.png&text=edit-landing-cost-analysis">
               </div>
             </div>
           </div>
