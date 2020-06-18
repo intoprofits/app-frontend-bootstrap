@@ -358,7 +358,7 @@
                   <div class="col-6">
                     <div class="clearfix border-bottom mb-2">
                       <h6 class="float-left"><b>0 added</b></h6>
-                      <a class="float-right" href="#">Remove all</a>
+                      <a class="float-right" href="#" data-toggle="modal" data-target="#RemoveKeywords">Remove all</a>
                     </div>
                     <div class="mb-2 border-bottom">
                       <div class="row">
@@ -403,6 +403,40 @@
             </div>
           </div>
         </div>
+
+
+        <!-- Moda Remove Keywords Warning -->
+        <div class="modal fade" style="z-index: 5" id="RemoveKeywords" tabindex="-1" role="dialog" aria-labelledby="RemoveKeywordsLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <p><b>You're about to delete all your keywords. Are you Sure?</b></p>
+                <button class="btn btn-primary btn-sm" data-dismiss="modal" aria-label="Close">Yes</button>
+                <button class="btn btn-secondary btn-sm" data-dismiss="modal" aria-label="Close">No</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <style>
+          #RemoveKeywords.modal.show {
+              z-index: 1053 !important;
+          }
+          #RemoveKeywords .modal-dialog {
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            max-width: 450px;
+          }
+          #RemoveKeywords button.btn {
+            width: 100px;
+          }
+          .modal-backdrop.show:nth-of-type(even) {
+              z-index: 1052 !important;
+          }
+        </style>
+
 
         <!-- Modal Whitelist -->
         <div class="modal fade" id="Whitelist" tabindex="-1" role="dialog" aria-labelledby="WhitelistLabel" aria-hidden="true">
