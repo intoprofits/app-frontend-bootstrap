@@ -29,6 +29,18 @@ $('button.sidebar-toggle').click(function() {
 
 
 
+// -----------------------------------
+// SUPPLY CHAIN - Inventory Analysis
+// -----------------------------------
+$('.inline-edit a[data-btn="edit"]').click(function() {
+    $(this).parent().addClass('show');
+});
+
+$('.inline-edit button[data-btn="save"]').click(function() {
+    $(this).parents('.inline-edit').removeClass('show');
+});
+
+
 // ---------------------------
 // SUPPLY CHAIN - PO Creator
 // ---------------------------

@@ -288,6 +288,26 @@ main section.full {
   display: table-cell;
 }
 
+/* Supply Chain -> Inventory Analysis  */
+.inline-edit {
+  display: inline-block;
+}
+.inline-edit .input-group,
+.inline-edit.show a {
+  display: none;
+}
+.inline-edit.show .input-group {
+  display: flex;
+}
+.inline-edit .input-group input,
+.inline-edit .input-group button {
+  width: 60px;
+  height: 24px;
+  padding: 0 5px;
+}
+.inline-edit a {
+  display: block;
+}
 
 
   /* input types */
