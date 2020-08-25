@@ -616,6 +616,44 @@ main {
 		}
 	}
 }
+.po-invoice-wrap {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 960px;
+
+  .invoice-main {
+    background: #fff;
+    border: 1px solid #ccc;
+
+    .totals {
+      .row {
+        width: 240px;
+        .label {
+          font-size: 1rem;
+          line-height: 1.8rem;
+          color: #868686;
+        }
+        .amount {
+          font-size: 1.1rem;
+          line-height: 1.8rem;
+          font-weight: bold;
+        }
+      }
+
+      .amount-due {
+        div {
+          font-size: 1.3rem;
+          color: #4a4a4a;
+          &.total {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}
+
 
 /* SUPLY CHAIN -> Order Tracking  */
 .inputDrop {
