@@ -344,7 +344,10 @@ main section.full {
 .inline-edit a {
   display: block;
 }
-
+.page-item.active .page-link {
+  background-color: #0062cc;
+  border-color: #005cbf;
+}
 
 
 /* SUPPLY CHAIN -> P.O Creator */

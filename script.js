@@ -40,6 +40,11 @@ $('.inline-edit button[data-btn="save"]').click(function() {
     $(this).parents('.inline-edit').removeClass('show');
 });
 
+$(document).ready( function () {
+    $('#InventoryAnalysis').DataTable();
+} );
+
+
 
 // ---------------------------
 // SUPPLY CHAIN - PO Creator
