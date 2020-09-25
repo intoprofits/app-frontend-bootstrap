@@ -671,10 +671,17 @@ table.pofile td {
   display: block;
 }
 @media (min-width: 1200px) {
-  .culling .col-xl-2 {
-    -ms-flex: 0 0 14.285%;
-    flex: 0 0 14.285%;
-    max-width: 14.285%
+  .culling .col-xl-2 input,
+  .calibration .col-xl-2  input,
+  .culling .col-xl-2 select,
+  .calibration .col-xl-2  select,
+  .culling .col-xl-2 a.btn,
+  .calibration .col-xl-2  a.btn {
+    font-size: .9rem;
+  }
+  .culling .col-xl-2 a.btn,
+  .calibration .col-xl-2  a.btn {
+    color: #fff;
   }
 }
 

@@ -224,6 +224,7 @@
                     <option value="">Select...</option>
                     <option value="Keywords">Keywords</option>
                     <option value="Ad Groups">Ad Groups</option>
+                    <option value="Lateral Targeting">Lateral Targeting</option>
                   </select>
                   <div class="invalid-feedback">Please select a Record Type.</div>
                 </div>
@@ -231,11 +232,14 @@
 
               <div class="col-12 col-md-6 col-xl-2">
                 <div class="mb-3">
-                  <label for="campaign" class="text-nowrap">Select Campaign</label>
+                  <label for="campaign" class="text-nowrap">Time Frame <small>(Required)</small></label>
                   <select class="custom-select d-block w-100" id="campaign" required="">
                     <option value="">Select...</option>
-                    <option value="...">....</option>
-                    <option value="...">....</option>
+                    <option value="Last 7 Days">Last 7 Days</option>
+                    <option value="Last 14 Days">Last 14 Days</option>
+                    <option value="Last 30 Days">Last 30 Days</option>
+                    <option value="Last 60 Days">Last 60 Days</option>
+                    <option value="Lifetime">Lifetime</option>
                   </select>
                   <div class="invalid-feedback">Please select a campaign.</div>
                 </div>
@@ -243,21 +247,24 @@
 
               <div class="col-12 col-md-6 col-xl-2">
                 <div class="mb-3">
-                  <label for="date">Date</label>
-                  <input type="date" class="form-control" name="date" id="">
+                  <label for="productSku">Product SKU <small>(Optional)</small></label>
+                  <select class="custom-select d-block w-100" id="productSku" required="">
+                    <option value="">Type Product Identifier</option>
+                    <option value="...">...</option>
+                    <option value="...">...</option>
+                    <option value="...">...</option>
+                  </select>
                 </div>
               </div>
 
               <div class="col-12 col-md-6 col-xl-2">
                 <div class="mb-3">
-                  <label for="spend">Spend</label>
-                  <select class="custom-select d-block w-100" id="spend" required="">
-                    <option value="">Select...</option>
-                    <option value="1+">1+</option>
-                    <option value="2+">2+</option>
-                    <option value="3+">3+</option>
-                    <option value="4+">4+</option>
-                    <option value="5+">5+</option>
+                  <label for="campaign">Campaign <small>(Optional)</small></label>
+                  <select class="custom-select d-block w-100" id="campaign" required="">
+                    <option value="">Type Campaign Name</option>
+                    <option value="...">...</option>
+                    <option value="...">...</option>
+                    <option value="...">...</option>
                   </select>
                   <div class="invalid-feedback">Please select a Spend.</div>
                 </div>
@@ -265,37 +272,13 @@
 
               <div class="col-12 col-md-6 col-xl-2">
                 <div class="mb-3">
-                  <label for="orders">Orders</label>
-                  <select class="custom-select d-block w-100" id="orders" required="">
-                    <option value="">Select...</option>
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                  </select>
-                  <div class="invalid-feedback">Please select a Orders.</div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6 col-xl-2">
-                <div class="mb-3">
-                  <label for="clicks">Clicks</label>
-                  <select class="custom-select d-block w-100" id="clicks" required="">
-                    <option value="">Select...</option>
-                    <option value="10+">10+</option>
-                    <option value="20+">20+</option>
-                    <option value="30+">30+</option>
-                    <option value="40+">40+</option>
-                    <option value="50+">50+</option>
-                  </select>
-                  <div class="invalid-feedback">Please select a Clicks.</div>
+                  <label for="targetAcos">Target ACoS</label>
+                  <input type="text" class="form-control" name="targetAcos" id="" value="5%">
                 </div>
               </div>
 
               <div class="col-12 col-md-12 col-xl-2">
-                <button class="btn btn-primary btn-block mb-3" style="margin-top: 1.8rem">Submit</button>
+                <a class="btn btn-primary btn-block mb-3" style="margin-top: 1.8rem">Run</a>
               </div>
 
             </div>
@@ -303,44 +286,69 @@
 
           <section class="calibration">
             <div class="row">
-              <div class="col-12 col-md-6 col-xl-2">
-                <div class="mb-3 ">
-                  <label for="sku">SKU</label>
-                  <input type="text" class="form-control" id="sku" placeholder="Optional">
+                <div class="col-12 col-md-6 col-xl-2">
+                  <div class="mb-3">
+                    <label for="recordType">Record Type</label>
+                    <select class="custom-select d-block w-100" id="recordType" required="">
+                      <option value="">Select...</option>
+                      <option value="Keywords">Keywords</option>
+                      <option value="Ad Groups">Ad Groups</option>
+                      <option value="Lateral Targeting">Lateral Targeting</option>
+                    </select>
+                    <div class="invalid-feedback">Please select a Record Type.</div>
+                  </div>
                 </div>
-              </div>
-
-              <div class="col-12 col-md-6 col-xl-2">
-                <div class="mb-3">
-                  <label for="startDate">Start Date</label>
-                  <input type="date" class="form-control" id="startDate">
+  
+                <div class="col-12 col-md-6 col-xl-2">
+                  <div class="mb-3">
+                    <label for="campaign" class="text-nowrap">Time Frame <small>(Required)</small></label>
+                    <select class="custom-select d-block w-100" id="campaign" required="">
+                      <option value="">Select...</option>
+                      <option value="Last 7 Days">Last 7 Days</option>
+                      <option value="Last 14 Days">Last 14 Days</option>
+                      <option value="Last 30 Days">Last 30 Days</option>
+                      <option value="Last 60 Days">Last 60 Days</option>
+                      <option value="Lifetime">Lifetime</option>
+                    </select>
+                    <div class="invalid-feedback">Please select a campaign.</div>
+                  </div>
                 </div>
-              </div>
-
-              <div class="col-12 col-md-6 col-xl-2">
-                <div class="mb-3">
-                  <label for="endDate">End Date</label>
-                  <input type="date" class="form-control" id="endDate">
+  
+                <div class="col-12 col-md-6 col-xl-2">
+                  <div class="mb-3">
+                    <label for="productSku">Product SKU <small>(Optional)</small></label>
+                    <select class="custom-select d-block w-100" id="productSku" required="">
+                      <option value="">Type Product Identifier</option>
+                      <option value="...">...</option>
+                      <option value="...">...</option>
+                      <option value="...">...</option>
+                    </select>
+                  </div>
                 </div>
-              </div>
-
-              <div class="col-12 col-md-6 col-xl-2">
-                <div class="mb-3 ">
-                  <label for="campaigns">Campaigns</label>
-                  <input type="text" class="form-control" id="campaigns" placeholder="Optional">
+  
+                <div class="col-12 col-md-6 col-xl-2">
+                  <div class="mb-3">
+                    <label for="campaign">Campaign <small>(Optional)</small></label>
+                    <select class="custom-select d-block w-100" id="campaign" required="">
+                      <option value="">Type Campaign Name</option>
+                      <option value="...">...</option>
+                      <option value="...">...</option>
+                      <option value="...">...</option>
+                    </select>
+                    <div class="invalid-feedback">Please select a Spend.</div>
+                  </div>
                 </div>
-              </div>
-
-              <div class="col-12 col-md-6 col-xl-2">
-                <div class="">
-                  <label for="targetAcos">Target ACOS</label>
-                  <input type="text" class="form-control" id="targetAcos" >
+  
+                <div class="col-12 col-md-6 col-xl-2">
+                  <div class="mb-3">
+                    <label for="targetAcos">Target ACoS</label>
+                    <input type="text" class="form-control" name="targetAcos" id="" value="5%">
+                  </div>
                 </div>
-              </div>
-
-              <div class="col-12 col-md-12 col-xl-2">
-                <button class="btn btn-primary btn-block" style="margin-top: 1.8rem">Submit</button>
-              </div>
+  
+                <div class="col-12 col-md-12 col-xl-2">
+                  <a class="btn btn-primary btn-block mb-3" style="margin-top: 1.8rem">Run</a>
+                </div>
             </div>
           </section>
         
