@@ -82,7 +82,7 @@
               <tr>
                 <th  style="width: 30%;" class="text-nowrap">Product Name <i class="fas fa-sort" aria-hidden="true"></i></th>
                 <th  style="width: 12%;" class="text-nowrap">SKU <i class="fas fa-sort" aria-hidden="true"></i></th>
-                <th  style="width: 18%;" class="text-nowrap">Gross Margin ACoS % <i class="fas fa-sort" aria-hidden="true"></i></th>
+                <th  style="width: 14%;" class="text-nowrap">Gross Margin % <i class="fas fa-sort" aria-hidden="true"></i></th>
                 <th  style="width: 12%;" class="text-nowrap">Current ACoS <i class="fas fa-sort" aria-hidden="true"></i></th>
                 <th  style="width: 12%;" class="text-nowrap">Target ACoS <i class="fas fa-sort" aria-hidden="true"></i></th>
                 <th  style="width: 12%;" class="text-nowrap">AVL <i class="fas fa-sort" aria-hidden="true"></i></th>
@@ -94,15 +94,7 @@
                 <td>Lorem Ipsum dolor set amet</td>
                 <td>3216549</td>
                 <td>30.5%</td>
-                <td>
-                  <a href="#" class="edit-avl" title="Click to edit">5.00%</a>
-                  <div class="input-group" style="display: none;">
-                    <input type="text" class="form-control" aria-label="" placeholder="$5.00">
-                    <div class="input-group-append ">
-                      <button class="btn btn-sm btn-outline-secondary save-avl" type="button">Save</button>
-                    </div>
-                  </div>
-                </td>
+                <td>5.00%</td>
                 <td>
                   <a href="#" class="edit-avl" title="Click to edit">5.00%</a>
                   <div class="input-group" style="display: none;">
@@ -131,15 +123,7 @@
                 <td>Lorem Ipsum dolor set amet</td>
                 <td>3216549</td>
                 <td>21.5%</td>
-                <td>
-                  <a href="#" class="edit-avl" title="Click to edit">5.00%</a>
-                  <div class="input-group" style="display: none;">
-                    <input type="text" class="form-control" aria-label="" placeholder="$5.00">
-                    <div class="input-group-append ">
-                      <button class="btn btn-sm btn-outline-secondary save-avl" type="button">Save</button>
-                    </div>
-                  </div>
-                </td>
+                <td>5.20%</td>
                 <td>
                   <a href="#" class="edit-avl" title="Click to edit">5.00%</a>
                   <div class="input-group" style="display: none;">
@@ -168,15 +152,7 @@
                 <td>Lorem Ipsum dolor set amet</td>
                 <td>3216549</td>
                 <td>62.2%</td>
-                <td>
-                  <a href="#" class="edit-avl" title="Click to edit">5.00%</a>
-                  <div class="input-group" style="display: none;">
-                    <input type="text" class="form-control" aria-label="" placeholder="$5.00">
-                    <div class="input-group-append ">
-                      <button class="btn btn-sm btn-outline-secondary save-avl" type="button">Save</button>
-                    </div>
-                  </div>
-                </td>
+                <td>4.30%</td>
                 <td>
                   <a href="#" class="edit-avl" title="Click to edit">5.00%</a>
                   <div class="input-group" style="display: none;">
@@ -221,7 +197,7 @@
                 <div class="mb-3">
                   <label for="recordType">Record Type</label>
                   <select class="custom-select d-block w-100" id="recordType" required="">
-                    <option value="">Select...</option>
+                    <option hidden value="">Select...</option>
                     <option value="Keywords">Keywords</option>
                     <option value="Ad Groups">Ad Groups</option>
                     <option value="Lateral Targeting">Lateral Targeting</option>
@@ -234,7 +210,7 @@
                 <div class="mb-3">
                   <label for="campaign" class="text-nowrap">Time Frame <small>(Required)</small></label>
                   <select class="custom-select d-block w-100" id="campaign" required="">
-                    <option value="">Select...</option>
+                    <option hidden value="">Select...</option>
                     <option value="Last 7 Days">Last 7 Days</option>
                     <option value="Last 14 Days">Last 14 Days</option>
                     <option value="Last 30 Days">Last 30 Days</option>
@@ -247,26 +223,15 @@
 
               <div class="col-12 col-md-6 col-xl-2">
                 <div class="mb-3">
-                  <label for="productSku">Product SKU <small>(Optional)</small></label>
-                  <select class="custom-select d-block w-100" id="productSku" required="">
-                    <option value="">Type Product Identifier</option>
-                    <option value="...">...</option>
-                    <option value="...">...</option>
-                    <option value="...">...</option>
-                  </select>
+                  <label class="text-nowrap" for="productSku">Product SKU <small>(Optional)</small></label>
+                  <input type="text" class="form-control" name="productSku" id="productSku" title="Type Product Identifier" placeholder="Type Product Identifier">
                 </div>
               </div>
 
               <div class="col-12 col-md-6 col-xl-2">
                 <div class="mb-3">
                   <label for="campaign">Campaign <small>(Optional)</small></label>
-                  <select class="custom-select d-block w-100" id="campaign" required="">
-                    <option value="">Type Campaign Name</option>
-                    <option value="...">...</option>
-                    <option value="...">...</option>
-                    <option value="...">...</option>
-                  </select>
-                  <div class="invalid-feedback">Please select a Spend.</div>
+                  <input type="text" class="form-control" name="campaign" id="campaign" title="Type Campaign Name" placeholder="Type Campaign Name">
                 </div>
               </div>
 
@@ -290,10 +255,15 @@
                   <div class="mb-3">
                     <label for="recordType">Record Type</label>
                     <select class="custom-select d-block w-100" id="recordType" required="">
-                      <option value="">Select...</option>
-                      <option value="Keywords">Keywords</option>
-                      <option value="Ad Groups">Ad Groups</option>
-                      <option value="Lateral Targeting">Lateral Targeting</option>
+                      <option hidden value="">Select...</option>
+                      <option disabled value="#">Lower ACoS</option>
+                      <option value="Lower ACoS Keywords">&nbsp; - Keywords</option>
+                      <option value="Lower ACoS Lateral Targeting">&nbsp; - Lateral Targeting</option>
+                      <option value="Lower ACoS Auto">&nbsp; - Auto</option>
+                      <option disabled value="#">Raise ACoS</option>
+                      <option value="Raise ACoS Keywords">&nbsp; - Keywords</option>
+                      <option value="Raise ACoS Lateral Targeting">&nbsp; - Lateral Targeting</option>
+                      <option value="Raise ACoS Auto">&nbsp; - Auto</option>
                     </select>
                     <div class="invalid-feedback">Please select a Record Type.</div>
                   </div>
@@ -303,7 +273,7 @@
                   <div class="mb-3">
                     <label for="campaign" class="text-nowrap">Time Frame <small>(Required)</small></label>
                     <select class="custom-select d-block w-100" id="campaign" required="">
-                      <option value="">Select...</option>
+                      <option hidden value="">Select...</option>
                       <option value="Last 7 Days">Last 7 Days</option>
                       <option value="Last 14 Days">Last 14 Days</option>
                       <option value="Last 30 Days">Last 30 Days</option>
@@ -316,26 +286,15 @@
   
                 <div class="col-12 col-md-6 col-xl-2">
                   <div class="mb-3">
-                    <label for="productSku">Product SKU <small>(Optional)</small></label>
-                    <select class="custom-select d-block w-100" id="productSku" required="">
-                      <option value="">Type Product Identifier</option>
-                      <option value="...">...</option>
-                      <option value="...">...</option>
-                      <option value="...">...</option>
-                    </select>
+                    <label class="text-nowrap" for="productSku">Product SKU <small>(Optional)</small></label>
+                    <input type="text" class="form-control" name="productSku" id="productSku" title="Type Product Identifier" placeholder="Type Product Identifier">
                   </div>
                 </div>
   
                 <div class="col-12 col-md-6 col-xl-2">
                   <div class="mb-3">
                     <label for="campaign">Campaign <small>(Optional)</small></label>
-                    <select class="custom-select d-block w-100" id="campaign" required="">
-                      <option value="">Type Campaign Name</option>
-                      <option value="...">...</option>
-                      <option value="...">...</option>
-                      <option value="...">...</option>
-                    </select>
-                    <div class="invalid-feedback">Please select a Spend.</div>
+                    <input type="text" class="form-control" name="campaign" id="campaign" title="Type Campaign Name" placeholder="Type Campaign Name">
                   </div>
                 </div>
   
@@ -529,14 +488,6 @@
                       <select class="form-control form-control-sm" style="display: inline-block; max-width: 130px; margin-right: 10px; height: 28px;">
                         <option>Select SKU</option>
                       </select>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="exact" checked>
-                        <label class="form-check-label" for="inlineRadio1">Whitelist exact</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="phrase">
-                        <label class="form-check-label" for="inlineRadio2">Whitelist phrase</label>
-                      </div>
                     </div>
                     <textarea class="form-control mb-3" name="" placeholder="Enter your list and separate each item with a new line" id="" cols="20" rows="3"></textarea>
                     <button type="button" class="btn btn-primary btn-sm float-right">Add keywords</button>
