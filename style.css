@@ -351,6 +351,9 @@ main section.full {
 
 
 /* SUPPLY CHAIN -> P.O Creator */
+.POcreator label {
+  font-size: 0.8rem;
+}
 .pofile-wrap {
   overflow: auto;
 }

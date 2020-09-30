@@ -67,9 +67,9 @@
   
       <section role="main" class="col-10 border-left">
 
-        <div class="POCreator row">
-          <div class="col-md-5 col-xl-4">
-            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 border-bottom mb-5">
+        <div class="row">
+          <div class="col-md-5 col-xl-4 POcreator">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 border-bottom mb-3">
               <h3>P.O. Creator</h3>
               <div class="btn-toolbar mb-2 mb-md-0 d-inline d-md-none">
                 <!-- Button trigger modal -->
@@ -77,20 +77,20 @@
               </div>
             </div>
 
-            <div class="mb-3">
-              <label for="template">Template</label>
-              <select class="custom-select d-block w-100" id="template" required="">
-                <option value="">Select...</option>
+            <div class="mb-2">
+              <label class="m-0" for="template">Template</label>
+              <select class="form-control form-control-sm d-block w-100" id="template" required="">
+                <option hidden value="">Select...</option>
                 <option>English</option>
                 <option>English &amp; Chinese</option>
               </select>
               <div class="invalid-feedback">Please select a template.</div>
             </div>
 
-            <div class="mb-3">
-              <label for="supplier">Supplier</label>
-              <select class="custom-select d-block w-100" id="supplier" required="">
-                <option value="">Select...</option>
+            <div class="mb-2">
+              <label class="m-0" for="supplier">Supplier</label>
+              <select class="form-control form-control-sm d-block w-100" id="supplier" required="">
+                <option hidden value="">Select...</option>
                 <option value="Suplier One">Suplier One</option>
                 <option value="Suplier Two">Suplier Two</option>
                 <option value="Suplier Three">Suplier Three</option>
@@ -98,10 +98,10 @@
               <div class="invalid-feedback">Please select a supplier.</div>
             </div>
 
-            <div class="mb-3">
-              <label for="shipAddress">Shipping Address</label>
-              <select class="custom-select d-block w-100" id="shipAddress" required="">
-                <option value="">Select...</option>
+            <div class="mb-2">
+              <label class="m-0" for="shipAddress">Shipping Address</label>
+              <select class="form-control form-control-sm d-block w-100" id="shipAddress" required="">
+                <option hidden value="">Select...</option>
                 <option value="Sample Address 1">Sample Address 1</option>
                 <option value="Sample Address 2">Sample Address 2</option>
                 <option value="Sample Address 3">Sample Address 3</option>
@@ -109,10 +109,10 @@
               <div class="invalid-feedback">Please select a shipping supplier.</div>
             </div>
 
-            <div class="mb-3">
-              <label for="shipMethod">Shipping Method</label>
-              <select class="custom-select d-block w-100" id="shipMethod" required="">
-                <option value="">Select...</option>
+            <div class="mb-2">
+              <label class="m-0" for="shipMethod">Shipping Method</label>
+              <select class="form-control form-control-sm d-block w-100" id="shipMethod" required="">
+                <option hidden value="">Select...</option>
                 <option value="Land">Land</option>
                 <option value="Sea">Sea</option>
                 <option value="Air">Air</option>
@@ -120,20 +120,20 @@
               <div class="invalid-feedback">Please select a shipping method.</div>
             </div>
 
-            <div class="mb-3">
-              <label for="exportTerm">Export Term</label>
-              <select class="custom-select d-block w-100" id="exportTerm" required="">
-                <option value="">Select...</option>
+            <div class="mb-2">
+              <label class="m-0" for="exportTerm">Export Term</label>
+              <select class="form-control form-control-sm d-block w-100" id="exportTerm" required="">
+                <option hidden value="">Select...</option>
                 <option value="FOB">FOB</option>
                 <option value="EXW">EXW</option>
               </select>
               <div class="invalid-feedback">Please select a valid export term.</div>
             </div>
 
-            <div class="mb-3">
-              <label for="paymentTerm">Payment Term</label>
-              <select class="custom-select d-block w-100" id="paymentTerm" required="">
-                <option value="">Select...</option>
+            <div class="mb-2">
+              <label class="m-0" for="paymentTerm">Payment Term</label>
+              <select class="form-control form-control-sm d-block w-100" id="paymentTerm" required="">
+                <option hidden value="">Select...</option>
                 <option value="10/90">10/90</option>
                 <option value="20/80">20/80</option>
                 <option value="30/70">30/70</option>
@@ -143,10 +143,10 @@
               <div class="invalid-feedback">Please select a Payment Term.</div>
             </div>
 
-            <div class="mb-3">
-              <label for="product">Product</label>
-              <select class="custom-select d-block w-100" id="product" required="">
-                <option value="">Select...</option>
+            <div class="mb-2">
+              <label class="m-0" for="product">Product</label>
+              <select class="form-control form-control-sm d-block w-100" id="product" required="">
+                <option hidden value="">Select...</option>
                 <option value="Product 1">Product 1</option>
                 <option value="Product 2">Product 2</option>
                 <option value="Product 3">Product 3</option>
@@ -154,19 +154,19 @@
               <div class="invalid-feedback">Please select a valid product.</div>
             </div>
     
-            <div class="mb-3">
-              <label for="quantity">Order Quantity</label>
-              <input type="number" class="form-control" value="" min="1" name="quantity" id="quantity" placeholder="1">
+            <div class="mb-2">
+              <label class="m-0" for="quantity">Order Quantity</label>
+              <input type="number" class="form-control form-control-sm" value="" min="1" name="quantity" id="quantity" placeholder="1">
             </div>
 
-            <div class="mb-3">
-              <label for="unitCost">Unit Cost</label>
-              <input type="text" class="form-control" id="unitCost" value="" placeholder="Unit Cost">
+            <div class="mb-2">
+              <label class="m-0" for="unitCost">Unit Cost</label>
+              <input type="text" class="form-control form-control-sm" id="unitCost" value="" placeholder="Unit Cost">
             </div>
             
             <div class="mb-4">
-              <label for="discount">Discount Request</label>
-              <input type="text" class="form-control" id="discount" value="" placeholder="Discount Request">
+              <label class="m-0" for="discount">Discount Request</label>
+              <input type="text" class="form-control form-control-sm" id="discount" value="" placeholder="Discount Request">
             </div>
 
             
