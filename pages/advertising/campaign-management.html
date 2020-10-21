@@ -314,7 +314,7 @@
         </div>
 
         
-       
+        <!-- Start Process Log -->
         <div class="pt-3 pb-2 border-bottom mb-3">
           <h5>Process Log</h5>
         </div>
@@ -333,27 +333,28 @@
             </thead>
             <tbody>
               <tr>
-                <td>001 - Calibration</td>
+                <td>001 - Culling - Lateral Targeting - 7 days - SKU</td>
                 <td>12-13-20</td>
                 <td>3216549</td>
                 <td>DONE</td>
                 <td>Result</td>
-                <td><button class="btn btn-sm btn-outline-secondary">View</button></td>
+                <td><button class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#campaignManagementModal">View</button></td>
                 <td><button class="btn btn-sm btn-outline-secondary">Revert</button></td>
               </tr>
               <tr>
-                <td>002 - Culling</td>
+                <td>002 - Culling - Keywords - 14 days - SKU</td>
                 <td>12-13-20</td>
                 <td>3216549</td>
                 <td>DONE</td>
                 <td>Result</td>
-                <td><button class="btn btn-sm btn-outline-secondary">View</button></td>
+                <td><button class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#campaignManagementModal">View</button></td>
                 <td><button class="btn btn-sm btn-outline-secondary">Revert</button></td>
               </tr>
             </tbody>
           </table>
         </div>
-     
+        <!-- End Process Log -->
+
           
         <!-- Modal Negatives-->
         <div class="modal fade" id="Negatives" tabindex="-1" role="dialog" aria-labelledby="NegativesLabel" aria-hidden="true">
@@ -463,9 +464,9 @@
           #RemoveKeywords button.btn {
             width: 100px;
           }
-          .modal-backdrop.show:nth-of-type(even) {
+          /* .modal-backdrop.show:nth-of-type(even) {
               z-index: 1052 !important;
-          }
+          } */
         </style>
 
 
@@ -559,6 +560,200 @@
           </div>
         </div>
 
+        <!-- Modal: Campaign Management View Item -->
+        <div class="modal fade" id="campaignManagementModal" tabindex="-1" role="dialog" aria-labelledby="campaignManagementModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="campaignManagementModalLabel">Process ID: <b>001</b></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-12 col-xl-3">
+                    <p><b class="bg-light p-2 border">Process ID:</b> 001</p>
+                    <p><b class="bg-light p-2 border">Date:</b> 10/30/20</p>
+                  </div>
+                  <div class="col-12 col-xl-3">
+                    <p><b class="bg-light p-2 border">Time Frame:</b> 7 Days</p>
+                    <p><b class="bg-light p-2 border">SKU:</b> SKU123</p>
+                  </div>
+                  <div class="col-12 col-xl-3">
+                    <p><b class="bg-light p-2 border">Campaign:</b> HAPPY CAMPAIGN-TAN</p>
+                    <p><b class="bg-light p-2 border">Total Spend:</b> $1,234</p>
+                  </div>
+                  <div class="col-12 col-xl-3">
+                    <p><b class="bg-light p-2 border">Target AcoS:</b> $5,678</p>
+                  </div>
+                </div>
+
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Keywords</th>
+                      <th>Spend</th>
+                      <th>Clicks</th>
+                      <th>CPC</th>
+                      <th>ACoS</th>
+                      <th>Orders</th>
+                      <th>Sales</th>
+                      <th>Current Bid</th>
+                      <th>New Bid</th>
+                      <th>Campaign</th>
+                      <th>Ad Group</th>
+                      <th>[REVERT]</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1. Pull Up</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td><button class="btn btn-sm btn-outline-danger">Revert</button></td>
+                    </tr>
+                    <tr>
+                      <td>2. Dips</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td><button class="btn btn-sm btn-outline-danger">Revert</button></td>
+                    </tr>
+                    <tr>
+                      <td>3. Shoulders</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td><button class="btn btn-sm btn-outline-danger">Revert</button></td>
+                    </tr>
+                    <tr>
+                      <td>4. Biceps</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td><button class="btn btn-sm btn-outline-danger">Revert</button></td>
+                    </tr>
+                    <tr>
+                      <td>5. Hamstring</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td><button class="btn btn-sm btn-outline-danger">Revert</button></td>
+                    </tr>
+                    <tr>
+                      <td>6. Strength</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td><button class="btn btn-sm btn-outline-danger">Revert</button></td>
+                    </tr>
+                    <tr>
+                      <td>7. Work Out</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td><button class="btn btn-sm btn-outline-danger">Revert</button></td>
+                    </tr>
+                    <tr>
+                      <td>8. Gym</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td><button class="btn btn-sm btn-outline-danger">Revert</button></td>
+                    </tr>
+                    <tr>
+                      <td>9. Fitness</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td><button class="btn btn-sm btn-outline-danger">Revert</button></td>
+                    </tr>
+                    <tr>
+                      <td>10. USA</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td><button class="btn btn-sm btn-outline-danger">Revert</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal: Campaign Management View Item -->
       
       </section>
     </div>
