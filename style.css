@@ -375,6 +375,14 @@ main section.full {
   white-space: normal;
   padding: .6rem;
 }
+.tracker-item-dropdown {
+  bottom: 1rem;
+  right: 1rem;
+  position: absolute;
+}
+.tracker-item-dropdown-icon {
+  line-height: 3px;
+}
 
 /* SUPPLY CHAIN -> P.O Creator */
 .POcreator label {
