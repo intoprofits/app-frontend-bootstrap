@@ -6,6 +6,15 @@
 // General
 // ----------------
 
+// multiple modal overlay fix
+$(document).on('show.bs.modal', '.modal', function () {
+    var zIndex = 1040 + (10 * $('.modal:visible').length);
+    $(this).css('z-index', zIndex);
+    setTimeout(function() {
+        $('.modal-backdrop').not('.modal-stack').css('z-index', zIndex - 1).addClass('modal-stack');
+    }, 0);
+});
+
 // sidebar toggle
 $('button.sidebar-toggle').click(function() {
 
@@ -150,6 +159,15 @@ $('.steps .step').click(function(){
 $('[data-toggle="tooltip"]').tooltip();
 
 
+
+// ------------------------------
+// SUPPLY CHAIN - Inventory Tracker
+// ------------------------------
+
+// append dummy content on the table
+$('#addSplitPOItem').click(function(){
+    $('#splitPOtable tbody').append(`<tr><td class="align-middle">500</td><td class="align-middle">XYZ789 Destination Location</td></tr>`);
+});
 
 
 // ---------------------
