@@ -669,26 +669,20 @@ table.pofile td {
 /* SUPPLY CHAIN -> Order Tracking (Steps) */
 .steps {
   position: relative;
-  width: 96%;
-  min-width: 300px;
+  display: flex;
+  justify-content: space-between;
+  min-width: 260px;
+  padding-right: 16px;
   height: 1rem;
 }
 .step {
   width: 16px;
   height: 16px;
   background: #dfe1e2;
-  position: absolute;
   z-index: 1;
   border-radius: 50%;
   cursor: pointer;
 }
-.step.s1 { left: -1%; }
-.step.s2 { left: 16%; }
-.step.s3 { left: 33%; }
-.step.s4 { left: 50%; }
-.step.s5 { left: 66%; }
-.step.s6 { left: 82%; }
-.step.s7 { left: 98%; }
 .step.active { background: #0f9a2f; }
 
 
