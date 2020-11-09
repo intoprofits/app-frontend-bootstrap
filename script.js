@@ -142,7 +142,7 @@ $("#savedTemplates button.savedTempBtn").click(function(e){
 
 
 // ------------------------------
-// SUPPLY CHAIN - Order Tracking
+// SUPPLY CHAIN - PO Tracker
 // ------------------------------
 
 // dot steps 

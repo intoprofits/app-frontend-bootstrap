@@ -631,7 +631,7 @@ table.pofile td {
 
 
 
-/* SUPPLY CHAIN -> Order Tracking (Drag and Drop) */
+/* SUPPLY CHAIN -> PO Tracker (Drag and Drop) */
 .inputDrop {
   position: relative;
   cursor: pointer;
@@ -666,7 +666,7 @@ table.pofile td {
   border-color: #ccc;
 }
 
-/* SUPPLY CHAIN -> Order Tracking (Steps) */
+/* SUPPLY CHAIN -> PO Tracker (Steps) */
 .steps {
   position: relative;
   display: flex;
