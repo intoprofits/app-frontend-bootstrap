@@ -81,37 +81,24 @@
             <thead>
               <tr>
                 <th class="text-nowrap">P.O. #<i class="fas fa-sort"></i></th>
-                <th class="text-nowrap" style="min-width: 110px; width: 120px;">P.I. # <i class="fas fa-sort"></i></th>
-                <th class="text-nowrap" style="min-width: 110px; width: 120px;">S.I. # <i class="fas fa-sort"></i></th>
+                <th class="text-nowrap">P.I. # <i class="fas fa-sort"></i></th>
+                <th class="text-nowrap">S.I. # <i class="fas fa-sort"></i></th>
                 <th class="text-nowrap">Supplier <i class="fas fa-sort"></i></th>
                 <th class="text-nowrap"># Units <i class="fas fa-sort"></i></th>
                 <th class="text-nowrap">SKU <i class="fas fa-sort"></i></th>
                 <th><span class="text-nowrap">Landed</span> <span class="text-nowrap">Unit Cost <i class="fas fa-sort"></i></span></th>
                 <th><span class="text-nowrap">Landed</span> <span class="text-nowrap">Total <i class="fas fa-sort"></i></span></th>
                 <th class="text-nowrap">Progress</th>
-                <th class="text-nowrap">View More</th>
+                <th class="text-nowrap" style="width: 120px">View More</th>
+                <th style="width: 40px"></th>
               </tr>
             </thead>
             <tbody>
               <!-- new item -->
               <tr>
                 <td class="align-middle">P001</td>
-                <td>
-                  <input class="form-control form-control-sm mb-1 d-inline" type="text" placeholder="P.I. Cost">
-                  <div class="form-group inputDrop m-0">
-                    <label class="sr-only" for="inputFile">Upload P.I.</label>
-                    <input type="file" class="form-control-file" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Drop P.I. Here">
-                    <span class="bg text-nowrap text-truncate">Drop P.I. Here</span>
-                  </div>
-                </td>
-                <td>
-                  <input class="form-control form-control-sm mb-1 d-inline" type="text" placeholder="S.I. Cost">
-                  <div class="form-group inputDrop m-0">
-                    <label class="sr-only" for="inputFile">Upload S.I.</label>
-                    <input type="file" class="form-control-file" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Drop S.I. Here">
-                    <span class="bg text-nowrap text-truncate">Drop S.I. Here</span>
-                  </div>
-                </td>
+                <td class="align-middle">$987</td>
+                <td class="align-middle">$654</td>
                 <td class="align-middle">QWERRRR</td>
                 <td class="align-middle">621</td>
                 <td class="align-middle">ASDFFFF</td>
@@ -128,29 +115,22 @@
                   </div>
                 </td>
                 <td class="align-middle">
-                  <button class="btn btn-outline-secondary" data-toggle="modal" data-target="#PoModal">View More</button>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-outline-secondary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">View More</button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Upload Documents</a>
+                      <a class="dropdown-item" href="#">View Documents</a>
+                    </div>
+                  </div>
                 </td>
+                <td><a href="" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#PoModal"><i class="fa fa-angle-down"></i></a></td>
               </tr>
 
               <!-- new item -->
               <tr>
                 <td class="align-middle">P002</td>
-                <td>
-                  <input class="form-control form-control-sm mb-1 d-inline" type="text" placeholder="P.I. Cost">
-                  <div class="form-group inputDrop m-0">
-                    <label class="sr-only" for="inputFile">Upload P.I.</label>
-                    <input type="file" class="form-control-file" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Drop P.I. Here">
-                    <span class="bg text-nowrap text-truncate">Drop P.I. Here</span>
-                  </div>
-                </td>
-                <td>
-                  <input class="form-control form-control-sm mb-1 d-inline" type="text" placeholder="S.I. Cost">
-                  <div class="form-group inputDrop m-0">
-                    <label class="sr-only" for="inputFile">Upload S.I.</label>
-                    <input type="file" class="form-control-file" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Drop S.I. Here">
-                    <span class="bg text-nowrap text-truncate">Drop S.I. Here</span>
-                  </div>
-                </td>
+                <td class="align-middle">$321</td>
+                <td class="align-middle">$80</td>
                 <td class="align-middle">QWERRRR</td>
                 <td class="align-middle">621</td>
                 <td class="align-middle">ASDFFFF</td>
@@ -167,29 +147,22 @@
                   </div>
                 </td>
                 <td class="align-middle">
-                  <button class="btn btn-outline-secondary" data-toggle="modal" data-target="#PoModal">View More</button>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-outline-secondary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">View More</button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Upload Documents</a>
+                      <a class="dropdown-item" href="#">View Documents</a>
+                    </div>
+                  </div>
                 </td>
+                <td><a href="" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#PoModal"><i class="fa fa-angle-down"></i></a></td>
               </tr>
 
               <!-- new item -->
               <tr>
                 <td class="align-middle">P003</td>
-                <td >
-                  <input class="form-control form-control-sm mb-1 d-inline" type="text" placeholder="P.I. Cost">
-                  <div class="form-group inputDrop m-0">
-                    <label class="sr-only" for="inputFile">Upload P.I.</label>
-                    <input type="file" class="form-control-file" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Drop P.I. Here">
-                    <span class="bg text-nowrap text-truncate">Drop P.I. Here</span>
-                  </div>
-                </td>
-                <td class="align-middle">
-                  <input class="form-control form-control-sm mb-1 d-inline" type="text" placeholder="S.I. Cost">
-                  <div class="form-group inputDrop m-0">
-                    <label class="sr-only" for="inputFile">Upload S.I.</label>
-                    <input type="file" class="form-control-file" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Drop S.I. Here">
-                    <span class="bg text-nowrap text-truncate">Drop S.I. Here</span>
-                  </div>
-                </td>
+                <td class="align-middle">$130</td>
+                <td class="align-middle">$90</td>
                 <td class="align-middle">QWERRRR</td>
                 <td class="align-middle">621</td>
                 <td class="align-middle">ASDFFFF</td>
@@ -206,29 +179,22 @@
                   </div>
                 </td>
                 <td class="align-middle">
-                  <button class="btn btn-outline-secondary" data-toggle="modal" data-target="#PoModal">View More</button>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-outline-secondary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">View More</button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Upload Documents</a>
+                      <a class="dropdown-item" href="#">View Documents</a>
+                    </div>
+                  </div>
                 </td>
+                <td><a href="" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#PoModal"><i class="fa fa-angle-down"></i></a></td>
               </tr>
 
               <!-- new item -->
               <tr>
                 <td class="align-middle">P004</td>
-                <td >
-                  <input class="form-control form-control-sm mb-1 d-inline" type="text" placeholder="P.I. Cost">
-                  <div class="form-group inputDrop m-0">
-                    <label class="sr-only" for="inputFile">Upload P.I.</label>
-                    <input type="file" class="form-control-file" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Drop P.I. Here">
-                    <span class="bg text-nowrap text-truncate">Drop P.I. Here</span>
-                  </div>
-                </td>
-                <td class="align-middle">
-                  <input class="form-control form-control-sm mb-1 d-inline" type="text" placeholder="S.I. Cost">
-                  <div class="form-group inputDrop m-0">
-                    <label class="sr-only" for="inputFile">Upload S.I.</label>
-                    <input type="file" class="form-control-file" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Drop S.I. Here">
-                    <span class="bg text-nowrap text-truncate">Drop S.I. Here</span>
-                  </div>
-                </td>
+                <td class="align-middle">$130</td>
+                <td class="align-middle">$120</td>
                 <td class="align-middle">QWERRRR</td>
                 <td class="align-middle">621</td>
                 <td class="align-middle">ASDFFFF</td>
@@ -245,8 +211,15 @@
                   </div>
                 </td>
                 <td class="align-middle">
-                  <button class="btn btn-outline-secondary" data-toggle="modal" data-target="#PoModal">View More</button>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-outline-secondary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">View More</button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Upload Documents</a>
+                      <a class="dropdown-item" href="#">View Documents</a>
+                    </div>
+                  </div>
                 </td>
+                <td><a href="" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#PoModal"><i class="fa fa-angle-down"></i></a></td>
               </tr>
             </tbody>
           </table>
