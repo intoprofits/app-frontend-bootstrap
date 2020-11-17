@@ -118,7 +118,7 @@
                   <div class="btn-group">
                     <button type="button" class="btn btn-outline-secondary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">View More</button>
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Upload Documents</a>
+                      <a class="dropdown-item" href="#" data-toggle="modal" data-target="#PoUpload">Upload Documents</a>
                       <a class="dropdown-item" href="#">View Documents</a>
                     </div>
                   </div>
@@ -150,7 +150,7 @@
                   <div class="btn-group">
                     <button type="button" class="btn btn-outline-secondary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">View More</button>
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Upload Documents</a>
+                      <a class="dropdown-item" href="#" data-toggle="modal" data-target="#PoUpload">Upload Documents</a>
                       <a class="dropdown-item" href="#">View Documents</a>
                     </div>
                   </div>
@@ -182,7 +182,7 @@
                   <div class="btn-group">
                     <button type="button" class="btn btn-outline-secondary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">View More</button>
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Upload Documents</a>
+                      <a class="dropdown-item" href="#" data-toggle="modal" data-target="#PoUpload">Upload Documents</a>
                       <a class="dropdown-item" href="#">View Documents</a>
                     </div>
                   </div>
@@ -214,7 +214,7 @@
                   <div class="btn-group">
                     <button type="button" class="btn btn-outline-secondary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">View More</button>
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Upload Documents</a>
+                      <a class="dropdown-item" href="#" data-toggle="modal" data-target="#PoUpload">Upload Documents</a>
                       <a class="dropdown-item" href="#">View Documents</a>
                     </div>
                   </div>
@@ -352,6 +352,36 @@
             </div>
           </div>
         </div>
+
+        <!-- Modal Upload Document -->
+        <div class="modal fade" id="PoUpload" tabindex="-1" role="dialog" aria-labelledby="PoUploadLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="PoUploadLabel">Upload Documents</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="invoiceAmount">Invoice Amount</label>
+                  <input type="text" class="form-control" id="invoiceAmount" placeholder="$ 0.00">
+                </div>
+                <div class="uploadDocs mb-4">
+                  <div class="form-group inputDrop m-0">
+                    <label class="sr-only" for="docpicker">Upload Documents</label>
+                    <input type="file" class="form-control-file" style="height: 100px" id="docpicker" accept="image/*,.pdf,.doc,.docx" onchange="readUrl(this)" data-title="Upload Document">
+                    <span class="bg text-nowrap text-truncate">Upload Document</span>
+                  </div>
+                </div>
+                <a href="" class="btn btn-primary" data-dismiss="modal">Submit</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal View Documents -->
 
       </section>
     </div>
