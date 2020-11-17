@@ -75,8 +75,9 @@
           </div>
         </div>
 
-        <div class="kpi-wrap mb-3">
-          <div class="btn-group">
+        <div class="kpi-wrap">
+          
+          <div class="btn-group mb-3">
             <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter</button>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="#">7 Days</a>
@@ -86,64 +87,64 @@
               <a class="dropdown-item" href="#">Custom</a>
             </div>
           </div>
+
+          <div class="table-responsive">
+            <table class="table" id="InventoryAnalysis">
+              <thead>
+                <tr>
+                  <th class="m-0 text-nowrap">Date <i class="fas fa-sort" aria-hidden="true"></i></th>
+                  <th class="m-0 text-nowrap">Net Profit <i class="fas fa-sort" aria-hidden="true"></i></th>
+                  <th class="m-0 text-nowrap">Revenue ($) <i class="fas fa-sort" aria-hidden="true"></i></th>
+                  <th class="m-0 text-nowrap">Cash Balance <i class="fas fa-sort" aria-hidden="true"></i></th>
+                  <th class="m-0 text-nowrap">Loan <i class="fas fa-sort" aria-hidden="true"></i></th>
+                  <th class="m-0 text-nowrap">COG's Value <i class="fas fa-sort" aria-hidden="true"></i></th>
+                  <th class="m-0 text-nowrap">Units Rtn <i class="fas fa-sort" aria-hidden="true"></i></th>
+                  <th class="m-0 text-nowrap">Total Sales Units <i class="fas fa-sort" aria-hidden="true"></i></th>
+                  <th class="m-0 text-nowrap">Sessions <i class="fas fa-sort" aria-hidden="true"></i></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="text-nowrap">
+                  <td class="align-middle">Thursday, Dec 26</td>
+                  <td class="align-middle">$ 4,433.75</td>
+                  <td class="align-middle">0</td>
+                  <td class="align-middle">$ 62,956.35</td>
+                  <td class="align-middle"></td>
+                  <td class="align-middle">0</td>
+                  <td class="align-middle">0</td>
+                  <td class="align-middle">0</td>
+                  <td class="align-middle">0</td>
+                </tr>
+  
+                <tr class="text-nowrap">
+                  <td class="align-middle">Thursday, Jan 02</td>
+                  <td class="align-middle">$ -2,331.12</td>
+                  <td class="align-middle">0</td>
+                  <td class="align-middle">$ 62,956.35</td>
+                  <td class="align-middle"></td>
+                  <td class="align-middle">$ 80,413.80</td>
+                  <td class="align-middle">0</td>
+                  <td class="align-middle">0</td>
+                  <td class="align-middle">0</td>
+                </tr>
+  
+                <tr class="text-nowrap">
+                  <td class="align-middle">Thursday, Jan 09</td>
+                  <td class="align-middle">$ 2,016.21</td>
+                  <td class="align-middle">$ 19,131.11</td>
+                  <td class="align-middle">$ 61,610.02</td>
+                  <td class="align-middle"></td>
+                  <td class="align-middle">$ 81,041.37</td>
+                  <td class="align-middle">13</td>
+                  <td class="align-middle">627</td>
+                  <td class="align-middle">4807</td>
+                </tr>
+  
+              </tbody>
+            </table>
+          </div>
+
         </div>
-
-        <div class="table-responsive">
-          <table class="table" id="InventoryAnalysis">
-            <thead>
-              <tr>
-                <th class="m-0 text-nowrap">Date</th>
-                <th class="m-0 text-nowrap">Net Profit</th>
-                <th class="m-0 text-nowrap">Revenue ($)</th>
-                <th class="m-0 text-nowrap">Cash Balance</th>
-                <th class="m-0 text-nowrap">Loan</th>
-                <th class="m-0 text-nowrap">COG's Value</th>
-                <th class="m-0 text-nowrap">Units Rtn</th>
-                <th class="m-0 text-nowrap">Total Sales Units</th>
-                <th class="m-0 text-nowrap">Sessions</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="text-nowrap">
-                <td class="align-middle">Thursday, Dec 26</td>
-                <td class="align-middle">$ 4,433.75</td>
-                <td class="align-middle">0</td>
-                <td class="align-middle">$ 62,956.35</td>
-                <td class="align-middle"></td>
-                <td class="align-middle">0</td>
-                <td class="align-middle">0</td>
-                <td class="align-middle">0</td>
-                <td class="align-middle">0</td>
-              </tr>
-
-              <tr class="text-nowrap">
-                <td class="align-middle">Thursday, Jan 02</td>
-                <td class="align-middle">$ -2,331.12</td>
-                <td class="align-middle">0</td>
-                <td class="align-middle">$ 62,956.35</td>
-                <td class="align-middle"></td>
-                <td class="align-middle">$ 80,413.80</td>
-                <td class="align-middle">0</td>
-                <td class="align-middle">0</td>
-                <td class="align-middle">0</td>
-              </tr>
-
-              <tr class="text-nowrap">
-                <td class="align-middle">Thursday, Jan 09</td>
-                <td class="align-middle">$ 2,016.21</td>
-                <td class="align-middle">$ 19,131.11</td>
-                <td class="align-middle">$ 61,610.02</td>
-                <td class="align-middle"></td>
-                <td class="align-middle">$ 81,041.37</td>
-                <td class="align-middle">13</td>
-                <td class="align-middle">627</td>
-                <td class="align-middle">4807</td>
-              </tr>
-
-            </tbody>
-          </table>
-        </div>
-
 
         <!-- Modal Learn More-->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
